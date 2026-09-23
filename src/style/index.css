@@ -1,0 +1,195 @@
+/********************************************
+ * INDEX GLOBAL — IMPORTS ET STYLES DE BASE
+ ********************************************/
+
+/********************************************
+ * IMPORTS DES FEUILLES CSS PAR COMPOSANT
+ ********************************************/
+
+/* Animations globales. */
+@import "./animations.css";
+
+/* Loader de l’écran de chargement. */
+@import "./loader.css";
+
+/* Sommaires. */
+@import "./pageSommaire.css";
+@import "./leftSommaire.css";
+
+/* En-tête et navigation principale. */
+@import "./header.css";
+
+/* Bannière, carrousel et recherche Primo. */
+@import "./banner.css";
+
+/* Second menu avec tuiles d’accès rapide. */
+@import "./secondMenu.css";
+
+
+
+@import "./affluences.css";
+
+
+/* Menu par faculté et disciplines. */
+@import "./facultéMenu.css";
+
+/* Pages génériques, layout principal, BU et sommaires. */
+@import "./page.css";
+
+/* Glossaire. */
+@import "./gloss.css";
+
+/* Pied de page. */
+@import "./footer.css";
+
+/* Fil d’Ariane. */
+@import "./ariane.css";
+
+/* Résultats de recherche. */
+@import "./searchResults.css";
+
+/* Recherche Primo. */
+@import "./primoSearch.css";
+
+/* Responsive global. */
+@import "./responsive.css";
+
+
+/********************************************
+ * IMPORT DES POLICES
+ ********************************************/
+
+/* Polices Mulish, Oswald et Farsan depuis Google Fonts. */
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400&family=Farsan&display=swap");
+
+/********************************************
+ * VARIABLES GLOBALES ET STYLES DE BASE
+ ********************************************/
+
+html,
+body {
+  /* Palette de couleurs principale. */
+  --blackish: #0e0d0d;
+  --whiteish: #f9f7fd;
+  --uOrange: #e84e24;
+  --uLightOrange: #eb5b34;
+  --uBlue: #1c9cd8;
+  --uGrey: #434341;
+
+  /* Couleurs par discipline. */
+  --science: #1c9cd8;
+  --staps: #fbba00;
+  --arts: #5eb98c;
+  --psycho: #ea5175;
+  --droit: #9e8dc2;
+  --lettres: #d5d400;
+
+  /* Typographie globale. */
+  font-family: "Mulish", sans-serif;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  font-weight: 400;
+  color: var(--blackish);
+
+  /* Layout global. */
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  overflow-x: hidden;
+  letter-spacing: 0;
+  word-break: break-word;
+}
+
+/********************************************
+ * LIENS ET TEXTES
+ ********************************************/
+
+/* Styles de base pour les liens et les paragraphes. */
+a,
+p {
+  color: var(--blackish);
+  text-decoration: none;
+}
+
+/* Rendu homogène des états standards des liens. */
+a:focus,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+/********************************************
+ * CONTENEUR RACINE REACT
+ ********************************************/
+
+.app {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  margin: auto;
+}
+
+/********************************************
+ * ACCESSIBILITÉ — LIEN D’ÉVITEMENT
+ ********************************************/
+
+/* Lien caché visuellement mais accessible au clavier. */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  z-index: 2000;
+  padding: 8px 14px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: top 0.25s ease;
+}
+
+/* Affichage du lien d’évitement au focus clavier. */
+.skip-link:focus {
+  top: 10px;
+  outline: 2px solid #fff;
+}
+
+/********************************************
+ * ACCESSIBILITÉ — MESSAGE D’ERREUR GLOBAL
+ ********************************************/
+
+.global-error {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 15px 20px;
+  background: #ffe8e6;
+  border-left: 6px solid #d9534f;
+  color: #a94442;
+  font-size: 1rem;
+  line-height: 1.4;
+  border-radius: 4px;
+}
+
+.global-error:focus {
+  outline: 3px solid #d9534f;
+}
+
+/********************************************
+ * FOCUS VISUEL GÉNÉRAL
+ ********************************************/
+
+:focus-visible:not(.primo-input) {
+  outline: 2px solid var(--uOrange) !important;
+  outline-offset: 2px;
+}
+
+/* Focus clavier des liens dans le header. */
+header a:focus-visible {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
+}

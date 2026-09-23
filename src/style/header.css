@@ -1,0 +1,531 @@
+/********************************************
+ * HEADER — LIENS
+ ********************************************/
+
+header a {
+  color: inherit !important;
+}
+
+/********************************************
+ * BARRE DE NAVIGATION PRINCIPALE
+ ********************************************/
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  padding: 5px;
+
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--whiteish);
+
+  background-color: var(--uOrange);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav li {
+  list-style: none;
+}
+
+/********************************************
+ * LOGO NÎMES UNIVERSITÉ
+ ********************************************/
+
+.logoWrapper,
+#menu,
+.logoWrapperTitle {
+  margin: 0;
+  margin: auto;
+}
+
+nav .logo {
+  height: 30px;
+}
+
+/********************************************
+ * TITRE DU SITE
+ ********************************************/
+
+.numTitle {
+  margin: 0 10px;
+  padding: 3px;
+
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+
+  pointer-events: none;
+}
+
+/********************************************
+ * MENU PRINCIPAL
+ ********************************************/
+
+.menu {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0 10px 0 0;
+}
+
+/* Animation du menu mobile. */
+.animateMenu {
+  animation: swing-in-top-fwd22 0.5s
+    cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+.menu .list {
+  position: relative;
+  z-index: 750;
+
+  margin: 3px 10px;
+  padding-block: 5px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  word-break: keep-all!important;
+     
+}
+
+
+
+.menu .firstList {
+  word-break: keep-all!important;
+  
+}
+
+
+
+.majTitre {
+  letter-spacing: 1.2px;
+}
+
+.menu .list a {
+  margin: 0;
+  word-break: keep-all!important;
+
+}
+
+/********************************************
+ * MENU — SÉPARATEURS
+ ********************************************/
+
+/* Séparateur vertical entre les éléments du menu. */
+.menu .list::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  right: -10px;
+
+  width: 1px;
+  height: 5px;
+
+  background-color: #fff;
+  transform: translateY(-50%);
+}
+
+.list:last-of-type::after {
+  all: unset;
+}
+
+/********************************************
+ * MENU — SOULIGNAGE ANIMÉ
+ ********************************************/
+
+.menu .list::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 900;
+
+  display: none;
+
+  width: 80%;
+  height: 2px;
+  margin-left: 10%;
+
+  background-color: #fff;
+
+  animation: tilt-in-left-1 0.2s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.menu .list:hover::before {
+  display: block;
+}
+
+.menu .list:hover .subMenu {
+  display: flex;
+}
+
+/********************************************
+ * SOUS-MENUS — NIVEAU 2
+ ********************************************/
+
+.menu .subMenu {
+  position: absolute;
+  left: 140px;
+
+  display: none;
+  flex-direction: column;
+  align-items: center;
+
+  margin-left: 10%;
+  padding: 10px;
+
+  background-color: var(--uOrange);
+
+  animation: swing-in-top-fwd 0.5s
+    cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+.menu .subMenu a,
+.menu .subMenu p {
+  margin: 0;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+
+  opacity: 0.95;
+  color: var(--whiteish);
+}
+
+.subList {
+  width: 300px !important;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: auto;
+  padding: 5px;
+
+  border-bottom: 0.1px solid rgba(255, 255, 255, 0.3);
+}
+
+.subMenu2 .subList:last-child {
+  border-bottom: none;
+}
+
+.subList:has(> .subMenu2):hover p {
+  font-weight: 800;
+}
+
+/********************************************
+ * SOUS-MENUS — NIVEAU 3
+ ********************************************/
+
+.subMenu2 {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 300px !important;
+
+  margin: auto;
+  margin-top: 0;
+  padding-left: 0;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  opacity: 0.95;
+}
+
+/* Chevron des sous-menus. */
+.subMenu i {
+  position: absolute;
+  right: 50px;
+
+  transition: 0.35s;
+}
+
+/* Rotation du chevron au hover. */
+.subList:hover i {
+  transform: rotate(450deg);
+}
+
+/* Liste niveau 3. */
+.subMenu2 .subList {
+  position: relative;
+
+  display: none;
+
+  width: 98% !important;
+  padding-left: 20px;
+}
+
+.subList:hover .subMenu2 .subList {
+  display: flex;
+}
+
+/* Petit carré repère des éléments niveau 3. */
+.subMenu2 .subList::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  width: 5px;
+  height: 5px;
+
+  background-color: #fff;
+  transform: translateY(-50%);
+}
+
+/********************************************
+ * BOUTONS CIRCULAIRES (? et 🔍)
+ ********************************************/
+
+.helper,
+.searchToggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 31px;
+  height: 31px;
+
+  margin-right: 15px;
+
+  border-radius: 50% !important;
+  border: 2px solid rgba(255, 255, 255, 1);
+
+  background-color: #fff;
+    flex-shrink: 0;
+  
+
+  cursor: pointer;
+  z-index: 800;
+
+  transition: 0.25s;
+}
+
+/* Bouton recherche. */
+.searchToggle {
+  transform: rotate(0deg) scale(1);
+}
+
+/* Texte du bouton aide. */
+.helper p {
+  margin: 0 !important;
+
+  font-size: 14px !important;
+  font-weight: 800;
+
+  color: var(--uOrange);
+}
+
+/* Icône recherche. */
+.searchToggle i {
+  font-size: 15px;
+  color: var(--uOrange);
+
+  pointer-events: none;
+}
+
+/********************************************
+ * HOVER — BOUTONS
+ ********************************************/
+
+.helper:hover {
+  transform: rotate(360deg);
+  background-color: var(--uOrange);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.searchToggle:hover {
+  transform: scale(1.3) !important;
+  background-color: var(--uOrange);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.helper:hover p,
+.searchToggle:hover i {
+  transform: rotate(360deg) !important;
+  color: var(--whiteish);
+}
+
+/********************************************
+ * MENU BURGER (MOBILE)
+ ********************************************/
+
+.burgerM {
+  visibility: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 25px;
+  height: 25px;
+
+  cursor: pointer;
+}
+
+.middleBar {
+  position: relative;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: var(--whiteish);
+}
+
+.middleBar::before,
+.middleBar::after {
+  content: "";
+
+  position: absolute;
+
+  width: 100%;
+  height: 2px;
+
+  background: var(--whiteish);
+}
+
+.middleBar::before {
+  top: -7px;
+}
+
+.middleBar::after {
+  bottom: -7px;
+}
+
+/********************************************
+ * MODALE DE RECHERCHE
+ ********************************************/
+
+.searchModalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.searchModal {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  width: 85%;
+  max-width: 500px;
+
+  padding: 20px 25px;
+
+  background: #fff;
+  border-radius: 6px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+.searchModalTitle {
+  margin: 0 0 15px 0;
+
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  color: var(--uOrange);
+}
+
+.searchModalClose {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+
+  background: transparent;
+  border: none;
+
+  font-size: 22px;
+
+  cursor: pointer;
+}
+
+.searchModalForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.searchModalForm input {
+  flex: 1;
+
+  padding: 8px 10px;
+
+  border: 1px solid #ddd;
+  border-radius: 4px;
+
+  font-size: 15px;
+}
+
+.searchModalButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 8px 14px;
+
+  background: var(--uOrange);
+  color: #fff;
+
+  border: none;
+  border-radius: 4px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/********************************************
+ * HOVER — LIENS MENU
+ ********************************************/
+
+/* Hover général pour les liens du menu. */
+nav li a:hover {
+  font-weight: 900 !important;
+}
+
+/* Exception : pas de hover sur le premier lien de .firstList. */
+.firstList > a:hover {
+  font-weight: inherit !important;
+}
+
+
+.helperP2{
+  display: none;
+}

@@ -1,0 +1,108 @@
+/***********************************
+ * FIL D’ARIANE : STRUCTURE GLOBALE
+ ***********************************/
+
+.ariane1 {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 50px auto 0 15px;
+}
+
+/***********************************
+ * CONTENEUR DU FIL D’ARIANE
+ ***********************************/
+
+.ariane {
+  display: flex;
+  flex-wrap: wrap;
+  animation: scale-in-hor-left 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/***********************************
+ * LIENS DU FIL D’ARIANE
+ ***********************************/
+
+.ariane a {
+  position: relative;
+  z-index: 200 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  border-radius: 5px 1px 1px 5px;
+  color: black !important;
+  font-size: 17px;
+  transform: scale(1);
+  transition: 0.4s;
+}
+
+/* Capitalise automatiquement la première lettre de chaque lien. */
+.ariane a:first-letter {
+  text-transform: capitalize !important;
+}
+
+/***********************************
+ * FLÈCHES ENTRE LES LIENS
+ ***********************************/
+
+.ariane a:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 0;
+  z-index: -1 !important;
+  width: 7px;
+  height: 7px;
+  border: 2px solid var(--uOrange);
+  border-top: unset;
+  border-left: unset;
+  transform: rotate(-45deg) scale(1);
+  transition: 0.4s;
+}
+
+/***********************************
+ * EFFETS D’INTERACTION
+ ***********************************/
+
+.ariane a:hover {
+  color: var(--uOrange) !important;
+  transform: scale(1.03);
+}
+
+.ariane a:focus-visible {
+  outline: 2px solid var(--uOrange);
+  outline-offset: 3px;
+}
+
+/***********************************
+ * TEXTE RÉSERVÉ AUX LECTEURS D’ÉCRAN
+ ***********************************/
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/***********************************
+ * ACCESSIBILITÉ : RÉDUCTION DES ANIMATIONS
+ ***********************************/
+
+@media (prefers-reduced-motion: reduce) {
+  .ariane {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .ariane a,
+  .ariane a::after {
+    transition-duration: 0.01ms !important;
+  }
+}

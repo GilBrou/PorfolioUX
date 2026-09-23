@@ -1,0 +1,370 @@
+.pageType {
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  width: 100vw;
+  min-height: 70vh !important;
+  padding: 20px;
+}
+
+/********************************************
+ * ZONE CENTRALE
+ ********************************************/
+
+/* Zone centrale des colonnes et blocs. */
+.mainZone {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 99%;
+  height: fit-content;
+
+  margin: 0;
+  padding: 0 10px;
+
+  row-gap: 50px;
+}
+
+/********************************************
+ * ACTUALITÉS — LISTE ET CARTES
+ ********************************************/
+
+.actuWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 100%;
+  margin: auto;
+  padding: 0 25px 25px !important;
+
+  background: linear-gradient(#ffffff, #f2f2f2);
+  /*background: yellow;*/
+}
+
+.actus-heading {
+  width: 100%;
+  margin-bottom: 40px !important;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--uOrange);
+}
+
+/********************************************
+ * CARTE ACTUALITÉ
+ ********************************************/
+
+.actuWrapper .actuBox {
+  position: relative;
+  z-index: 800;
+
+  display: flex;
+  /*flex-direction: column;*/
+  align-items: center;
+
+  /*width: 250px;
+  min-width: 200px;
+  height: 300px;
+
+  */
+  /*border: 2px solid var(--uOrange);*/
+
+
+  width: 400px;
+  /*min-width: 400px;*/
+
+  /*height: 150px;*/
+  /*height: 200px;*/
+  height: 225px;
+
+  margin: 20px 30px;
+  padding: 0;
+
+  /*border-radius: 7px;*/
+
+  /*background: url("./background/background1.webp") center / cover no-repeat;
+  background-attachment: fixed;*/
+  background: white;
+  box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.8);
+
+  transform: scale(1) /*rotate(-1.5deg)*/;
+  transition: 0.4s;
+
+      padding: 5px 10px;
+}
+
+
+
+
+
+
+
+.actuWrapper .actuBox:hover {
+  transform: scale(1.05);
+}
+
+/********************************************
+ * VIGNETTE IMAGE
+ ********************************************/
+
+.actuWrapper .actuBox .vign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /*width: 100%;*/
+  /*height: 125px;*/
+  overflow: hidden;
+
+  /*border-radius: 7px 7px 0 0;*/
+  height: 100%;
+  flex:1;
+  /*background: blue;*/
+
+}
+
+/* Image interne. */
+.actuWrapper .actuBox .vign img {
+  width: 100%;
+  height: auto;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/********************************************
+ * TITRE DES CARTES
+ ********************************************/
+.actuWrapper .columnActu{
+
+display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*background: red;*/
+  flex:2;
+
+}
+.actuWrapper .actuBox h4 {
+}
+
+
+
+.actuWrapper .actuBox h3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  /*height: 125px !important;*/
+
+  margin: auto;
+  padding: 10px;
+
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+
+  font-family: "oswald";
+  font-weight: 500;
+  letter-spacing: 1px;
+
+  color: black;
+  /*background: red;*/
+}
+
+/********************************************
+ * ICÔNE PUNAISE
+ ********************************************/
+/*
+.actuWrapper .actuBox .fa-thumb-tack {
+  position: absolute;
+  left: 50%;
+  top: -15px;
+
+  z-index: 50;
+
+  font-size: 30px;
+  color: black;
+
+  text-shadow: 1px 1px 2px white;
+
+  transform: translateX(-50%) rotate(1.5deg);
+  transition: 0.3s;
+}
+
+.actuBox:hover .fa-thumb-tack {
+  transform: translateX(-50%) translateY(-100%);
+}
+
+
+.actuWrapper .vign::before {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  left: 50%;
+
+  z-index: 20;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: var(--whiteish);
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 1);
+
+  transform: translateX(-55%);
+}
+*/
+/********************************************
+ * ARTICLE PRINCIPAL
+ ********************************************/
+
+.mainArticle {
+  flex: 3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: auto;
+  padding: 25px;
+}
+
+/********************************************
+ * WP CONTENT ISOLATED
+ ********************************************/
+
+.ImportFromWPApi {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap !important;
+
+  width: 100%;
+  max-width: 90%;
+
+  padding: 25px;
+
+  background: #f2f2f2;
+  font-family: "Mulish", sans-serif;
+}
+
+.ImportFromWPApi * {
+  max-width: 100% !important;
+  height: auto;
+
+  word-wrap: break-word;
+}
+
+/********************************************
+ * TITRES H2
+ ********************************************/
+
+.ImportFromWPApi h2 {
+  width: fit-content;
+
+  padding-bottom: 3px;
+
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 1px;
+
+  font-family: "oswald", sans-serif;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/********************************************
+ * CONTENU TEXTE
+ ********************************************/
+
+.ImportFromWPApi p,
+.ImportFromWPApi tr,
+.ImportFromWPApi li {
+  font-size: 20px;
+}
+
+/* Lignes de tableaux. */
+.ImportFromWPApi tr {
+  background: white;
+}
+
+/* Images centrées. */
+.ImportFromWPApi img {
+  align-self: center !important;
+  margin: auto !important;
+}
+
+/********************************************
+ * LIENS WORDPRESS
+ ********************************************/
+
+.ImportFromWPApi a,
+.ImportFromWPApi .simple {
+  color: var(--uOrange) !important;
+  transform: scale(1) !important;
+}
+
+.ImportFromWPApi a::before {
+  content: "↗";
+  margin-right: 5px;
+  font-weight: bolder;
+}
+
+.ImportFromWPApi a:hover {
+  color: var(--uOrange);
+  transform: scale(1.05) !important;
+}
+
+/********************************************
+ * TITRE DE PAGE
+ ********************************************/
+
+.pageTitle {
+  width: 100%;
+
+  margin-top: 20px;
+  padding-bottom: 3px;
+
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+
+  font-family: "oswald";
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/********************************************
+ * CATÉGORIE 63
+ ********************************************/
+
+.postCategorie63 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  padding: 25px;
+}
+
+/********************************************
+ * MENTIONS LÉGALES
+ ********************************************/
+
+.mentionDiv {
+  width: 60%;
+}

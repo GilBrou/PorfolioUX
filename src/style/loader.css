@@ -1,0 +1,435 @@
+/********************************************
+ * LOADER HEXAGONAL — STRUCTURE ET WRAPPER
+ ********************************************/
+
+/* Wrapper général du loader avec le logo et l’animation. */
+.socketWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80vw;
+  height: 101vh !important;
+  margin: auto !important;
+}
+
+/* Logo Nîmes Université affiché au-dessus du loader. */
+.logoLoader {
+  align-self: center;
+  width: 40%;
+  min-width: 300px;
+  height: auto;
+  margin-top: -35vh;
+  animation: loaderFadeIn 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+/* Support des hexagones. */
+.socket {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 175px;
+  height: 175px;
+  margin-left: -80px;
+  animation: rotate-center 2s ease-in-out infinite both;
+}
+
+/********************************************
+ * ANIMATION DE ROTATION GLOBALE
+ ********************************************/
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/********************************************
+ * BRIQUES HEXAGONALES
+ ********************************************/
+
+/* Segment utilisé pour composer chaque cellule hexagonale. */
+.hex-brick {
+  position: absolute;
+  top: 5px;
+  width: 30px;
+  height: 17px;
+  background: var(--uOrange);
+  animation-name: fade;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* Orientation des segments pour former un hexagone. */
+.h2 {
+  transform: rotate(60deg);
+}
+
+.h3 {
+  transform: rotate(-60deg);
+}
+
+/********************************************
+ * CELLULES GEL
+ ********************************************/
+
+.gel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  transition: all 0.3s;
+}
+
+/* Cellule centrale du loader. */
+.center-gel {
+  margin-left: -15px;
+  margin-top: -15px;
+  animation: pulse 2s infinite;
+}
+
+/********************************************
+ * POSITIONNEMENT DES CELLULES — COURONNE 1
+ ********************************************/
+
+.c1 {
+  margin-left: -47px;
+  margin-top: -15px;
+}
+
+.c2 {
+  margin-left: -31px;
+  margin-top: -43px;
+}
+
+.c3 {
+  margin-left: 1px;
+  margin-top: -43px;
+}
+
+.c4 {
+  margin-left: 17px;
+  margin-top: -15px;
+}
+
+.c5 {
+  margin-left: -31px;
+  margin-top: 13px;
+}
+
+.c6 {
+  margin-left: 1px;
+  margin-top: 13px;
+}
+
+/********************************************
+ * POSITIONNEMENT DES CELLULES — COURONNE 2
+ ********************************************/
+
+.c7 {
+  margin-left: -63px;
+  margin-top: -43px;
+}
+
+.c8 {
+  margin-left: 33px;
+  margin-top: -43px;
+}
+
+.c9 {
+  margin-left: -15px;
+  margin-top: 41px;
+}
+
+.c10 {
+  margin-left: -63px;
+  margin-top: 13px;
+}
+
+.c11 {
+  margin-left: 33px;
+  margin-top: 13px;
+}
+
+.c12 {
+  margin-left: -15px;
+  margin-top: -71px;
+}
+
+.c13 {
+  margin-left: -47px;
+  margin-top: -71px;
+}
+
+.c14 {
+  margin-left: 17px;
+  margin-top: -71px;
+}
+
+.c15 {
+  margin-left: -47px;
+  margin-top: 41px;
+}
+
+.c16 {
+  margin-left: 17px;
+  margin-top: 41px;
+}
+
+.c17 {
+  margin-left: -79px;
+  margin-top: -15px;
+}
+
+.c18 {
+  margin-left: 49px;
+  margin-top: -15px;
+}
+
+/********************************************
+ * POSITIONNEMENT DES CELLULES — COURONNE 3
+ ********************************************/
+
+.c19 {
+  margin-left: -63px;
+  margin-top: -99px;
+}
+
+.c20 {
+  margin-left: 33px;
+  margin-top: -99px;
+}
+
+.c21 {
+  margin-left: 1px;
+  margin-top: -99px;
+}
+
+.c22 {
+  margin-left: -31px;
+  margin-top: -99px;
+}
+
+.c23 {
+  margin-left: -63px;
+  margin-top: 69px;
+}
+
+.c24 {
+  margin-left: 33px;
+  margin-top: 69px;
+}
+
+.c25 {
+  margin-left: 1px;
+  margin-top: 69px;
+}
+
+.c26 {
+  margin-left: -31px;
+  margin-top: 69px;
+}
+
+.c27 {
+  margin-left: -79px;
+  margin-top: -15px;
+}
+
+.c28 {
+  margin-left: -95px;
+  margin-top: -43px;
+}
+
+.c29 {
+  margin-left: -95px;
+  margin-top: 13px;
+}
+
+.c30 {
+  margin-left: 49px;
+  margin-top: 41px;
+}
+
+.c31 {
+  margin-left: -79px;
+  margin-top: -71px;
+}
+
+.c32 {
+  margin-left: -111px;
+  margin-top: -15px;
+}
+
+.c33 {
+  margin-left: 65px;
+  margin-top: -43px;
+}
+
+.c34 {
+  margin-left: 65px;
+  margin-top: 13px;
+}
+
+.c35 {
+  margin-left: -79px;
+  margin-top: 41px;
+}
+
+.c36 {
+  margin-left: 49px;
+  margin-top: -71px;
+}
+
+.c37 {
+  margin-left: 81px;
+  margin-top: -15px;
+}
+
+/********************************************
+ * ANNEAUX R1 / R2 / R3
+ ********************************************/
+
+/* Paramètres communs pour créer l’effet de propagation. */
+.r1,
+.r2,
+.r3 {
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* Délais différenciés des anneaux. */
+.r1 {
+  animation-delay: 0.2s;
+}
+
+.r2 {
+  animation-delay: 0.4s;
+}
+
+.r3 {
+  animation-delay: 0.6s;
+}
+
+/* Animation des briques internes de chaque anneau. */
+.r1 > .hex-brick,
+.r2 > .hex-brick,
+.r3 > .hex-brick {
+  animation-name: fade;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.r1 > .hex-brick {
+  animation-delay: 0.2s;
+}
+
+.r2 > .hex-brick {
+  animation-delay: 0.4s;
+}
+
+.r3 > .hex-brick {
+  animation-delay: 0.6s;
+}
+
+/********************************************
+ * ANIMATIONS PULSE ET FADE
+ ********************************************/
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.01);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.01);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes fade {
+  0% {
+    background: #abf8ff;
+  }
+
+  50% {
+    background: #389ca6;
+  }
+
+  100% {
+    background: #abf8ff;
+  }
+}
+
+@keyframes fade {
+  0% {
+    background: var(--uOrange);
+  }
+
+  50% {
+    background: var(--uOrange);
+  }
+
+  100% {
+    background: var(--uOrange);
+  }
+}
+
+/********************************************
+ * ANIMATION D’APPARITION DU LOGO
+ ********************************************/
+
+@-webkit-keyframes loaderFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes loaderFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
