@@ -2,20 +2,12 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Redirect } from "react-router";
-import SmoothScroll from "smooth-scroll";
 
 /***PAGES***/
 import Homepage from "./Homepage";
-import Error404 from "./Error404";
 
 /***DATAS***/
-import JsonData from "./data/data.json";
-
-/*Smooth scroll parameters*/
-export const scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 1000,
-  speedAsDuration: true,
-});
+import JsonData from "./datas/data.json";
 
 /*Main app*/
 function App() {
@@ -37,9 +29,6 @@ function App() {
           </Route>
           <Route>
             <Redirect to="/accueil" />
-          </Route>
-          <Route>
-            <Error404 />
           </Route>
         </Switch>
       </div>

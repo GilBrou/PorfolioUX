@@ -4,15 +4,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap");
 
 /***COMPONENTS STYLES***/
-@import "./animations.css";
-@import "./contact.css";
-@import "./cv.css";
+/*@import "./animations.css";*/
+/*@import "./contact.css";*/
+/*@import "./cv.css";*/
 @import "./header.css";
-@import "./intro.css";
-@import "./parcours.css";
-@import "./projets.css";
-@import "./responsive.css";
-@import "./404.css";
+/*@import "./intro.css";*/
+/*@import "./parcours.css";*/
+/*@import "./projets.css";*/
+/*@import "./responsive.css";*/
 
 /*Color Variables*/
 body {
