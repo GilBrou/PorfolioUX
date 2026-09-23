@@ -1,44 +1,32 @@
-# Site Bu Nîmes Université
-
+# Portfolio Gillian Brousse - UI/UX Designer - Digital Learning
 
 Page d'accueil:
 
 ![Preview](https://github.com/web-unimes/bibliotheque/blob/47af272b40becbf8426b1563dfd5b6e7090e8d1f/Accueil.webp)
 
+/*
 
-Page type:
+Projet personnel de création de mon portfolio professionnel.
 
-![Preview](https://github.com/web-unimes/bibliotheque/blob/82eb2110d50b9b4536bcf55a85d6c1a91650c618/PageType.webp)
+détail :
 
+    	Utilisation de React et React Router.
+    	Structure logique des différents fichiers.
+    	Composants modulaires et réutilisables.
+    	DOM dynamique (depuis Json).
+    	Page 404 pour les routes inexistantes.
+    	Code commenté.
+    	Site full responsive.
+    	Création de la charte graphique, logo, infographies icônes et animations.
 
-Page type format FAQ:
+Environnement de travail :
 
-![Preview](https://github.com/web-unimes/bibliotheque/blob/82eb2110d50b9b4536bcf55a85d6c1a91650c618/PageFAQ.webp)
+    	L’éditeur Sublime text.
+    	Le terminal GitBash.
+    	La plateforme GitHub.
+    	Les devtools de Google Chrome.
+    	React et React Router.
+    	Netlify pour héberger le site.
 
-Page type format Sommaire:
-
-![Preview](https://github.com/web-unimes/bibliotheque/blob/82eb2110d50b9b4536bcf55a85d6c1a91650c618/PageSommaire.webp)
-
-
-Architecture:
-
-![Preview](https://github.com/web-unimes/bibliotheque/blob/82eb2110d50b9b4536bcf55a85d6c1a91650c618/Architecture.webp)
-
-
-Notice rédaction via WordPress :
-
-![Preview](https://github.com/web-unimes/bibliotheque/blob/9d4e0c2aa42945d962bf42f8c5c445bc52d58df3/NoticeWP1.webp)
-
-![Preview](https://github.com/web-unimes/bibliotheque/blob/9d4e0c2aa42945d962bf42f8c5c445bc52d58df3/NoticeWP2.webp)
-
-![Preview](https://github.com/web-unimes/bibliotheque/blob/9d4e0c2aa42945d962bf42f8c5c445bc52d58df3/NoticeWP3.webp)
-
-![Preview](https://github.com/web-unimes/bibliotheque/blob/9d4e0c2aa42945d962bf42f8c5c445bc52d58df3/NoticeWP4.webp)
-
-![Preview](https://github.com/web-unimes/bibliotheque/blob/9d4e0c2aa42945d962bf42f8c5c445bc52d58df3/NoticeWP5.webp)
-
-![Preview](https://github.com/web-unimes/bibliotheque/blob/9d4e0c2aa42945d962bf42f8c5c445bc52d58df3/NoticeWP6.webp)
-
-![Preview](https://github.com/web-unimes/bibliotheque/blob/9d4e0c2aa42945d962bf42f8c5c445bc52d58df3/NoticeWP7.webp)
-
-
+Lien pour consulter le site : https://www.gillianbroussedev.com/
+*/
