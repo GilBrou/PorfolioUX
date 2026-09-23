@@ -1,0 +1,71 @@
+/********************************************
+ * BANNER / CAROUSEL D'ACCUEIL
+ ********************************************/
+
+/* Conteneur principal du carousel */
+.carousel {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 20vh;
+  height: 20vh;
+  width: 110vw;
+  margin-left: -25px;
+  justify-content: center;
+  align-items: center;
+  /*border: 3px solid var(--beige);*/
+  background: var(--beige);
+}
+
+.carousel .ban {
+  width: 400px;
+  /*flex: 1;*/
+  height: 100%;
+  transform: skew(-10deg);
+  background: red;
+  margin: 0 3px;
+}
+
+.carousel .ban.ban1 {
+  background: url("./background/background1.webp");
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-size: cover;
+}
+.carousel .ban.ban2 {
+  background: url("./background/background2.webp");
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-size: cover;
+}
+.carousel .ban.ban3 {
+  background: url("./background/background6.webp");
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-size: cover;
+}
+.carousel .ban.ban4 {
+  background: url("./background/background4.webp");
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-size: cover;
+}
+.carousel .ban.ban5 {
+  background: url("./background/background5.webp");
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-size: cover;
+}
+
+.carousel .ban.ban6 {
+  background: url("./background/background7.webp");
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-size: cover;
+}
+.carousel .ban.ban7 {
+  background: url("./background/background3.webp");
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-size: cover;
+}
