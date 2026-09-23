@@ -1,0 +1,51 @@
+{
+  "pId": "",
+  "pImg": "",
+  "pName": "",
+  "pDescription": "",
+  "pInfos": "",
+  "technos": [
+    {
+      "name": "Html",
+      "icon": "img/techIcons/html.webp"
+    },
+    {
+      "name": "Css",
+      "icon": "img/techIcons/css.webp"
+    },
+    {
+      "name": "JS",
+      "icon": "img/techIcons/javascript.webp"
+    },
+    {
+      "name": "Bootstrap",
+      "icon": "img/techIcons/bootstrap.webp"
+    },
+    {
+      "name": "React",
+      "icon": "img/techIcons/react.webp"
+    },
+    {
+      "name": "Figma",
+      "icon": "img/techIcons/Figma.webp"
+    },
+    {
+      "name": "Krita",
+      "icon": "img/techIcons/Krita.webp"
+    },
+    {
+      "name": "Inkscape",
+      "icon": "img/techIcons/Inkscape.webp"
+    },
+    {
+      "name": "Github",
+      "icon": "img/techIcons/github.webp"
+    }
+  ],
+  "pSite": "",
+  "but1": "Visiter le site",
+  "bClassName": "buttonNotNeeded",
+  "pCode": "",
+  "but2": "Détails du code",
+  "b2ClassName": "soloButton"
+}
