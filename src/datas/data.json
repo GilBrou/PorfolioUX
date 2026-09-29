@@ -10,8 +10,9 @@
   },
   "intro": {
     "title": "Bienvenue",
-    "paragraphIntroOLD": "Développeur Front-End diplômé avec une appétence certaine pour l'UI et l'UX, je suis à la recherche d'une entreprise afin de mettre à profit sans délai les compétences acquises lors de ma formation de Développeur d'application JavaScript/React.",
-    "paragraphIntro": "Développeur Front-End diplômé avec une appétence certaine pour l'UI et l'UX, je suis à la recherche d'une entreprise afin de mettre à profit sans délai les compétences acquises lors de ma formation de Développeur d'application JavaScript/React.",
+    "paragraphIntro": "À la croisée de l’UX/UI Design, du Digital Learning et du développement web, je conçois des sites, des solutions numériques et des dispositifs pédagogiques centrés sur les utilisateurs et les apprenants.",
+    "paragraphIntro2": "De l’analyse des besoins à la conception et à la réalisation, je mobilise recherche UX, design d’interface, accessibilité, développement Frontend et outils de création de contenus pédagogiques, notamment dans des environnements LMS tels que Moodle.",
+    "paragraphIntro3": "Mon parcours en graphisme et multimédia complète cette approche par une expertise en conception visuelle et en production de contenus numériques au service d’expériences efficientes et accessibles.",
     "photoIntro": "img/GBphoto.webp",
     "photoAlt": "Photo de Gillian Brousse"
   },

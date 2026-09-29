@@ -3,12 +3,12 @@ import { useState, useEffect } from "react";
 
 /***COMPONENTS***/
 import Header from "./Components/Header";
-/*import Intro from "./Components/Intro";
+import Intro from "./Components/Intro";
+/*
 import Parcours from "./Components/Parcours";
 import Projets from "./Components/Projets";
 import CV from "./Components/CV";
 import Contact from "./Components/Contact";*/
-import Banner from "./Components/Banner.jsx";
 
 /***DATAS***/
 import projetsD from "./datas/projetsD.json";
@@ -27,9 +27,9 @@ export default function Homepage(data) {
   return (
     <div className="homepage">
       <Header data={data.data.nav} />
-      <Banner />
+      <Intro data={data.data.intro} />
 
-      {/*<Intro data={data.data.intro} data2={data.data.contact} />
+      {/*
             <Parcours data={data.data.parcours} />
             <Projets data={pDatas} />
             <CV data={data.data.cv} />

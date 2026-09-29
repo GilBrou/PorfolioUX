@@ -1,90 +1,136 @@
 /*Module*/
 .intro {
-  padding-top: 30vh;
-  padding-bottom: 15vh;
-}
-.intro .row {
-  display: flex;
-  flex-direction: row;
-  align-content: space-between;
-}
-/*Left part*/
-.intro-text {
-  flex: 1;
-  max-width: 565px;
-  justify-content: center;
-  margin: 10px;
-  -webkit-animation: popInText 0.85s linear 2.2s both;
-  animation: popInText 0.85s linear 2.2s both;
-  text-align: justify;
-  padding-top: 30px;
-  border-bottom: solid 1px var(--secondary-color);
-}
-/*Title*/
-.intro-text h1 {
-  color: var(--primary-subcolor);
-  border-bottom: solid 1px var(--secondary-color);
-  padding-bottom: 10px;
-  text-shadow: 0 -1px 1.5px var(--secondary-subcolor);
-}
-/*Paragraph*/
-.intro-text p {
-  font-size: 22px;
-  line-height: 32px;
-  padding-bottom: 20px;
-}
-/*Right part*/
-.intro-img {
-  flex: 1;
+  background: lightblue;
+  margin-top: 50px;
+  padding: 100px 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 10px;
-  -webkit-animation: popInPhoto 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s
-    both;
-  animation: popInPhoto 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s both;
+  align-items: center;
+
+  pointer-events: none;
+  background: url("./background/background.webp"), var(--yel);
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-size: cover;
+  clip-path: shape(
+    from 0 25px,
+    curve to 10.71% 25.5px with 7.14% 26px,
+    curve to 17.86% 21.5px with 14.29% 25px,
+    curve to 25% 9.5px with 21.43% 18px,
+    curve to 32.14% 19.5px with 28.57% 1px,
+    curve to 39.29% 21.5px with 35.71% 38px,
+    curve to 46.43% 3.5px with 42.86% 5px,
+    curve to 53.57% 19px with 50% 2px,
+    curve to 60.71% 26.5px with 57.14% 36px,
+    curve to 67.86% 17px with 64.29% 17px,
+    curve to 75% 19px with 71.43% 17px,
+    curve to 82.14% 25.5px with 78.57% 21px,
+    curve to 89.29% 20px with 85.71% 30px,
+    curve to 100% 25px with 92.86% 10px,
+    vline to calc(100% - 25px),
+    curve to 89.29% calc(100% - 35.5px) with 92.86% calc(100% - 29px),
+    curve to 82.14% calc(100% - 36px) with 85.71% calc(100% - 42px),
+    curve to 75% calc(100% - 15.5px) with 78.57% calc(100% - 30px),
+    curve to 67.86% calc(100% - 23.5px) with 71.43% calc(100% - 1px),
+    curve to 60.71% calc(100% - 38px) with 64.29% calc(100% - 46px),
+    curve to 53.57% calc(100% - 22px) with 57.14% calc(100% - 30px),
+    curve to 46.43% calc(100% - 29.5px) with 50% calc(100% - 14px),
+    curve to 39.29% calc(100% - 31px) with 42.86% calc(100% - 45px),
+    curve to 32.14% calc(100% - 13px) with 35.71% calc(100% - 17px),
+    curve to 25% calc(100% - 25px) with 28.57% calc(100% - 9px),
+    curve to 17.86% calc(100% - 31px) with 21.43% calc(100% - 41px),
+    curve to 10.71% calc(100% - 35.5px) with 14.29% calc(100% - 21px),
+    curve to 0 calc(100% - 25px) with 7.14% calc(100% - 50px),
+    vline to 0
+  );
+
+  transform: rotate(-1deg);
 }
-/*Photo*/
-.authorPhoto {
-  height: auto;
-  width: auto;
+
+.intro h2 {
+  /*background: blue;*/
+  /*width: fit-content;*/
+  width: 100%;
+  text-align: center;
+
+  letter-spacing: 2px;
+  margin: auto auto 25px auto;
+  padding: 0;
+  color: var(--yel);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--yel);
+  border-color: var(--blackish);
+  color: var(--blackish);
+}
+
+.introBox {
+  transform: rotate(1deg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 60vw;
+
+  /*padding: 25px;
+  
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.31);
+  */
+}
+
+.introBox .introPart {
+  flex: 1;
+  width: 50%;
+  margin: auto;
+  /*text-align: justify;*/
+}
+
+.intro .introBox .ileft {
+  /*padding-right: 25px;*/
+  flex: 1.5;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--yel);
+  border-color: var(--blackish);
+  border: none;
+}
+.intro .introBox .iright {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro .introBox p,
+.intro .introBox img {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+  color: var(--blackish);
+}
+
+.intro .introBox img {
+}
+.introBox .iright img {
+  margin: 0;
+  width: 300px;
+  border-radius: 50%;
+  border: 1px solid var(--yel);
+  border-color: var(--blackish);
+  border: none;
+  /*box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);*/
+
+  /*
+
   animation: movingImg 9s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
     alternate both;
-}
-/*Mail*/
-.intro .cInfosDiv {
-  transform: scale(1.1);
-  transition: 0.7s;
-}
-.intro .cInfosDiv p {
-  color: var(--secondary-color);
-  line-height: unset;
-  border-bottom: unset;
-  padding-bottom: unset;
-  margin: 10px;
-  border-bottom: unset;
-}
-.intro .cInfosDiv img {
-  width: 55px;
-  height: auto;
-  margin: auto;
-  border-radius: 50px;
-  -webkit-box-shadow: 0 0 4px 1px var(--secondary-color);
-  box-shadow: 0 0 4px 1px var(--secondary-color);
-  -webkit-animation: iconRotate2 0.6s ease-in-out reverse both;
-  animation: iconRotate2 0.6s ease-in-out reverse both;
-}
-.intro .cInfosDiv a {
-  display: flex;
-  justify-content: space-around;
-}
-.intro .cInfosDiv:hover {
-  transform: scale(1.2);
-}
-.cInfosDiv:hover p {
-  color: var(--primary-subcolor);
-}
-.intro .cInfosDiv:hover img {
-  -webkit-animation: iconRotate 0.6s ease-in-out both;
-  animation: iconRotate 0.6s ease-in-out both;
+    */
 }
