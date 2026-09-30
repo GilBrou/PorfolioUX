@@ -1,94 +1,171 @@
 /*Module*/
 .parcours {
-  padding-top: 15vh;
+  /*background: red;*/
+  padding: 100px 25px;
+  max-width: 60vw;
+  max-width: 80vw;
+  margin: auto;
+  position: relative;
+  z-index: 500;
 }
-.info {
+
+.parcours h2 {
+  width: 100%;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: auto auto 25px auto;
+  padding: 0;
+  color: var(--yel);
+  padding-bottom: 10px;
+  pointer-events: none;
+  position: relative;
+}
+
+.parcours .card {
+  position: relative;
+  /*background: lightsteelblue;*/
+}
+
+.parcours .card::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  border: solid 1px var(--yel);
+  pointer-events: none;
+  /*border-color: red;*/
+}
+
+.parcours h2::before {
+  content: "";
+  position: absolute;
+  width: 645px;
+  top: 38%;
+  right: 6px;
+  /*transform: translateX(-50%);*/
+  border: solid 1px var(--yel);
+  pointer-events: none;
+  /*border-color: red;*/
+  border-radius: 50px 0;
+}
+
+.parcours h2::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  top: -84px;
+  border: solid 1px var(--yel);
+  pointer-events: none;
+  /*border-color: red;*/
+  left: 93%;
+  transform: rotate(90deg);
+  border-radius: 0 50px;
+}
+
+.parcours .card .info {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   padding: 10px;
+  /*background: darkcyan;*/
 }
-.info h3 {
-}
-/*Title*/
-.parcours h1 {
-  color: var(--primary-subcolor);
-  padding-bottom: 10px;
-  border-bottom: solid 1px var(--secondary-color);
-  border: solid var(--secondary-color);
-  border-width: 0px 0 1px 0px;
-  margin: auto;
-  max-width: 185px;
-  text-shadow: 0 -1px 1.5px var(--secondary-subcolor);
-  /*
-  -webkit-animation: popInText 0.85s linear 2s both;
-  animation: popInText 0.85s linear 2s both;
-  */
-}
-/*Carreer paragraph*/
-.parcours p {
-  font-size: 18px;
-  line-height: 32px;
-  text-align: justify;
-}
-/*Carreer card*/
-.card {
-  position: relative;
-}
-/*Carreer title*/
-.title {
-  color: var(--primary-subcolor);
+
+.parcours .card .info .title {
+  color: var(--yel);
   position: relative;
   margin: unset;
   margin-bottom: 10px;
+  /*background: yellow;*/
+  pointer-events: none;
 }
-/*Carreer subtitle*/
-.subTitle {
-  color: var(--secondary-subcolor);
-  font-size: 20px;
+
+.parcours .card .info .subTitle {
   line-height: 12px;
   text-align: justify;
   font-style: italic;
   cursor: none;
   pointer-events: none;
+  /*background: lightcoral;*/
 }
-/*Possible link */
-.thisLinks {
+
+.parcours .card .info .title2 {
+  color: var(--lightB);
+  font-size: 20px;
+  line-height: 12px;
+  text-align: justify;
+  margin-top: 15px;
+  pointer-events: none;
+
+  /* background: lightpink;*/
+}
+
+.parcours .card:nth-of-type(even) .info .title,
+.parcours .card:nth-of-type(even) .info .subTitle,
+.parcours .card:nth-of-type(even) .info .title2 {
+  text-align: right;
+}
+
+/*
+.parcours .card .info .subTitle.noLink {
+  background: green;
+}
+
+.parcours .card .info .subTitle.thisLinks {
   position: absolute;
   color: var(--blackish);
+  color:;
   pointer-events: auto;
   width: 278px;
-  background-color: var(--secondary-color);
+  background-color: var(--yel);
   border-radius: 5px;
   padding: 10px;
   margin-top: 55px;
   cursor: pointer;
   transition: all 0.5s;
-  font-family: "Titillium Web", sans-serif;
   text-transform: uppercase;
   text-align: center;
+  background: blue;
 }
-.thisLinks:hover,
-.ithisLinks:focus,
-.ithisLinks:visited,
-.thisLinks:hover {
-  color: var(--blackish);
-  -webkit-animation: pulseButton 1.5s ease-in-out infinite both;
-  animation: pulseButton 1.5s ease-in-out infinite both;
+*/
+
+.parcours .card .info .inContent {
+  /*/background: red;***/
+  display: flex;
+  gap: 15px;
 }
-/*Carreer border styling*/
-.card::before {
-  content: "";
-  position: absolute;
-  width: 50%;
-  border: solid var(--secondary-color);
-  opacity: 0.7;
+
+.parcours .card:nth-of-type(even) .info .inContent {
+  flex-direction: row-reverse;
+}
+
+.parcours .card .info .inContent .cardImg {
+  height: auto;
+
+  width: 350px;
+  float: left;
+  /*margin: 0 20px 0 0;*/
+  border-radius: 0px 20px 20px 0px;
+  border-radius: 20px;
+  height: auto;
   pointer-events: none;
 }
-/*styling if carreer card is odd or even*/
+
+.parcours .card .info .inContent p {
+  align-self: center;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+  /*text-align: left;*/
+  pointer-events: none;
+  text-align: justify;
+  line-height: 30px;
+}
+
 .card:nth-child(odd) {
   padding: 30px 0 30px 30px;
 }
+
 .card:nth-child(odd)::before {
   left: 0px;
   top: -2px;
@@ -96,6 +173,7 @@
   border-width: 2px 0 2px 2px;
   border-radius: 50px 0px 0px 50px;
 }
+
 .card:nth-child(even) {
   padding: 30px 30px 30px 0;
 }
@@ -106,7 +184,7 @@
   border-width: 2px 2px 2px 0;
   border-radius: 0px 50px 50px 0px;
 }
-/*styling if carreer card is first or last*/
+
 .card:first-child::before {
   left: 0px;
   top: 46px;
@@ -120,67 +198,16 @@
   top: 0;
   bottom: 40px;
 }
-.subTitleR {
-  text-align: right;
-}
-.title2 {
-  color: var(--primary-subcolor);
-  font-size: 20px;
-  line-height: 12px;
-  text-align: justify;
-  margin-top: 15px;
-}
-.title3 {
-  text-align: right;
-}
-.card:nth-child(even) > .info > .title {
-  text-align: right;
-}
-.cardImgL {
-  height: auto;
 
-  width: 350px;
-  float: left;
-  margin: 0 20px 0 0;
-  border-radius: 0px 20px 20px 0px;
-  height: auto;
-}
-.cardImgR {
-  height: auto;
-
-  max-width: 400px;
-  float: right;
-  margin: 0 0 0 20px;
-  border-radius: 20px 0px 0px 20px;
-  height: auto;
+.card:last-of-type::before {
+  border-bottom-right-radius: 0px;
+  bottom: 40px;
+  /*top: 0px;*/
+  border-bottom: 0px;
+  border-radius: 50px 0px 0px 0px;
 }
 
-/*Career card entrance animation*/
-/*
-.Carreer1 {
-  -webkit-animation: CarreerLeftEntrance 0.4s
-    cubic-bezier(0.25, 0.46, 0.5, 0.94) 2.45s both;
-  animation: CarreerLeftEntrance 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.45s
-    both;
+.card:first-of-type::before {
+  /*border-color: red;*/
+  top: -250px;
 }
-
-.Carreer2 {
-  -webkit-animation: CarreerRightEntrance 0.4s
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.85s both;
-  animation: CarreerRightEntrance 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    2.85s both;
-}
-
-.Carreer3 {
-  -webkit-animation: CarreerLeftEntrance 0.4s
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) 3.25s both;
-  animation: CarreerLeftEntrance 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 3.25s
-    both;
-}
-.Carreer4 {
-  -webkit-animation: CarreerRightEntrance 0.4s
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) 3.65s both;
-  animation: CarreerRightEntrance 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    3.65s both;
-}
-*/

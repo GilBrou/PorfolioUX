@@ -18,11 +18,6 @@
   },
   "parcours": [
     {
-      "number": "1",
-      "cardClassName": "card Carreer1",
-      "parcoursImgClass": "img-responsive cardImgL",
-      "parcoursSubTitleClass": "subTitle noLink",
-      "parcoursTitle2Class": "title2",
       "parcoursTitle1": "Depuis 2020 : Développement",
       "parcoursSubTitle": "Diplôme RNCP Développeur concepteur logiciel",
       "parcoursTitle2": "Développeur Front-End",
@@ -31,12 +26,16 @@
       "parcoursParagraph": "Bien que j’aie géré des sites via CMS pendant des années, mes premières lignes de code remontent à 2020, lorsque je réalise un petit jeu rétro se déroulant dans l’univers de mon roman à l’aide du moteur Adventure Game Studio et son langage dérivé du C++. Ce premier défi passionnant entérine rapidement mon envie d’apprendre, puis de me reconvertir dans ce milieu. Après une formation diplômante d’un an auprès de l'organisme OpenClassrooms, me voici développeur Front-End, prêt à intégrer l’entreprise qui me permettra de consolider mes compétences et d’en acquérir de nouvelles."
     },
     {
-      "number": "2",
-      "cardClassName": "card Carreer2",
-      "parcoursImgClass": "img-responsive cardImgR",
-      "parcoursSubTitleClass": "subTitle subTitleR thisLinks",
-      "parcoursTitle2Class": "title3 title2",
-      "parcoursTitle1": "Depuis 2017 : Édition littéraire",
+      "parcoursTitle1": "2022 : Développement",
+
+      "parcoursSubTitle": "Diplôme RNCP Développeur concepteur logiciel",
+      "parcoursTitle2": "Développeur Front-End",
+      "parcoursImg": "img/parcours/CV4.webp",
+      "parcoursImgAlt": "Carrière Développeur",
+      "parcoursParagraph": "Bien que j’aie géré des sites via CMS pendant des années, mes premières lignes de code remontent à 2020, lorsque je réalise un petit jeu rétro se déroulant dans l’univers de mon roman à l’aide du moteur Adventure Game Studio et son langage dérivé du C++. Ce premier défi passionnant entérine rapidement mon envie d’apprendre, puis de me reconvertir dans ce milieu. Après une formation diplômante d’un an auprès de l'organisme OpenClassrooms, me voici développeur Front-End, prêt à intégrer l’entreprise qui me permettra de consolider mes compétences et d’en acquérir de nouvelles."
+    },
+    {
+      "parcoursTitle1": "2020 - 2024 : Édition littéraire",
       "parcoursSubTitle": "Mon portfolio artistique",
       "link": "https://gillianbrousse.netlify.app/accueil",
       "parcoursTitle2": "Monteur vidéo, Graphiste, Auteur et Illustrateur",
@@ -45,24 +44,14 @@
       "parcoursParagraph": "Je suis également auteur et illustrateur dans les genres de l’imaginaire, publié dans une dizaine de maisons d'édition. Mon premier roman est d’ores et déjà disponible tandis que mon prochain ouvrage, un essai sur la Science-fiction, verra le jour cette année. J’ai également pu travailler comme vidéaste et graphiste auprès de mes éditeurs (booktrailers, infographies, couvertures, conception de logos…). Ces expériences m’ont doté de solides capacités rédactionnelles, ainsi que de compétences en graphisme et en communication visuelle pouvant être mises à profit en UI et UX design."
     },
     {
-      "number": "3",
-      "cardClassName": "card Carreer3",
-      "parcoursImgClass": "img-responsive cardImgL",
-      "parcoursTitle2Class": "title2",
-      "parcoursSubTitleClass": "subTitle noLink",
       "parcoursSubTitle": "CQP Vendeur-conseil en magasin",
       "parcoursTitle2": "Employé de vente, Co-créateur, Créateur et Gestionnaire d'entreprise",
       "parcoursImg": "img/parcours/CV2.webp",
       "parcoursImgAlt": "Carrière Commerçant",
-      "parcoursTitle1": "2011 - 2019 : Commerce",
+      "parcoursTitle1": "2011 - 2020 : Commerce",
       "parcoursParagraph": "En parallèle de ma carrière en restauration, j'ai ressenti le besoin d'entreprendre et j'ai créé successivement : un e-commerce de vêtements et produits axés sur la Pop-culture, une boutique de bijoux et accessoires et un magasin de décoration et cadeaux. De cette manière, j'ai acquis des compétences utiles à tous métiers, de la relation client (conseil, fidélisation, techniques de vente) à la gestion d'entreprise (législation, administratif, relations fournisseurs). Afin de parfaire cette expérience, j'ai également suivi une formation et obtenu un diplôme dans la vente."
     },
     {
-      "number": "4",
-      "cardClassName": "card Carreer4",
-      "parcoursTitle2Class": "title3 title2",
-      "parcoursSubTitleClass": "subTitle subTitleR noLink",
-      "parcoursImgClass": "img-responsive cardImgR",
       "parcoursTitle1": "2005 - 2016 : Restauration",
       "parcoursSubTitle": "BEP et BAC PRO Hôtellerie-Restauration",
       "parcoursTitle2": "Commis, Second et Chef - du salon de thé au restaurant gastronomique",

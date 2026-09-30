@@ -3,9 +3,12 @@
   background: lightblue;
   margin-top: 50px;
   padding: 100px 25px;
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 800;
   align-items: center;
 
   pointer-events: none;
@@ -49,11 +52,8 @@
 }
 
 .intro h2 {
-  /*background: blue;*/
-  /*width: fit-content;*/
   width: 100%;
   text-align: center;
-
   letter-spacing: 2px;
   margin: auto auto 25px auto;
   padding: 0;
@@ -66,7 +66,6 @@
 
 .introBox {
   transform: rotate(1deg);
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,10 +114,9 @@
   font-weight: 500;
   width: 100%;
   color: var(--blackish);
+  line-height: 30px;
 }
 
-.intro .introBox img {
-}
 .introBox .iright img {
   margin: 0;
   width: 300px;
@@ -126,6 +124,7 @@
   border: 1px solid var(--yel);
   border-color: var(--blackish);
   border: none;
+  position: relative;
   /*box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);*/
 
   /*
@@ -133,4 +132,18 @@
   animation: movingImg 9s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
     alternate both;
     */
+}
+
+.introBox .iright img::after {
+  z-index: 800;
+  content: "";
+  position: absolute;
+  width: 645px;
+  top: 38%;
+  right: 6px;
+  /*transform: translateX(-50%);*/
+  border: solid 1px var(--yel);
+  pointer-events: none;
+  border-color: red;
+  border-radius: 50px 0;
 }
