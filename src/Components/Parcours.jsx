@@ -9,7 +9,7 @@ function Parcours(props) {
           <div className="outer">
             {props.data
               ? props.data.map((d, i) => (
-                  <div key={d.number} className="card">
+                  <div key={"card" + i} className="card">
                     <div className="info">
                       <h3 className="title">{d.parcoursTitle1}</h3>
 

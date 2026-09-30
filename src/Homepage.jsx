@@ -5,9 +5,9 @@ import { useState, useEffect } from "react";
 import Header from "./Components/Header";
 import Intro from "./Components/Intro";
 import Parcours from "./Components/Parcours";
+import Projets from "./Components/Projets";
 
 /*
-import Projets from "./Components/Projets";
 import CV from "./Components/CV";
 import Contact from "./Components/Contact";*/
 
@@ -30,10 +30,10 @@ export default function Homepage(data) {
       <Header data={data.data.nav} />
       <Intro data={data.data.intro} />
       <Parcours data={data.data.parcours} />
-
+      <Projets data={pDatas} />
       {/*
             <Parcours data={data.data.parcours} />
-            <Projets data={pDatas} />
+         
             <CV data={data.data.cv} />
             <Contact data={data.data.contact} />*/}
     </div>

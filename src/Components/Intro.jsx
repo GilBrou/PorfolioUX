@@ -1,13 +1,6 @@
 /***INTRO MODULE***/
 
 export default function Intro({ data }) {
-  console.log(data);
-  /*
-props.data.title
-props.data.paragraphIntro
-props.data.photoIntro
-props.data.photoAlt*/
-
   return data ? (
     <div className="intro">
       <div className="introBox">
@@ -23,7 +16,9 @@ props.data.photoAlt*/
         </div>
 
         <div className="introPart iright">
-          <img src={data.photoIntro} alt={data.photoAlt} />
+          <div className="imgwrap">
+            <img src={data.photoIntro} alt={data.photoAlt} className="myImg" />
+          </div>
         </div>
       </div>
     </div>

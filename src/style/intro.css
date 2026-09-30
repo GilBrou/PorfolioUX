@@ -3,6 +3,7 @@
   background: lightblue;
   margin-top: 50px;
   padding: 100px 25px;
+  padding: 75px 25px 50px 25px;
   position: relative;
 
   display: flex;
@@ -55,12 +56,13 @@
   width: 100%;
   text-align: center;
   letter-spacing: 2px;
+  letter-spacing: 3px;
+  font-size: 2em;
   margin: auto auto 25px auto;
   padding: 0;
   color: var(--yel);
   padding-bottom: 10px;
-  border-bottom: 1px solid var(--yel);
-  border-color: var(--blackish);
+  border-bottom: 1px solid vvar(--blackish);
   color: var(--blackish);
 }
 
@@ -69,7 +71,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 60vw;
+  /*max-width: 60vw;*/
+  max-width: 80vw;
 
   /*padding: 25px;
   
@@ -104,6 +107,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 800;
 }
 
 .intro .introBox p,
@@ -114,17 +119,19 @@
   font-weight: 500;
   width: 100%;
   color: var(--blackish);
-  line-height: 30px;
+  /*line-height: 30px;*/
 }
 
 .introBox .iright img {
   margin: 0;
   width: 300px;
+  width: 250px;
   border-radius: 50%;
   border: 1px solid var(--yel);
   border-color: var(--blackish);
   border: none;
-  position: relative;
+  z-index: 800;
+  position: revert;
   /*box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);*/
 
   /*
@@ -134,16 +141,28 @@
     */
 }
 
-.introBox .iright img::after {
-  z-index: 800;
+/*.introBox .iright .imgwrap::after {
   content: "";
   position: absolute;
-  width: 645px;
-  top: 38%;
-  right: 6px;
-  /*transform: translateX(-50%);*/
-  border: solid 1px var(--yel);
-  pointer-events: none;
-  border-color: red;
-  border-radius: 50px 0;
+  width: 100%;
+  height: 100%;
+  background: red;
+  z-index: 1000;
+}*/
+
+.introBox .iright .imgwrap {
+  padding: 10px;
+  padding: 20px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--);
+  background: var(--yel);
+
+  /*border: 1px solid var(--blackish);
+  border-left: none;
+  border-top: none;
+  border-bottom: none;*/
 }

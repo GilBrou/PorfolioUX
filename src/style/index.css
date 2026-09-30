@@ -10,7 +10,8 @@
 @import "./intro.css";
 
 @import "./parcours.css";
-/*@import "./projets.css";*/
+@import "./projets.css";
+
 /*@import "./responsive.css";*/
 
 /*Color Variables*/
@@ -64,6 +65,7 @@ h2 {
   font-family: "Space Grotesk", sans-serif;
   text-transform: uppercase;
   font-size: 24px;
+  font-size: 2em;
 }
 
 a:hover,
