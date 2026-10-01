@@ -1,0 +1,177 @@
+/*Module*/
+
+/*
+
+.title
+.comps
+
+.titreComp
+.paragComp
+.boldp
+.pcomp
+*/
+
+.comp {
+  margin-top: 35px;
+  padding: 100px 25px;
+  padding: 75px 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 800;
+  width: 100vw;
+  align-items: center;
+  pointer-events: none;
+  background: url("./background/background.webp"), var(--yel);
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-size: cover;
+  clip-path: shape(
+    from 0 25px,
+    curve to 10.71% 25.5px with 7.14% 26px,
+    curve to 17.86% 21.5px with 14.29% 25px,
+    curve to 25% 9.5px with 21.43% 18px,
+    curve to 32.14% 19.5px with 28.57% 1px,
+    curve to 39.29% 21.5px with 35.71% 38px,
+    curve to 46.43% 3.5px with 42.86% 5px,
+    curve to 53.57% 19px with 50% 2px,
+    curve to 60.71% 26.5px with 57.14% 36px,
+    curve to 67.86% 17px with 64.29% 17px,
+    curve to 75% 19px with 71.43% 17px,
+    curve to 82.14% 25.5px with 78.57% 21px,
+    curve to 89.29% 20px with 85.71% 30px,
+    curve to 100% 25px with 92.86% 10px,
+    vline to calc(100% - 25px),
+    curve to 89.29% calc(100% - 35.5px) with 92.86% calc(100% - 29px),
+    curve to 82.14% calc(100% - 36px) with 85.71% calc(100% - 42px),
+    curve to 75% calc(100% - 15.5px) with 78.57% calc(100% - 30px),
+    curve to 67.86% calc(100% - 23.5px) with 71.43% calc(100% - 1px),
+    curve to 60.71% calc(100% - 38px) with 64.29% calc(100% - 46px),
+    curve to 53.57% calc(100% - 22px) with 57.14% calc(100% - 30px),
+    curve to 46.43% calc(100% - 29.5px) with 50% calc(100% - 14px),
+    curve to 39.29% calc(100% - 31px) with 42.86% calc(100% - 45px),
+    curve to 32.14% calc(100% - 13px) with 35.71% calc(100% - 17px),
+    curve to 25% calc(100% - 25px) with 28.57% calc(100% - 9px),
+    curve to 17.86% calc(100% - 31px) with 21.43% calc(100% - 41px),
+    curve to 10.71% calc(100% - 35.5px) with 14.29% calc(100% - 21px),
+    curve to 0 calc(100% - 25px) with 7.14% calc(100% - 50px),
+    vline to 0
+  );
+
+  /*transform: rotate(0.5deg);*/
+}
+
+.comp h2 {
+  border-bottom: 1px solid vvar(--blackish);
+  color: var(--blackish);
+  width: 100%;
+  /*background: red;*/
+}
+
+.comp .compPart {
+  background: blue;
+  width: 90%;
+  margin: auto;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  gap: 50px;
+  position: relative;
+  align-items: stretch;
+}
+
+.comp .compPart::before,
+.comp .compPart::after {
+  position: absolute;
+  content: "";
+  height: 70%;
+  border: 2px solid var(--blackish);
+  left: 25px;
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.comp .compPart::after {
+  left: unset;
+  right: 25px;
+}
+
+.comp .compPart .myCompCard {
+  display: flex;
+  flex-direction: column;
+
+  border: 2px solid var(--blackish);
+
+  border-radius: 20px;
+  width: 25%;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+
+  padding: 60px 20px 0px 20px;
+}
+
+.comp .compPart .myCompCard:nth-of-type(1),
+.comp .compPart .myCompCard:nth-of-type(2) {
+  width: 40%;
+}
+
+.comp .compPart .myCompCard:nth-of-type(1)::after,
+.comp .compPart .myCompCard:nth-of-type(2)::after {
+  position: absolute;
+  content: "";
+  height: 70%;
+  border: 2px solid var(--blackish);
+  left: 25px;
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-color: red;
+}
+
+.comp .compPart .myCompCard:nth-of-type(3),
+.comp .compPart .myCompCard:nth-of-type(4),
+.comp .compPart .myCompCard:nth-of-type(5) {
+  margin-top: 50px;
+}
+
+.comp .compPart .myCompCard .myComp {
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: var(--yel);
+  background: var(--blackish);
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 105%;
+  padding: 10px 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+.comp .compPart .myCompCard .pComp {
+  text-align: left;
+  display: inline-block;
+
+  margin: 0;
+}
+
+.comp .compPart .myCompCard .pComp strong {
+  font-weight: bolder;
+}
+
+.comp .compPart .myCompCard .myCompDetails {
+}

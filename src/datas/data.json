@@ -16,6 +16,106 @@
     "photoIntro": "img/GBphoto.webp",
     "photoAlt": "Photo de Gillian Brousse"
   },
+  "comp": {
+    "title": "Mes compétences",
+    "comps": [
+      {
+        "titreComp": "UI/UX/LX DESIGN",
+        "paragComp": [
+          {
+            "boldp": "Analyse des besoins et des usages",
+            "pcomp": ", audits, identification des points de friction et formulation de pistes correctives."
+          },
+
+          {
+            "boldp": "Conception centrée utilisateur",
+            "pcomp": " : personas, parcours, architecture de l’information, wireframes, prototypage et amélioration continue."
+          },
+          {
+            "boldp": "Accessibilité numérique et ergonomie",
+            "pcomp": " pris en compte dans la conception des interfaces."
+          },
+
+          {
+            "boldp": "Learning experience Design ",
+            "pcomp": ": structuration des contenus et des interactions, prise en compte des objectifs pédagogiques, des profils et des modalités d’apprentissage pour favoriser l’engagement et l’efficacité des parcours."
+          }
+        ]
+      },
+      {
+        "titreComp": "DIGITAL LEARNING",
+        "paragComp": [
+          {
+            "boldp": "Conception et adaptation de dispositifs",
+
+            "pcomp": ": modules de formation /autoformation, activités interactives, exercices et ressources multimédias."
+          },
+
+          {
+            "boldp": "Adaptation des parcours,",
+
+            "pcomp": "en fonction des objectifs pédagogiques et des besoins des apprenants."
+          },
+          {
+            "boldp": "Accompagnement et formation des utilisateurs",
+
+            "pcomp": "à la prise en main des environnements et outils numériques."
+          },
+
+          {
+            "boldp": "Formateur sur UniCamp",
+
+            "pcomp": ", plateforme de formation digitale (Graphisme, Web, UI/UX, Ingénierie Pédagogique)."
+          }
+        ]
+      },
+      {
+        "titreComp": "DÉVELOPPEMENT",
+        "paragComp": [
+          {
+            "boldp": "Développement Front-end et intégration d'interfaces",
+
+            "pcomp": "(HTML, CSS, JavaScript, React)"
+          },
+
+          {
+            "boldp": "Gestion de versions et collaboration",
+
+            "pcomp": " (Git, GitHub)."
+          }
+        ]
+      },
+      {
+        "titreComp": "ADMINISTRATION LMS",
+        "paragComp": [
+          {
+            "boldp": "Accompagnement des formateurs",
+
+            "pcomp": "(conception, mise en ligne et suivi)"
+          },
+
+          {
+            "boldp": "Maintenance, diagnostic & résolution des incidents techniques.",
+            "pcomp": ""
+          }
+        ]
+      },
+      {
+        "titreComp": "GRAPHISME, COMMUNICATION & MULTIMÉDIA",
+        "paragComp": [
+          {
+            "boldp": "Conception graphique print & numérique            ",
+            "pcomp": " : identités visuelles, affiches, infographies, newsletters et supports pédagogiques."
+          },
+
+          {
+            "boldp": "Contenus multimédias",
+            "pcomp": " : vidéo, podcast, ressources interactives et contenus numériques."
+          }
+        ]
+      }
+    ]
+  },
   "parcours": [
     {
       "parcoursTitle1": "2005 - 2016 : Restauration",
