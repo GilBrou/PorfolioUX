@@ -5,7 +5,7 @@ export default function Intro({ data }) {
     <div className="intro">
       <div className="introBox">
         <div className="introPart ileft">
-          <h2>{data.title}</h2>
+          <h2 className="secTitle01">{data.title}</h2>
 
           <p>{data.paragraphIntro}</p>
           <br />

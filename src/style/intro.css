@@ -1,11 +1,9 @@
 /*Module*/
 .intro {
-  background: lightblue;
   margin-top: 50px;
   padding: 100px 25px;
   padding: 75px 25px 50px 25px;
   position: relative;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,15 +51,6 @@
 }
 
 .intro h2 {
-  width: 100%;
-  text-align: center;
-  letter-spacing: 2px;
-  letter-spacing: 3px;
-  font-size: 2em;
-  margin: auto auto 25px auto;
-  padding: 0;
-  color: var(--yel);
-  padding-bottom: 10px;
   border-bottom: 1px solid vvar(--blackish);
   color: var(--blackish);
 }

@@ -1,25 +1,9 @@
 .parcours {
   padding: 100px 25px;
-  max-width: 60vw;
-  max-width: 80vw;
-  max-width: 70vw;
   max-width: 68vw;
   margin: auto;
   position: relative;
   z-index: 500;
-}
-
-.parcours h2 {
-  width: 100%;
-  text-align: center;
-  letter-spacing: 2px;
-  margin: auto auto 25px auto;
-  padding: 0;
-  color: var(--yel);
-  padding-bottom: 10px;
-  pointer-events: none;
-  position: relative;
-  font-weight: 500;
 }
 
 .parcours .card {
@@ -165,16 +149,16 @@
 .card:last-of-type::after {
   content: "";
   position: absolute;
-  bottom: -301.5px;
+  bottom: -162px;
   right: 45%;
   border: solid 2px var(--yel);
   pointer-events: none;
 
   height: 300px;
+  height: 160px;
   width: 50%;
   border-radius: 0 50px;
   border-bottom: none;
-
   border-left: none;
 }
 

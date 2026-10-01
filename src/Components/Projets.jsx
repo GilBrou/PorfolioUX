@@ -29,32 +29,24 @@ function Projets(props) {
   }
   /*Main*/
   return (
-    <section id="réalisations">
-      <div className="réalisations">
-        {/*Title*/}
-        <h1 className="text-center">Réalisations</h1>
+    <section id="realisations">
+      <div className="realisations">
+        <h2 className="secTitle01">Réalisations</h2>
         <div className="container">
-          {/*Tooltip template*/}
           {tTip()}
           {/*Project cards wrapper*/}
           <div className="row otherCardsFade">
-            {/*Dynamic Project cards creation from Json data*/}
             {props.data.projets
               ? props.data.projets.map(
                   (d, i) => (
-                    {
-                      /*Project card*/
-                    },
+                    {/*Project card*/},
                     (
-                      <div
-                        key={d.pId}
-                        className="projectCard thathCard col-md-3 "
-                      >
+                      <div key={d.pId} className="projectCard thathCard">
                         {/*Project image*/}
                         <img
                           src={d.pImg}
                           loading="lazy"
-                          className="img-responsive projectCardImg"
+                          className="projectCardImg"
                           alt={d.pName}
                         />{" "}
                         {/*Project title*/}
@@ -68,9 +60,7 @@ function Projets(props) {
                           {/*Dynamic tech icons creation from Json data*/}
                           {d.technos.map(
                             (technos) => (
-                              {
-                                /*Tech icons*/
-                              },
+                              {/*Tech icons*/},
                               (
                                 <img
                                   key={technos.name}
@@ -81,7 +71,7 @@ function Projets(props) {
                                   data-for="techTip"
                                 />
                               )
-                            )
+                            ),
                           )}
                         </div>
                         {/*Buttons wrapper*/}
@@ -116,7 +106,7 @@ function Projets(props) {
                         </div>
                       </div>
                     )
-                  )
+                  ),
                 )
               : "Loading..."}
           </div>

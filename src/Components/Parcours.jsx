@@ -2,7 +2,7 @@
 function Parcours(props) {
   return (
     <div className="parcours">
-      <h2>Mon parcours</h2>
+      <h2 className="secTitle01">Mon parcours</h2>
 
       <div className="container">
         <div className="row">

@@ -1,28 +1,39 @@
 /*Module*/
-.réalisations {
-  padding-top: 15vh;
-  padding-bottom: 10vh;
+.realisations {
+  padding: 75px 25px 50px 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 800;
+  align-items: center;
+  /*pointer-events: none;*/
 }
-.réalisations .container {
+.realisations .secTitle01 {
+  width: fit-content;
+  margin-top: 20px;
+}
+
+.realisations .container {
   padding: unset;
-  width: 70%;
+  max-width: 85vw;
+  /*background: red;*/
+  border: 2px solid var(--yel);
+  border-radius: 20px;
+  padding: 20px 10px;
 }
-.réalisations .row {
+.realisations .container .row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-/*Title*/
-.réalisations h1 {
-  text-shadow: 0 -1px 1.5px var(--secondary-subcolor);
-  color: var(--primary-subcolor);
-  padding-bottom: 10px;
-  border-bottom: solid 1px var(--secondary-color);
-  margin: auto auto 70px auto;
-  max-width: 245px;
-}
+
 /*Project cards*/
-.projectCard {
+
+.realisations .container .row .thathCard {
+}
+
+.realisations .container .row .projectCard {
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -36,7 +47,7 @@
   transition: 0.5s;
 }
 /*Project image*/
-.projectCardImg {
+.realisations .container .row .projectCard .projectCardImg {
   height: auto;
   margin-bottom: 20px;
   width: 100%;
@@ -52,7 +63,8 @@
   transition: 0.5s;
 }
 /*Project title*/
-.projectCard h2 {
+
+.realisations .container .row .projectCard h2 {
   color: var(--primary-subcolor);
   margin: 10px 10px 5px 10px;
   font-weight: 600;
@@ -61,7 +73,7 @@
   padding-left: 0px;
 }
 /*Project description*/
-.projectCard h3 {
+.realisations .container .row .projectCard h3 {
   margin: 0 10px 0 10px;
   text-align: left;
   color: var(--secondary-subcolor);
@@ -75,7 +87,7 @@
   justify-content: center;
 }
 /*Project details*/
-.projectCard p {
+.realisations .container .row .projectCard p {
   text-align: justify;
   margin: 10px 10px 0 10px;
   height: 152px;
@@ -83,7 +95,7 @@
   max-height: 152px;
 }
 /*Project techs wrapper*/
-.techs {
+.realisations .container .row .projectCard .techs {
   text-align: left;
   padding: 0 10px 0 10px;
   height: 45px;
@@ -92,70 +104,74 @@
   margin-top: 10px;
 }
 /*Tech icons*/
-.techs img {
+.realisations .container .row .projectCard .techs img {
   height: 25px;
   width: auto;
   max-height: 25px;
   margin: 0 3px 0 3px;
 }
 /*Buttons wrapper*/
-.buttonW {
+.realisations .container .row .projectCard .buttonW {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   margin-top: 10px;
 }
 /*Buttons*/
-.projectCard button {
+.realisations .container .row .projectCard button {
   margin: 5px;
   font-family: "Titillium Web", sans-serif;
   text-transform: uppercase;
   color: var(--blackish);
   font-size: 16px;
 }
-.buttonNotNeeded {
+.realisations .container .row .projectCard .buttonNotNeeded {
   display: none;
 }
-.soloButton {
+.realisations .container .row .projectCard .soloButton {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-.soloButton button {
+.realisations .container .row .projectCard .soloButton button {
   width: 100%;
 }
 /*Buttons hover animation*/
-.projectCard button:hover {
+.realisations .container .row .projectCard .projectCard button:hover {
   -webkit-animation: pulseButton 1.5s ease-in-out infinite both;
   animation: pulseButton 1.5s ease-in-out infinite both;
 }
 /*Project cards hover animation*/
-.otherCardsFade {
+
+.realisations .container .otherCardsFade {
   visibility: hidden;
 }
-.otherCardsFade > * {
+.realisations .container .otherCardsFade > * {
   visibility: visible;
-  transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms;
+  transition:
+    opacity 150ms linear 100ms,
+    transform 150ms ease-in-out 100ms;
 }
-.otherCardsFade:hover > * {
+.realisations .container .otherCardsFade:hover > * {
   opacity: 0.5;
   transform: scale(0.99);
   transition: 0.4s;
 }
-.otherCardsFade > *:hover {
+.realisations .container .otherCardsFade > *:hover {
   opacity: 1;
   transform: scale(1.03);
   transition: 0.4s;
 }
-.projectCard:hover .techs img {
+.realisations .container .row .projectCard:hover .techs img {
   -webkit-animation: techAnim 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: techAnim 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-.projectCard:hover .projectCardImg {
+.realisations .container .row .projectCard:hover .projectCardImg {
   filter: saturate(1.1);
   transition: 0.5s;
 }
 /*Tech icons entrance on hover animation*/
+/*
 .projectCard:hover .techs > :nth-child(1) {
   -webkit-animation: techAnim 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: techAnim 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -196,3 +212,4 @@
   -webkit-animation: techAnim 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.8s both;
   animation: techAnim 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.8s both;
 }
+*/
