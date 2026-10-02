@@ -7,25 +7,103 @@
   justify-content: center;
   z-index: 800;
   align-items: center;
-  /*pointer-events: none;*/
+  /*overflow: hidden;*/
+  max-width: 95vw;
+  margin: auto;
 }
+
+.realisations::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 185px;
+  top: -38px;
+  border-radius: 0 0 20px 0;
+  border: 2px solid var(--yel);
+  z-index: -1;
+  left: 50%;
+  border-top: unset;
+  border-left: unset;
+}
+/*
+.realisations::before {
+  content: "";
+  position: absolute;
+  height: 120px;
+  top: -20px;
+  border-radius: 0 0 20px 20px;
+  border: 1px solid var(--yel);
+  z-index: -1;
+  border-top: unset;
+}
+*/
 .realisations .secTitle01 {
   width: fit-content;
-  margin-top: 20px;
+  margin: 20px auto 75px;
+  margin: 20px auto 25px;
+  background: url("./background/background.webp"), var(--blackish);
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-size: cover;
+  padding: 35px 35px 0 35px;
 }
 
 .realisations .container {
   padding: unset;
-  max-width: 85vw;
-  /*background: red;*/
-  border: 2px solid var(--yel);
-  border-radius: 20px;
+  /*max-width: 85vw;*/
+  /*background: lightblue;*/
   padding: 20px 10px;
+  /*overflow: hidden;*/
 }
+
+.realisations .secTitle02 {
+  background: url("./background/background.webp"), var(--blackish);
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-size: cover;
+  padding: unset;
+  text-align: left;
+  padding: 10px 15px;
+  width: fit-content;
+  justify-self: flex-start;
+  float: left;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.realisations .secTitle02::before {
+  content: "";
+  position: absolute;
+  width: 685px;
+  height: 125px;
+  border-radius: 20px 0;
+  border: 2px solid var(--yel);
+  z-index: -100;
+  left: 50px;
+  top: -87px;
+  border-right: unset;
+  border-bottom: unset;
+}
+
+.realisations .secTitle02::after {
+  content: "";
+  position: absolute;
+  height: 3650px;
+  width: 100%;
+  border: 2px solid var(--yel);
+  z-index: -100;
+  left: 52%;
+  border-right: unset;
+  border-top: unset;
+  border-bottom: unset;
+  border-radius: 20px 0 0 0;
+}
+
 .realisations .container .row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding-top: 55px;
 }
 
 /*Project cards*/
@@ -52,7 +130,8 @@
   margin-bottom: 20px;
   width: 100%;
   border: 2px solid var(--secondary-color);
-  box-shadow: 0 6px 0px 1px #6c5003;
+  border: 1px solid var(--yel);
+  box-shadow: 0 6px 0px 0px var(--yel);
   border-radius: 18px;
   padding: 5px;
   filter: saturate(0.9);

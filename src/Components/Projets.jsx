@@ -33,6 +33,8 @@ function Projets(props) {
       <div className="realisations">
         <h2 className="secTitle01">Réalisations</h2>
         <div className="container">
+          <h3 className="secTitle01 secTitle02">Web</h3>
+
           {tTip()}
           {/*Project cards wrapper*/}
           <div className="row otherCardsFade">
@@ -49,59 +51,38 @@ function Projets(props) {
                           className="projectCardImg"
                           alt={d.pName}
                         />{" "}
-                        {/*Project title*/}
                         <h2>{d.pName}</h2>
-                        {/*Project description*/}
                         <h3>{d.pDescription}</h3>
-                        {/*Project details*/}
                         <p>{d.pInfos}</p>
-                        {/*Project techs wrapper*/}
                         <div className="techs">
-                          {/*Dynamic tech icons creation from Json data*/}
-                          {d.technos.map(
-                            (technos) => (
-                              {/*Tech icons*/},
-                              (
-                                <img
-                                  key={technos.name}
-                                  loading="lazy"
-                                  src={technos.icon}
-                                  alt={technos.name}
-                                  data-tip={technos.name}
-                                  data-for="techTip"
-                                />
-                              )
-                            ),
-                          )}
+                          {d.technos.map((technos) => (
+                            <img
+                              key={technos.name}
+                              loading="lazy"
+                              src={technos.icon}
+                              alt={technos.name}
+                              data-tip={technos.name}
+                              data-for="techTip"
+                            />
+                          ))}
                         </div>
-                        {/*Buttons wrapper*/}
                         <div className="buttonW">
-                          {/*Site demo link*/}
                           <a
                             href={d.pSite}
                             className={d.bClassName}
                             target="_blank"
                             rel="noreferrer"
                           >
-                            {/*Button*/}
-                            <button>
-                              {/*Buttons text*/}
-                              {d.but1}
-                            </button>
+                            <button>{d.but1}</button>
                           </a>
 
-                          {/*Code repo link*/}
                           <a
                             href={d.pCode}
                             className={d.b2ClassName}
                             target="_blank"
                             rel="noreferrer"
                           >
-                            {/*Button*/}
-                            <button>
-                              {/*Buttons text*/}
-                              {d.but2}
-                            </button>
+                            <button>{d.but2}</button>
                           </a>
                         </div>
                       </div>
