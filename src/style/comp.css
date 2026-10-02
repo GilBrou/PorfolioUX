@@ -1,32 +1,20 @@
 /*Module*/
 
-/*
-
-.title
-.comps
-
-.titreComp
-.paragComp
-.boldp
-.pcomp
-*/
-
 .comp {
   margin-top: 35px;
-  padding: 100px 25px;
-  padding: 75px 25px;
+  padding: 75px 25px 125px 25px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 800;
-  width: 100vw;
   align-items: center;
   pointer-events: none;
   background: url("./background/background.webp"), var(--yel);
   background-attachment: fixed;
   background-blend-mode: overlay;
   background-size: cover;
+  overflow: visible;
   clip-path: shape(
     from 0 25px,
     curve to 10.71% 25.5px with 7.14% 26px,
@@ -58,19 +46,16 @@
     curve to 0 calc(100% - 25px) with 7.14% calc(100% - 50px),
     vline to 0
   );
-
-  /*transform: rotate(0.5deg);*/
 }
 
 .comp h2 {
   border-bottom: 1px solid vvar(--blackish);
   color: var(--blackish);
   width: 100%;
-  /*background: red;*/
+  margin: 25px auto 55px auto;
 }
 
 .comp .compPart {
-  background: blue;
   width: 90%;
   margin: auto;
   padding: 15px;
@@ -80,40 +65,42 @@
   gap: 15px;
   flex-wrap: wrap;
   gap: 50px;
+  gap: 20px 75px;
   position: relative;
   align-items: stretch;
+  overflow: hidden;
 }
 
-.comp .compPart::before,
 .comp .compPart::after {
   position: absolute;
   content: "";
-  height: 70%;
+  height: 60%;
   border: 2px solid var(--blackish);
-  left: 25px;
-  top: 0;
+  width: 98%;
   top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
   transform: translateY(-50%);
-}
-
-.comp .compPart::after {
-  left: unset;
-  right: 25px;
+  z-index: -1;
+  border-radius: 20px;
 }
 
 .comp .compPart .myCompCard {
   display: flex;
   flex-direction: column;
-
   border: 2px solid var(--blackish);
-
   border-radius: 20px;
   width: 25%;
   align-items: center;
-  overflow: hidden;
+  justify-content: flex-start;
   position: relative;
-
-  padding: 60px 20px 0px 20px;
+  background: url("./background/background.webp"), var(--yel);
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-color: var(--beige);
+  color: var(--blackish);
 }
 
 .comp .compPart .myCompCard:nth-of-type(1),
@@ -121,57 +108,28 @@
   width: 40%;
 }
 
-.comp .compPart .myCompCard:nth-of-type(1)::after,
-.comp .compPart .myCompCard:nth-of-type(2)::after {
-  position: absolute;
-  content: "";
-  height: 70%;
-  border: 2px solid var(--blackish);
-  left: 25px;
-  top: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  border-color: red;
-}
-
 .comp .compPart .myCompCard:nth-of-type(3),
 .comp .compPart .myCompCard:nth-of-type(4),
 .comp .compPart .myCompCard:nth-of-type(5) {
   margin-top: 50px;
-}
-
-.comp .compPart .myCompCard .myComp {
-  margin: 0;
-  padding: 0;
-  align-self: center;
-  height: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  color: var(--yel);
-  background: var(--blackish);
-  margin: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 105%;
-  padding: 10px 5px;
-  padding: 5px;
   text-align: center;
 }
 
-.comp .compPart .myCompCard .pComp {
-  text-align: left;
-  display: inline-block;
-
+.comp .compPart .myCompCard .myComp {
+  color: var(--yel);
+  background: var(--blackish);
+  width: stretch;
+  text-align: center;
+  padding: 10px;
+  border-radius: 20px 20px 0 0;
   margin: 0;
+}
+
+.comp .compPart .myCompCard .pComp {
+  margin: 0;
+  padding: 0 10px;
 }
 
 .comp .compPart .myCompCard .pComp strong {
   font-weight: bolder;
-}
-
-.comp .compPart .myCompCard .myCompDetails {
 }
