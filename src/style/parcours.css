@@ -79,7 +79,7 @@
   position: relative;
   gap: 15px;
 }
-
+/*
 .card .inContent::before {
   position: absolute;
   content: "";
@@ -101,7 +101,7 @@
   left: -47px;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
-
+*/
 .parcours .card:nth-of-type(even) .info .inContent {
   flex-direction: row-reverse;
 }
