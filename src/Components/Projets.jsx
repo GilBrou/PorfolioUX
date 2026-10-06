@@ -8,9 +8,10 @@ import Projet04GRAPH from "./Projet04GRAPH";
 
 /***PROJECTS MODULE***/
 function Projets(props) {
-  //console.log(props);
-  //console.log(props.data.projets);
-  let myDevprojects = props.data.projetsDev;
+  let myDevprojects = props.data.pDatas.projetsDev;
+  let myGraphprojects = props.data.pDatas4;
+
+  /*console.log(myGraphprojects);*/
 
   /*Tooltip*/
   function tTip() {
@@ -44,7 +45,7 @@ function Projets(props) {
         <Projet01UX data={myDevprojects} />
         <Projet02LMS data={myDevprojects} />
         <Projet03DEV data={myDevprojects} />
-        <Projet04GRAPH data={myDevprojects} />
+        <Projet04GRAPH data={myGraphprojects} />
       </div>
     </section>
   );
