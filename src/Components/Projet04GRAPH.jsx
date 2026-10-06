@@ -34,7 +34,7 @@ export default function Projet04GRAPH(props) {
   /*Main*/
   return (
     <div className="container">
-      <h3 className="secTitle01 secTitle02">Digital learning / LMS</h3>
+      <h3 className="secTitle01 secTitle02">Graphisme</h3>
 
       {tTip()}
       {/*Project cards wrapper*/}

@@ -14,14 +14,14 @@ import CV from "./Components/CV";
 import Contact from "./Components/Contact";*/
 
 /***DATAS***/
-import projetsD from "./datas/projetsD.json";
+import projetsDev from "./datas/projetsDev.json";
 
 export default function Homepage(data) {
   /*Get projects datas*/
   const [pDatas, setPDatas] = useState({});
   useEffect(() => {
     async function fetchDatas() {
-      setPDatas(projetsD);
+      setPDatas(projetsDev);
     }
     fetchDatas();
   }, []);
@@ -37,7 +37,6 @@ export default function Homepage(data) {
       <Projets data={pDatas} />
 
       {/*
-            <Parcours data={data.data.parcours} />
          
             <CV data={data.data.cv} />
             <Contact data={data.data.contact} />*/}

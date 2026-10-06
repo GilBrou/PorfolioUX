@@ -1,44 +1,35 @@
-/***HEADER/NAV MODULE***/
+/*** HEADER/NAV MODULE ***/
 export default function Header(props) {
+  function DisplayMenu(myMenu, i) {
+    const slug = myMenu
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+
+    return (
+      <li key={"menuItem" + i}>
+        <a href={`#${slug}`}>{myMenu}</a>
+      </li>
+    );
+  }
   return (
     <nav>
       <a href="/">
         <img
-          src={props.data ? props.data.logo : "loading..."}
-          alt={props.data ? props.data.nom : "loading..."}
-        />{" "}
+          src={props.data?.logo || "loading..."}
+          alt={props.data?.nom || "loading..."}
+        />
       </a>
 
       <ul>
         <li>
-          <a href="#a-propos">
-            {props.data ? props.data.sectionTitle1 : "loading..."}
+          <a href="/">
+            <i className="fa fa-home" aria-hidden="true"></i>
           </a>
         </li>
-
-        <li>
-          <a href="#parcours">
-            <i className="fa fa-facebook"></i>
-            {props.data ? props.data.sectionTitle2 : "loading..."}
-          </a>
-        </li>
-
-        <li>
-          <a href="#réalisations">
-            {props.data ? props.data.sectionTitle3 : "loading..."}
-          </a>
-        </li>
-        <li>
-          <a href="#cv">
-            {props.data ? props.data.sectionTitle4 : "loading..."}
-          </a>
-        </li>
-
-        <li>
-          <a href="#contact">
-            {props.data ? props.data.sectionTitle5 : "loading..."}
-          </a>
-        </li>
+        {props.data?.sectionTitle?.map((myMenu, i) => DisplayMenu(myMenu, i))}
       </ul>
     </nav>
   );

@@ -5,7 +5,6 @@ export default function Comp({ data }) {
     return (
       <div className="myCompCard" key={"myCompCard" + i}>
         <h3 className="myComp">{item.titreComp}</h3>
-        {/*<div className="myCompDetails">tableau à venir</div>*/}
         {item.paragComp.map((item, i) => renderComp2(item, i))}
       </div>
     );

@@ -34,7 +34,7 @@ export default function Projet01UX(props) {
   /*Main*/
   return (
     <div className="container">
-      <h3 className="secTitle01 secTitle02">Developpement</h3>
+      <h3 className="secTitle01 secTitle02">Développement</h3>
 
       {tTip()}
       {/*Project cards wrapper*/}
