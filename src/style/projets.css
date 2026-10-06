@@ -8,6 +8,7 @@
   z-index: 800;
   align-items: center;
   max-width: 95vw;
+  width: 95vw;
   margin: auto;
 }
 
@@ -42,288 +43,28 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /*background: blue;*/
+  border-left: 2px solid var(--yel);
+  width: 100%;
 }
 
-.realisations .container::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  height: 110%;
-  /*width: 100%;*/
-  border: 2px solid var(--yel);
-  z-index: -100;
-  left: 85px;
-  top: 185px;
-  top: 149px;
-
-  border-right: unset;
-  /*border-top: unset;**/
-  border-bottom: unset;
-  border-radius: 20px 0 0 0;
-  width: 50%;
-  /*background: red;*/
-
-  /*  height: calc(100% - 200px);*/
-
-  /*top: 265px;*/
-  /*width: 50px;*/
-}
-
-.realisations:not(:first-of-type) .container::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  height: 110%;
-  /*width: 100%;*/
-  border: 2px solid var(--yel);
-  z-index: -100;
-  left: 85px;
-  top: 185px;
-  top: 140px;
-
-  border-right: unset;
-  /*border-top: unset;**/
-  border-bottom: unset;
-  border-radius: 20px 0 0 0;
-  border-radius: 0;
-  width: 50%;
-  /*background: red;*/
-
-  /*  height: calc(100% - 200px);*/
-
-  /*top: 265px;*/
-  /*width: 50px;*/
-} /******/
-
-/*
-.realisations:nth-of-type(2) .container::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  height: calc(100% - 200px);
-  border: 2px solid var(--yel);
-  z-index: -100;
-  left: 85px;
-  top: 185px;
-
-  border-right: unset;
-  border-top: unset;
-  border-bottom: unset;
-  border-color: red;
-}
-*/
 .realisations .secTitle02 {
-  background: url("./background/background.webp"), var(--blackish);
-  background-attachment: fixed;
-  background-blend-mode: overlay;
-  background-size: cover;
   padding: unset;
   text-align: left;
   padding: 10px 15px;
   width: fit-content;
   justify-self: flex-start;
-  float: left;
   font-size: 25px;
   text-transform: uppercase;
-  width: 100%;
+  margin: auto;
+  text-align: center;
 }
 
 .realisations:first-of-type .secTitle02::before {
   content: "";
   position: absolute;
-  width: 685px;
-  height: 125px;
-  /*border-radius: 20px 0;*/
-  border: 2px solid var(--yel);
-  z-index: -100;
-  left: -36px;
-  top: 23px;
-  border-right: unset;
-  border-bottom: unset;
-}
-
-/*.realisations:nth-of-type(2) .secTitle02::before {*/
-/*.realisations:not(:first-of-type) .secTitle02::before {
-  content: "";
-  position: absolute;
-  width: 685px;
-  height: 115px;
-
-  border: 1px solid var(--yel);
-  z-index: -100;
-  left: 50px;
-  top: -130px;
-  border-radius: 0;
-  width: 0;
-  border-color: green;
-}*/
-/*
-
-/*
-.realisations .secTitle02::after {
-  content: "";
-  position: absolute;
-  
-  height: 1000px;
-  width: 100%;
-  border: 2px solid var(--yel);
-  z-index: -100;
-  left: 52%;
-  border-right: unset;
-  border-top: unset;
-  border-bottom: unset;
-  border-radius: 20px 0 0 0;
-}
-*/
-.realisations .container .row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-top: 55px;
-  gap: 5px;
-  max-width: 85vw;
-}
-
-/*Project cards*/
-
-.realisations .container .row .projectCard {
-  display: flex;
-  flex-direction: column;
-
-  margin: auto;
-  padding: 0 10px 10px 10px;
-  margin-bottom: 70px;
-  transition: 0.5s;
-  max-width: 400px;
-  height: stretch;
-
-  align-items: flex-start;
-  justify-content: space-between;
-  overflow: hidden;
-}
-/*Project image*/
-.realisations .container .row .projectCard .projectCardImg {
-  height: auto;
-  border: 1px solid var(--yel);
-  box-shadow: 0 6px 0px 0px var(--yel);
-  border-radius: 18px;
-  padding: 5px;
-  max-width: 400px;
-  width: 380px;
-  margin: auto;
-  margin: 0 auto 0;
-  display: block;
-  flex-shrink: 0;
-}
-/*Project image hover animation*/
-.projectCard:hover .projectCardImg {
-  filter: saturate(1.1);
-  transition: 0.5s;
-  pointer-events: none;
-}
-/*Project title*/
-
-.realisations .container .row .projectCard h2 {
-  color: var(--lightB);
-  font-size: 18px;
-  text-align: left;
-  width: 95%;
-  width: fit-content;
-  margin: 15px 0 0 0;
-  padding: 0;
-  pointer-events: none;
-}
-/*Project description*/
-.realisations .container .row .projectCard h3 {
-  font-size: 16px;
-  font-style: italic;
-  color: var(--beige);
-  text-align: left;
-  width: fit-content;
-  margin: 0 0 10px 0;
-  pointer-events: none;
-
-  padding: 0;
-}
-/*Project details*/
-.realisations .container .row .projectCard p {
-  text-align: justify;
-  margin: 0;
-  padding: 0;
-  pointer-events: none;
-}
-/*Project techs wrapper*/
-.realisations .container .row .projectCard .techs {
-  padding: 5px 0;
-  margin: 5px 0;
-  width: 95%;
-  display: flex;
-  align-items: center;
-}
-/*Tech icons*/
-.realisations .container .row .projectCard .techs img {
-  padding: 0;
-  margin: 0 5px;
-  background: rgba(255, 255, 255, 0.55);
-  padding: 5px;
-  border-radius: 50%;
-}
-/*Buttons wrapper*/
-.realisations .container .row .projectCard .buttonW {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 10px;
-  margin: auto;
-  position: relative;
-  width: 100%;
-}
-
-/*Buttons*/
-.realisations .container .row .projectCard button {
-  all: unset;
-  text-transform: uppercase;
-  color: var(--blackish);
-  font-size: 16px;
-  font-weight: 500;
-  padding: 10px 15px;
-  border: 2px solid var(--yel);
-  border-radius: 12px;
-  text-align: center;
-  margin: auto;
-  color: var(--beige);
-}
-.realisations .container .row .projectCard .buttonNotNeeded {
-  display: none;
-}
-.realisations .container .row .projectCard .soloButton {
-  display: flex;
-  justify-content: center;
-}
-.realisations .container .row .projectCard .soloButton button {
-  width: 100%;
-}
-/*Buttons hover animation*/
-.realisations .container .row .projectCard .projectCard button:hover {
-  -webkit-animation: pulseButton 1.5s ease-in-out infinite both;
-  animation: pulseButton 1.5s ease-in-out infinite both;
-}
-/*Project cards hover animation*/
-
-.realisations .container .otherCardsFade {
-  visibility: hidden;
-}
-.realisations .container .otherCardsFade > * {
-  visibility: visible;
-  transition:
-    opacity 150ms linear 100ms,
-    transform 150ms ease-in-out 100ms;
-}
-.realisations .container .otherCardsFade > *:hover {
-  opacity: 1;
-  transform: scale(1.03);
-  transition: 0.4s;
+  width: 1000%;
+  border-top: 2px solid var(--yel);
+  left: -1000%;
+  top: 50%;
+  transform: translateY(-50%);
 }

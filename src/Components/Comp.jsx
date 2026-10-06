@@ -2,8 +2,6 @@
 
 export default function Comp({ data }) {
   function renderComp(item, i) {
-    console.log(item);
-
     return (
       <div className="myCompCard" key={"myCompCard" + i}>
         <h3 className="myComp">{item.titreComp}</h3>

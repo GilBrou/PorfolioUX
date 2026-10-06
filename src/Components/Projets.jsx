@@ -1,8 +1,17 @@
 import ReactTooltip from "react-tooltip";
 import { useEffect, useState } from "react";
 
+import Projet01UX from "./Projet01UX";
+import Projet02LMS from "./Projet02LMS";
+import Projet03DEV from "./Projet03DEV";
+import Projet04GRAPH from "./Projet04GRAPH";
+
 /***PROJECTS MODULE***/
 function Projets(props) {
+  //console.log(props);
+  //console.log(props.data.projets);
+  let myDevprojects = props.data.projetsDev;
+
   /*Tooltip*/
   function tTip() {
     const [tip, setTip] = useState(0);
@@ -32,242 +41,10 @@ function Projets(props) {
     <section id="realisations">
       <div className="realisations">
         <h2 className="secTitle01">Exemples de réalisations</h2>
-
-        <div className="container">
-          <h3 className="secTitle01 secTitle02">UI/UX</h3>
-
-          {tTip()}
-          {/*Project cards wrapper*/}
-          <div className="row otherCardsFade">
-            {props.data.projets
-              ? props.data.projets.map((d, i) => (
-                  <div key={d.pId} className="projectCard thathCard">
-                    <img
-                      src={d.pImg}
-                      loading="lazy"
-                      className="projectCardImg"
-                      alt={d.pName}
-                    />{" "}
-                    <h2>{d.pName}</h2>
-                    <h3>{d.pDescription}</h3>
-                    <p>{d.pInfos}</p>
-                    <div className="techs">
-                      {d.technos.map((technos) => (
-                        <img
-                          key={technos.name}
-                          loading="lazy"
-                          src={technos.icon}
-                          alt={technos.name}
-                          data-tip={technos.name}
-                          data-for="techTip"
-                        />
-                      ))}
-                    </div>
-                    <div className="buttonW">
-                      <a
-                        href={d.pSite}
-                        className={d.bClassName}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <button>{d.but1}</button>
-                      </a>
-
-                      <a
-                        href={d.pCode}
-                        className={d.b2ClassName}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <button>{d.but2}</button>
-                      </a>
-                    </div>
-                  </div>
-                ))
-              : "Loading..."}
-          </div>
-        </div>
-      </div>
-      <div className="realisations">
-        <div className="container container2">
-          <h3 className="secTitle01 secTitle02">Digital Learning / LMS</h3>
-
-          {tTip()}
-          {/*Project cards wrapper*/}
-          <div className="row otherCardsFade">
-            {props.data.projets
-              ? props.data.projets.map((d, i) => (
-                  <div key={d.pId} className="projectCard thathCard">
-                    <img
-                      src={d.pImg}
-                      loading="lazy"
-                      className="projectCardImg"
-                      alt={d.pName}
-                    />{" "}
-                    <h2>{d.pName}</h2>
-                    <h3>{d.pDescription}</h3>
-                    <p>{d.pInfos}</p>
-                    <div className="techs">
-                      {d.technos.map((technos) => (
-                        <img
-                          key={technos.name}
-                          loading="lazy"
-                          src={technos.icon}
-                          alt={technos.name}
-                          data-tip={technos.name}
-                          data-for="techTip"
-                        />
-                      ))}
-                    </div>
-                    <div className="buttonW">
-                      <a
-                        href={d.pSite}
-                        className={d.bClassName}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <button>{d.but1}</button>
-                      </a>
-
-                      <a
-                        href={d.pCode}
-                        className={d.b2ClassName}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <button>{d.but2}</button>
-                      </a>
-                    </div>
-                  </div>
-                ))
-              : "Loading..."}
-          </div>
-        </div>
-      </div>
-
-      <div className="realisations">
-        <div className="container container2">
-          <h3 className="secTitle01 secTitle02">Developpement</h3>
-
-          {tTip()}
-          {/*Project cards wrapper*/}
-          <div className="row otherCardsFade">
-            {props.data.projets
-              ? props.data.projets.map(
-                  (d, i) => (
-                    {/*Project card*/},
-                    (
-                      <div key={d.pId} className="projectCard thathCard">
-                        {/*Project image*/}
-                        <img
-                          src={d.pImg}
-                          loading="lazy"
-                          className="projectCardImg"
-                          alt={d.pName}
-                        />{" "}
-                        <h2>{d.pName}</h2>
-                        <h3>{d.pDescription}</h3>
-                        <p>{d.pInfos}</p>
-                        <div className="techs">
-                          {d.technos.map((technos) => (
-                            <img
-                              key={technos.name}
-                              loading="lazy"
-                              src={technos.icon}
-                              alt={technos.name}
-                              data-tip={technos.name}
-                              data-for="techTip"
-                            />
-                          ))}
-                        </div>
-                        <div className="buttonW">
-                          <a
-                            href={d.pSite}
-                            className={d.bClassName}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <button>{d.but1}</button>
-                          </a>
-
-                          <a
-                            href={d.pCode}
-                            className={d.b2ClassName}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <button>{d.but2}</button>
-                          </a>
-                        </div>
-                      </div>
-                    )
-                  ),
-                )
-              : "Loading..."}
-          </div>
-        </div>
-      </div>
-      <div className="realisations">
-        <div className="container container2">
-          <h3 className="secTitle01 secTitle02">Graphisme</h3>
-
-          {tTip()}
-          {/*Project cards wrapper*/}
-          <div className="row otherCardsFade">
-            {props.data.projets
-              ? props.data.projets.map(
-                  (d, i) => (
-                    {/*Project card*/},
-                    (
-                      <div key={d.pId} className="projectCard thathCard">
-                        {/*Project image*/}
-                        <img
-                          src={d.pImg}
-                          loading="lazy"
-                          className="projectCardImg"
-                          alt={d.pName}
-                        />{" "}
-                        <h2>{d.pName}</h2>
-                        <h3>{d.pDescription}</h3>
-                        <p>{d.pInfos}</p>
-                        <div className="techs">
-                          {d.technos.map((technos) => (
-                            <img
-                              key={technos.name}
-                              loading="lazy"
-                              src={technos.icon}
-                              alt={technos.name}
-                              data-tip={technos.name}
-                              data-for="techTip"
-                            />
-                          ))}
-                        </div>
-                        <div className="buttonW">
-                          <a
-                            href={d.pSite}
-                            className={d.bClassName}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <button>{d.but1}</button>
-                          </a>
-
-                          <a
-                            href={d.pCode}
-                            className={d.b2ClassName}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <button>{d.but2}</button>
-                          </a>
-                        </div>
-                      </div>
-                    )
-                  ),
-                )
-              : "Loading..."}
-          </div>
-        </div>
+        <Projet01UX data={myDevprojects} />
+        <Projet02LMS data={myDevprojects} />
+        <Projet03DEV data={myDevprojects} />
+        <Projet04GRAPH data={myDevprojects} />
       </div>
     </section>
   );
