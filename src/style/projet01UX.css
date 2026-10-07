@@ -1,28 +1,29 @@
 /*Module*/
-/*.UXCont */
-.row {
-	max-width: 80% !important;
-	max-width: 98% !important;
+.UXCont .row {
+	/*max-width: 80% !important;*/
 	/*background: red;*/
-	gap: 1px;
+	gap: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 55px;
+	max-width: 90vw;
 }
 
 /*.UXCont */
 .Frame {
 	all: unset;
-
-	/*width: 300px;*/
-	/*height: 300px;*/
 	height: 150px;
-	max-width: 400px;
-	/*aspect-ratio: 3508 / 2480;*/
-
+	max-width: 300px;
 	transition: 0.5s;
 
 	overflow: hidden;
 	/*box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);*/
 	cursor: pointer;
 	margin: 0;
+	margin: 15px;
+	margin: 15px auto;
 }
 
 /*.UXCont */

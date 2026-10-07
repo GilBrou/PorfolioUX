@@ -1,19 +1,17 @@
 /*Module*/
 
-.realisations .container .row {
+.devCont .row {
+  /*background: blue;*/
   display: flex;
   justify-content: center !important;
   align-items: flex-start !important;
   flex-wrap: wrap;
   padding-top: 55px;
-  gap: 35px;
-  gap: 50px;
-
   gap: 100px 60px;
+  gap: 15px 37px;
 
-  /*max-width: 90vw;*/ /*ou non ?*/
-  max-width: 95vw;
-  max-width: 93vw;
+  max-width: 90vw;
+  /*max-width: 80% !important;*/
 }
 
 /*Project cards*/
@@ -95,6 +93,7 @@
   margin: 0;
   padding: 0;
   pointer-events: none;
+  display: none;
 }
 /*Project techs wrapper*/
 .realisations .container .row .projectCard .techs {
@@ -104,6 +103,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  display: none;
 }
 /*Tech icons*/
 .realisations .container .row .projectCard .techs img {

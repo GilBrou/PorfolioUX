@@ -1,8 +1,16 @@
 /*A4 = 210 × 297 mm → 2480 × 3508 px à 300 DPI.*/
 
 .graphCont .row {
-  max-width: 80% !important;
-  /*background: red;*/
+  /*max-width: 80% !important;*/
+  /*background: green;*/
+
+  gap: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 55px;
+  max-width: 90vw;
 }
 
 /*
