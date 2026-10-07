@@ -26,8 +26,9 @@
   },
   "scripts": {
     "generate-graph": "node scripts/generateGraphImages.js",
-    "start": "npm run generate-graph && react-scripts start",
-    "build": "npm run generate-graph && react-scripts build",
+    "generate-UX": "node scripts/generateUXImages.js",
+    "start": "npm run generate-UX && npm run generate-graph && react-scripts start",
+    "build": "npm run generate-UX && npm run generate-graph && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -19,8 +19,6 @@ export default function Projet04GRAPH(data) {
             className="Frame"
             onClick={() => setSelectedImage(d)}
           >
-            <p>{d.replace(/\.webp$/, "")}</p>
-
             <img src={`/img/Graph/${d}`} className="img-responsive" alt={d} />
           </div>
         ))}

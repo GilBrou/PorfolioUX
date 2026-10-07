@@ -48,14 +48,6 @@ html {
   font-weight: 400;
   color: var(--beige);
 
-  /*
-  background: url("./background/background.webp");
-  background-attachment: fixed;
-  background-blend-mode: overlay;
-  background-size: cover;
-
-
-  */
   background: url("./background/background.webp"), var(--blackish);
   background-attachment: fixed;
   background-blend-mode: overlay;

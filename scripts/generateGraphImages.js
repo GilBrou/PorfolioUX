@@ -4,7 +4,7 @@ const path = require("path");
 const graphDir = path.join(__dirname, "../public/img/Graph");
 const outputFile = path.join(__dirname, "../src/datas/projetsGraph.json");
 
-const extensions = [".jpg", ".jpeg", ".png", ".webp", ".gif", ".svg"];
+const extensions = [".webp"];
 
 const files = fs
   .readdirSync(graphDir)
@@ -13,4 +13,4 @@ const files = fs
 
 fs.writeFileSync(outputFile, JSON.stringify(files, null, 2));
 
-console.log(`✓ ${files.length} images trouvées → projetsGraph.json`);
+//console.log(`✓ ${files.length} images trouvées → projetsGraph.json`);

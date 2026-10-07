@@ -1,73 +1,35 @@
 /*A4 = 210 × 297 mm → 2480 × 3508 px à 300 DPI.*/
 
-.graphCont {
-  /*background: red;*/
-}
-
 .graphCont .row {
   /*background: blue;*/
   max-width: 80% !important;
 }
 .Frame {
-  width: 175px;
-  aspect-ratio: 190 / 280;
-
-  width: 175px;
   width: 200px;
   aspect-ratio: 2480 / 3508;
-
   transform-origin: center;
   transition: 0.5s;
-  /*margin: 40px 15px;*/
   padding: 0px;
   display: inline-block;
-  /*padding: 5px 10px 0px 10px;*/
-  /*padding: 10px;*/
-  /*padding: 10px 13px 3px 10px;*/
   box-sizing: border-box;
   border: 10px solid;
   border-color: var(--yel) var(--yel3) var(--yel2) var(--yel3);
-  background: var(
-    --beige
-  ); /*
-  box-shadow:
-    inset 0 2px 5px rgba(0, 0, 0, 0.6),
-    0 5px 2px rgba(0, 0, 0, 0.1),
-    0 10px 20px rgba(0, 0, 0, 0.8);*/
-
+  background: var(--beige);
   box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
   gap: 50px;
   position: relative;
   overflow: hidden;
   background: var(--blackish);
   cursor: pointer;
-  /*border-color: #2f2d2d #434040 #4f4c4c #434040;*/
-  /*border-color: #d0d2d2 #bcbfbf #b0b3b3 #bcbfbf;*/
-}
-
-.Frame p {
-  position: absolute;
-  bottom: -15%;
-  width: 100%;
-  left: 50%;
-  margin: 0 auto;
-  transform: translateX(-50%);
-  text-transform: uppercase;
-  text-align: center;
-  display: none;
 }
 
 .Frame img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-
+  /*  object-fit: contain;*/
   object-fit: cover;
   border: 2px solid;
   border-color: #bbbab4 #c7c7bf #e5e4df #c7c7bf;
-  /*box-shadow:
-    0 -1px 1px rgba(0, 0, 0, 0.1),
-    0 1px 1px 1px rgba(255, 255, 255, 0.7);*/
   padding: 0;
   box-shadow: none;
   margin: 0;
@@ -82,15 +44,11 @@
   position: fixed;
   inset: 0;
   z-index: 9999;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 40px;
-
   background: rgba(0, 0, 0, 0.9);
-
   cursor: zoom-out;
 }
 
@@ -98,12 +56,9 @@
 .imageModal img {
   max-width: 95vw;
   max-height: 95vh;
-
   width: auto;
   height: auto;
-
   object-fit: contain;
-
   cursor: default;
 }
 
@@ -112,16 +67,12 @@
   position: absolute;
   top: 20px;
   right: 30px;
-
   border: none;
   background: transparent;
-
   color: white;
   font-size: 50px;
   line-height: 1;
-
   cursor: pointer;
-
   z-index: 10000;
 }
 
