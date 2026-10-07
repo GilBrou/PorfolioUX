@@ -7,7 +7,13 @@
   flex-wrap: wrap;
   padding-top: 55px;
   gap: 35px;
-  max-width: 85vw;
+  gap: 50px;
+
+  gap: 100px 60px;
+
+  /*max-width: 90vw;*/ /*ou non ?*/
+  max-width: 95vw;
+  max-width: 93vw;
 }
 
 /*Project cards*/
@@ -17,17 +23,23 @@
   flex-direction: column;
 
   /*margin: auto;*/
-  padding: 0 10px 10px 10px;
-  margin-bottom: 70px;
+  padding: 0 10px;
+  top: 25px;
+  margin-bottom: 25px;
   transition: 0.5s;
   max-width: 400px;
+  max-width: 380px;
+
   height: stretch;
 
   align-items: flex-start;
   justify-content: space-between;
+  justify-content: flex-start;
   overflow: hidden;
-  /*  background: red;*/
+  /*background: red;*/
+  /*background: blueviolet;*/
 }
+
 /*Project image*/
 .realisations .container .row .projectCard .projectCardImg {
   height: auto;
@@ -37,10 +49,15 @@
   padding: 5px;
   max-width: 400px;
   width: 380px;
-  margin: auto;
-  margin: 0 auto 0;
+
+  max-width: 380px;
+  width: 378px;
+
   display: block;
   flex-shrink: 0;
+  align-self: center;
+  margin: 0;
+  align-self: center !important;
 }
 /*Project image hover animation*/
 .projectCard:hover .projectCardImg {
@@ -85,12 +102,13 @@
   margin: 5px 0;
   width: 95%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 /*Tech icons*/
 .realisations .container .row .projectCard .techs img {
   padding: 0;
-  margin: 0 5px;
+  margin: 5px;
   background: rgba(255, 255, 255, 0.55);
   padding: 5px;
   border-radius: 50%;
@@ -102,53 +120,39 @@
   align-items: center;
   flex-wrap: wrap;
   margin-top: 10px;
-  margin: auto;
   position: relative;
   width: 100%;
+  /*margin-top: auto;*/
+  /*background: red;*/
 }
 
 /*Buttons*/
-.realisations .container .row .projectCard button {
+.realisations .container .row .projectCard .urlButton {
   all: unset;
   text-transform: uppercase;
   color: var(--blackish);
   font-size: 16px;
   font-weight: 500;
   padding: 10px 15px;
+  padding: 5px 10px;
   border: 2px solid var(--yel);
   border-radius: 12px;
   text-align: center;
   margin: auto;
   color: var(--beige);
-}
-.realisations .container .row .projectCard .buttonNotNeeded {
-  display: none;
-}
-.realisations .container .row .projectCard .soloButton {
-  display: flex;
-  justify-content: center;
-}
-.realisations .container .row .projectCard .soloButton button {
-  width: 100%;
-}
-/*Buttons hover animation*/
-.realisations .container .row .projectCard .projectCard button:hover {
-  -webkit-animation: pulseButton 1.5s ease-in-out infinite both;
-  animation: pulseButton 1.5s ease-in-out infinite both;
-}
-/*Project cards hover animation*/
 
-.realisations .container .otherCardsFade {
-  visibility: hidden;
-}
-.realisations .container .otherCardsFade > * {
-  visibility: visible;
-  transition:
-    opacity 150ms linear 100ms,
-    transform 150ms ease-in-out 100ms;
-}
-.realisations .container .otherCardsFade > *:hover {
-  opacity: 1;
-  transform: scale(1.03);
+  /*
+  display: block;
+  box-sizing: border-box;
+*/
+  text-decoration: none;
+
+  cursor: pointer;
   transition: 0.4s;
+}
+
+.realisations .container .row .projectCard .buttonW .urlButton:hover {
+  transform: scale(1.05);
+  background: var(--yel);
+  color: var(--blackish);
 }

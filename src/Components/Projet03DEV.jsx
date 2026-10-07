@@ -1,21 +1,23 @@
 import ReactTooltip from "react-tooltip";
 import { useEffect, useState } from "react";
 
-/***PROJECTS MODULE***/
+/*** PROJECTS MODULE ***/
 
 export default function Projet01UX(props) {
-  //console.log(props.data);
   let myproject = props.data;
 
-  /*Tooltip*/
+  /* Tooltip */
   function tTip() {
     const [tip, setTip] = useState(0);
+
     useEffect(() => {
       function incrementNum() {
         setTip(+1);
       }
+
       incrementNum();
     }, []);
+
     if (tip > 0) {
       return (
         <ReactTooltip
@@ -31,59 +33,82 @@ export default function Projet01UX(props) {
       );
     }
   }
-  /*Main*/
+
+  /* Main */
   return (
     <div className="container">
       <h3 className="secTitle01 secTitle02">Développement</h3>
 
       {tTip()}
-      {/*Project cards wrapper*/}
+
+      {/* Project cards wrapper */}
       <div className="row otherCardsFade">
         {myproject
-          ? myproject.map((d, i) => (
-              <div key={d.pId} className="projectCard thathCard">
-                <img
-                  src={d.pImg}
-                  loading="lazy"
-                  className="projectCardImg"
-                  alt={d.pName}
-                />{" "}
-                <h2>{d.pName}</h2>
-                <h3>{d.pDescription}</h3>
-                <p>{d.pInfos}</p>
-                <div className="techs">
-                  {d.technos.map((technos) => (
-                    <img
-                      key={technos.name}
-                      loading="lazy"
-                      src={technos.icon}
-                      alt={technos.name}
-                      data-tip={technos.name}
-                      data-for="techTip"
-                    />
-                  ))}
-                </div>
-                <div className="buttonW">
-                  <a
-                    href={d.pSite}
-                    className={d.bClassName}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <button>{d.but1}</button>
-                  </a>
+          ? myproject.map((d, i) => {
+              return (
+                <div key={d.pId ?? i} className="projectCard thathCard">
+                  {/* Project image */}
+                  <img
+                    src={d.pImg}
+                    loading="lazy"
+                    className="projectCardImg"
+                    alt={d.pName}
+                  />
 
-                  <a
-                    href={d.pCode}
-                    className={d.b2ClassName}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <button>{d.but2}</button>
-                  </a>
+                  {/* Project title */}
+                  <h2>{d.pName}</h2>
+
+                  {/* Project description */}
+                  <h3>{d.pDescription}</h3>
+
+                  {/* Project information */}
+                  <p>{d.pInfos}</p>
+
+                  {/* Technologies */}
+                  <div className="techs">
+                    {d.technos.map((technos) => (
+                      <img
+                        key={technos.name}
+                        loading="lazy"
+                        src={technos.icon}
+                        alt={technos.name}
+                        data-tip={technos.name}
+                        data-for="techTip"
+                      />
+                    ))}
+                  </div>
+
+                  {/* Buttons */}
+                  {(d.pSite || d.pCode) && (
+                    <div className="buttonW">
+                      {/* Website */}
+                      {d.pSite && (
+                        <a
+                          className="urlButton"
+                          href={d.pSite}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Visiter le site
+                        </a>
+                      )}
+
+                      {/* Source code */}
+                      {d.pCode && (
+                        <a
+                          className="urlButton"
+                          href={d.pCode}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Parcourir le code
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
-              </div>
-            ))
+              );
+            })
           : "Loading..."}
       </div>
     </div>

@@ -1,29 +1,39 @@
 /*Module*/
-.UXCont .row {
-	/*	background: blue;*/
+/*.UXCont */
+.row {
 	max-width: 80% !important;
+	max-width: 98% !important;
+	/*background: red;*/
+	gap: 1px;
 }
 
-.UXCont .Frame {
+/*.UXCont */
+.Frame {
 	all: unset;
 
-	width: 300px;
-	aspect-ratio: 3508 / 2480;
+	/*width: 300px;*/
+	/*height: 300px;*/
+	height: 150px;
+	max-width: 400px;
+	/*aspect-ratio: 3508 / 2480;*/
 
 	transition: 0.5s;
 
-	gap: 50px;
-
 	overflow: hidden;
-	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	/*box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);*/
 	cursor: pointer;
+	margin: 0;
 }
 
-.UXCont .Frame img {
+/*.UXCont */
+.Frame img {
 	width: 100%;
 	height: 100%;
+	object-fit: contain;
+	margin: 0;
 }
 
-.UXCont .Frame:hover {
+/*.UXCont */
+.Frame:hover {
 	transform: scale(1.1);
 }

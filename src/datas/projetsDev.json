@@ -1,19 +1,14 @@
 {
   "projetsDev": [
     {
-      "pId": "projet21",
       "pImg": "img/Dev/e-campus.webp",
       "pName": "e-campus - LCMS Moodle",
-      "pDescription": "Plateforme de cours en ligne de Nîmes Université",
-      "pInfos": " Réalisation de la partie Front-End full responsive, DOM dynamique (depuis Json), composants modulaires et réutilisables, code commenté. Respect de l'ancienne charte graphique et création de la nouvelle, infographies et animations.",
+      "pDescription": "Refonte complète de la plateforme de cours en ligne de Nîmes Université",
+      "pInfos": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar porta nibh ut vulputate. Quisque mattis sapien a mi vulputate, at accumsan neque volutpat. Integer rhoncus mauris sit amet urna tristique, eu rhoncus erat eleifend. Aliquam ut magna vel eros mattis fringilla. Vestibulum viverra eleifend mollis. ",
       "technos": [
         {
-          "name": "React",
-          "icon": "img/techIcons/react.webp"
-        },
-        {
-          "name": "JavaScript",
-          "icon": "img/techIcons/javascript.webp"
+          "name": "Moodle",
+          "icon": "img/techIcons/moodle.webp"
         },
         {
           "name": "Html",
@@ -24,10 +19,6 @@
           "icon": "img/techIcons/css.webp"
         },
 
-        {
-          "name": "Github",
-          "icon": "img/techIcons/github.webp"
-        },
         {
           "name": "Krita",
           "icon": "img/techIcons/Krita.webp"
@@ -41,19 +32,14 @@
           "icon": "img/techIcons/Inkscape.webp"
         }
       ],
-      "pSite": "https://nda-2.netlify.app/accueil",
-      "but1": "Visiter le site",
-      "bClassName": "soloButton",
-      "but2": "Détails du code",
-      "b2ClassName": "buttonNotNeeded",
-      "pCode": "https://github.com/GilBrou/nda"
+
+      "pSite": "https://ecampus.unimes.fr"
     },
     {
-      "pId": "projet17",
       "pImg": "img/Dev/bu.webp",
       "pName": "Bibliothèque universitaire",
-      "pDescription": "Nouveau site d'une maison d'édition",
-      "pInfos": " Réalisation de la partie Front-End full responsive, DOM dynamique (depuis Json), composants modulaires et réutilisables, code commenté. Respect de l'ancienne charte graphique et création de la nouvelle, infographies et animations.",
+      "pDescription": "Création du site de la bibliothèque universitaire de Nîmes Université",
+      "pInfos": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar porta nibh ut vulputate. Quisque mattis sapien a mi vulputate, at accumsan neque volutpat. Integer rhoncus mauris sit amet urna tristique, eu rhoncus erat eleifend. Aliquam ut magna vel eros mattis fringilla. Vestibulum viverra eleifend mollis. ",
       "technos": [
         {
           "name": "React",
@@ -72,6 +58,10 @@
           "name": "Css",
           "icon": "img/techIcons/css.webp"
         },
+        {
+          "name": "Wordpress",
+          "icon": "img/techIcons/wordpress.webp"
+        },
 
         {
           "name": "Github",
@@ -84,25 +74,67 @@
         {
           "name": "Figma",
           "icon": "img/techIcons/Figma.webp"
-        },
-        {
-          "name": "Inkscape",
-          "icon": "img/techIcons/Inkscape.webp"
         }
       ],
       "pSite": "https://nda-2.netlify.app/accueil",
-      "but1": "Visiter le site",
-      "bClassName": "soloButton",
-      "but2": "Détails du code",
-      "b2ClassName": "buttonNotNeeded",
+
       "pCode": "https://github.com/GilBrou/nda"
     },
     {
-      "pId": "projet18",
       "pImg": "img/Dev/fondation.webp",
       "pName": "Fondation Unîmes Université",
-      "pDescription": "Nouveau site d'une maison d'édition",
-      "pInfos": " Réalisation de la partie Front-End full responsive, DOM dynamique (depuis Json), composants modulaires et réutilisables, code commenté. Respect de l'ancienne charte graphique et création de la nouvelle, infographies et animations.",
+      "pDescription": "Refonte du site de la fondation Unîmes Université",
+
+      "pInfos": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar porta nibh ut vulputate. Quisque mattis sapien a mi vulputate, at accumsan neque volutpat. Integer rhoncus mauris sit amet urna tristique, eu rhoncus erat eleifend. Aliquam ut magna vel eros mattis fringilla. Vestibulum viverra eleifend mollis. ",
+      "technos": [
+        {
+          "name": "React",
+          "icon": "img/techIcons/react.webp"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "img/techIcons/javascript.webp"
+        },
+
+        {
+          "name": "Html",
+          "icon": "img/techIcons/html.webp"
+        },
+        {
+          "name": "Css",
+          "icon": "img/techIcons/css.webp"
+        },
+        {
+          "name": "Wordpress",
+          "icon": "img/techIcons/wordpress.webp"
+        },
+
+        {
+          "name": "Github",
+          "icon": "img/techIcons/github.webp"
+        },
+        {
+          "name": "Krita",
+          "icon": "img/techIcons/Krita.webp"
+        },
+        {
+          "name": "Figma",
+          "icon": "img/techIcons/Figma.webp"
+        },
+        {
+          "name": "Inkscape",
+          "icon": "img/techIcons/Inkscape.webp"
+        }
+      ],
+      "pSite": "https://nda-2.netlify.app/accueil",
+
+      "pCode": "https://github.com/GilBrou/nda"
+    },
+    {
+      "pImg": "img/Dev/unanimes.webp",
+      "pName": "UNANÎMES",
+      "pDescription": "Création du site du projet UNANÎMES",
+      "pInfos": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar porta nibh ut vulputate. Quisque mattis sapien a mi vulputate, at accumsan neque volutpat. Integer rhoncus mauris sit amet urna tristique, eu rhoncus erat eleifend. Aliquam ut magna vel eros mattis fringilla. Vestibulum viverra eleifend mollis. ",
       "technos": [
         {
           "name": "React",
@@ -140,17 +172,13 @@
         }
       ],
       "pSite": "https://nda-2.netlify.app/accueil",
-      "but1": "Visiter le site",
-      "bClassName": "soloButton",
-      "but2": "Détails du code",
-      "b2ClassName": "buttonNotNeeded",
+
       "pCode": "https://github.com/GilBrou/nda"
     },
     {
-      "pId": "projet19",
       "pImg": "img/Dev/catnum.webp",
       "pName": "Catalogue des services numériques",
-      "pDescription": "Nouveau site d'une maison d'édition",
+      "pDescription": "Refonte du site des services numériques",
       "pInfos": " Réalisation de la partie Front-End full responsive, DOM dynamique (depuis Json), composants modulaires et réutilisables, code commenté. Respect de l'ancienne charte graphique et création de la nouvelle, infographies et animations.",
       "technos": [
         {
@@ -181,33 +209,21 @@
         {
           "name": "Figma",
           "icon": "img/techIcons/Figma.webp"
-        },
-        {
-          "name": "Inkscape",
-          "icon": "img/techIcons/Inkscape.webp"
         }
       ],
       "pSite": "https://nda-2.netlify.app/accueil",
-      "but1": "Visiter le site",
-      "bClassName": "soloButton",
-      "but2": "Détails du code",
-      "b2ClassName": "buttonNotNeeded",
+
       "pCode": "https://github.com/GilBrou/nda"
     },
     {
-      "pId": "projet20",
       "pImg": "img/Dev/etu.webp",
       "pName": "Guide étudiant",
-      "pDescription": "Nouveau site d'une maison d'édition",
-      "pInfos": " Réalisation de la partie Front-End full responsive, DOM dynamique (depuis Json), composants modulaires et réutilisables, code commenté. Respect de l'ancienne charte graphique et création de la nouvelle, infographies et animations.",
+      "pDescription": "Refonte visuelle du guide étudiant",
+      "pInfos": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar porta nibh ut vulputate. Quisque mattis sapien a mi vulputate, at accumsan neque volutpat. Integer rhoncus mauris sit amet urna tristique, eu rhoncus erat eleifend. Aliquam ut magna vel eros mattis fringilla. Vestibulum viverra eleifend mollis. ",
       "technos": [
         {
-          "name": "React",
-          "icon": "img/techIcons/react.webp"
-        },
-        {
-          "name": "JavaScript",
-          "icon": "img/techIcons/javascript.webp"
+          "name": "Wordpress",
+          "icon": "img/techIcons/wordpress.webp"
         },
 
         {
@@ -237,14 +253,10 @@
         }
       ],
       "pSite": "https://nda-2.netlify.app/accueil",
-      "but1": "Visiter le site",
-      "bClassName": "soloButton",
-      "but2": "Détails du code",
-      "b2ClassName": "buttonNotNeeded",
+
       "pCode": "https://github.com/GilBrou/nda"
     },
     {
-      "pId": "projet15",
       "pImg": "img/Dev/Portfolio.webp",
       "pName": "Mon portfolio",
       "pDescription": "",
@@ -286,17 +298,61 @@
         }
       ],
       "pSite": "https://www.gillianbroussedev.com/accueil",
-      "but1": "Visiter le site",
-      "bClassName": "buttonNotNeeded",
-      "but2": "Détails du code",
-      "b2ClassName": "soloButton",
+
       "pCode": "https://github.com/GilBrou/MonPortfolio"
     },
     {
-      "pId": "projet14",
+      "pImg": "img/dev/nda.webp",
+      "pName": "Noir D'Absinthe",
+      "pDescription": "Création du nouveau site d'une maison d'édition",
+      "pInfos": " Réalisation de la partie Front-End full responsive, DOM dynamique (depuis Json), composants modulaires et réutilisables, code commenté. Respect de l'ancienne charte graphique et création de la nouvelle, infographies et animations.",
+      "technos": [
+        {
+          "name": "React",
+          "icon": "img/techIcons/react.webp"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "img/techIcons/javascript.webp"
+        },
+        {
+          "name": "Bootstrap",
+          "icon": "img/techIcons/bootstrap.webp"
+        },
+        {
+          "name": "Html",
+          "icon": "img/techIcons/html.webp"
+        },
+        {
+          "name": "Css",
+          "icon": "img/techIcons/css.webp"
+        },
+
+        {
+          "name": "Github",
+          "icon": "img/techIcons/github.webp"
+        },
+        {
+          "name": "Krita",
+          "icon": "img/techIcons/Krita.webp"
+        },
+        {
+          "name": "Figma",
+          "icon": "img/techIcons/Figma.webp"
+        },
+        {
+          "name": "Inkscape",
+          "icon": "img/techIcons/Inkscape.webp"
+        }
+      ],
+      "pSite": "https://nda-2.netlify.app/accueil",
+
+      "pCode": "https://github.com/GilBrou/nda"
+    },
+    {
       "pImg": "img/Dev/Gali.webp",
       "pName": "Rachel Gali - Autrice SFFF",
-      "pDescription": "L'univers d'une apprentie conteuse.",
+      "pDescription": "Création du site portfolio d'une autrice",
       "pInfos": "Site full responsive, Liste dynamique des ouvrages, lien vers page dédiée (DOM hydraté par Json), création de template pour les livres (image, vidéos, résumé général, résumé de texte, liens d'achats, liens d'avis...), code commenté. Création de la charte graphique, logo, infographie et animations.",
       "technos": [
         {
@@ -338,17 +394,103 @@
         }
       ],
       "pSite": "https://rachelgali.netlify.app",
-      "but1": "Visiter le site",
-      "but2": "Détails du code",
+
       "pCode": "https://github.com/GilBrou/RachelGali"
     },
+    {
+      "pImg": "img/Dev/kzu.webp",
+      "pName": "Kzu  - Illustrateur",
+      "pDescription": "Création du site portfolio d'un illustrateur",
+      "pInfos": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar porta nibh ut vulputate. Quisque mattis sapien a mi vulputate, at accumsan neque volutpat. Integer rhoncus mauris sit amet urna tristique, eu rhoncus erat eleifend. Aliquam ut magna vel eros mattis fringilla. Vestibulum viverra eleifend mollis. ",
+      "technos": [
+        {
+          "name": "React",
+          "icon": "img/techIcons/react.webp"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "img/techIcons/javascript.webp"
+        },
 
+        {
+          "name": "Html",
+          "icon": "img/techIcons/html.webp"
+        },
+        {
+          "name": "Css",
+          "icon": "img/techIcons/css.webp"
+        },
+
+        {
+          "name": "Github",
+          "icon": "img/techIcons/github.webp"
+        },
+        {
+          "name": "Krita",
+          "icon": "img/techIcons/Krita.webp"
+        },
+        {
+          "name": "Figma",
+          "icon": "img/techIcons/Figma.webp"
+        },
+        {
+          "name": "Inkscape",
+          "icon": "img/techIcons/Inkscape.webp"
+        }
+      ],
+      "pSite": "https://kzu.netlify.app/",
+      "pCode": "https://github.com/GilBrou/RachelGali"
+    },
+    {
+      "pImg": "img/Dev/vesper.webp",
+      "pName": "Vesper Astria  - Astrologue",
+      "pDescription": "Création du site portfolio d'une astrologue",
+      "pInfos": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar porta nibh ut vulputate. Quisque mattis sapien a mi vulputate, at accumsan neque volutpat. Integer rhoncus mauris sit amet urna tristique, eu rhoncus erat eleifend. Aliquam ut magna vel eros mattis fringilla. Vestibulum viverra eleifend mollis. ",
+      "technos": [
+        {
+          "name": "React",
+          "icon": "img/techIcons/react.webp"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "img/techIcons/javascript.webp"
+        },
+
+        {
+          "name": "Html",
+          "icon": "img/techIcons/html.webp"
+        },
+        {
+          "name": "Css",
+          "icon": "img/techIcons/css.webp"
+        },
+
+        {
+          "name": "Github",
+          "icon": "img/techIcons/github.webp"
+        },
+        {
+          "name": "Krita",
+          "icon": "img/techIcons/Krita.webp"
+        },
+        {
+          "name": "Figma",
+          "icon": "img/techIcons/Figma.webp"
+        },
+        {
+          "name": "Inkscape",
+          "icon": "img/techIcons/Inkscape.webp"
+        }
+      ],
+      "pSite": "https://vesperastria.netlify.app/",
+      "pCode": "https://github.com/GilBrou/RachelGali"
+    },
     {
       "pId": "projet7",
       "pImg": "img/Dev/CultQuiz.webp",
       "pName": "CultQuiz",
       "pDescription": "Site de quiz sur la Pop-culture.",
-      "pInfos": "Projet personnel : création du logo et de la charte graphique, POO, pages dynamiques (depuis fichier Json), rédaction des questions/réponses, affichage du score final et des réponses, animations fluides, fonctionnalité de tri des quiz par sujet, mode multijoueur local, full responsive.",
+      "pInfos": "création du logo et de la charte graphique, POO, pages dynamiques (depuis fichier Json), rédaction des questions/réponses, affichage du score final et des réponses, animations fluides, fonctionnalité de tri des quiz par sujet, mode multijoueur local, full responsive.",
       "technos": [
         {
           "name": "JavaScript",

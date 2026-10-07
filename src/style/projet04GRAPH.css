@@ -1,10 +1,13 @@
 /*A4 = 210 × 297 mm → 2480 × 3508 px à 300 DPI.*/
 
 .graphCont .row {
-  /*background: blue;*/
   max-width: 80% !important;
+  /*background: red;*/
 }
+
+/*
 .Frame {
+
   width: 200px;
   aspect-ratio: 2480 / 3508;
   transform-origin: center;
@@ -23,10 +26,10 @@
   cursor: pointer;
 }
 
+
 .Frame img {
   width: 100%;
   height: 100%;
-  /*  object-fit: contain;*/
   object-fit: cover;
   border: 2px solid;
   border-color: #bbbab4 #c7c7bf #e5e4df #c7c7bf;
@@ -38,7 +41,7 @@
 .Frame:hover {
   transform: scale(1.15);
 }
-
+*/
 /* Modale plein écran */
 .imageModal {
   position: fixed;
