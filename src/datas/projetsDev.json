@@ -2,7 +2,7 @@
   "projetsDev": [
     {
       "pId": "projet21",
-      "pImg": "img/projets/e-campus.webp",
+      "pImg": "img/Dev/e-campus.webp",
       "pName": "e-campus - LCMS Moodle",
       "pDescription": "Plateforme de cours en ligne de Nîmes Université",
       "pInfos": " Réalisation de la partie Front-End full responsive, DOM dynamique (depuis Json), composants modulaires et réutilisables, code commenté. Respect de l'ancienne charte graphique et création de la nouvelle, infographies et animations.",
@@ -50,7 +50,7 @@
     },
     {
       "pId": "projet17",
-      "pImg": "img/projets/bu.webp",
+      "pImg": "img/Dev/bu.webp",
       "pName": "Bibliothèque universitaire",
       "pDescription": "Nouveau site d'une maison d'édition",
       "pInfos": " Réalisation de la partie Front-End full responsive, DOM dynamique (depuis Json), composants modulaires et réutilisables, code commenté. Respect de l'ancienne charte graphique et création de la nouvelle, infographies et animations.",
@@ -99,7 +99,7 @@
     },
     {
       "pId": "projet18",
-      "pImg": "img/projets/fondation.webp",
+      "pImg": "img/Dev/fondation.webp",
       "pName": "Fondation Unîmes Université",
       "pDescription": "Nouveau site d'une maison d'édition",
       "pInfos": " Réalisation de la partie Front-End full responsive, DOM dynamique (depuis Json), composants modulaires et réutilisables, code commenté. Respect de l'ancienne charte graphique et création de la nouvelle, infographies et animations.",
@@ -148,7 +148,7 @@
     },
     {
       "pId": "projet19",
-      "pImg": "img/projets/catnum.webp",
+      "pImg": "img/Dev/catnum.webp",
       "pName": "Catalogue des services numériques",
       "pDescription": "Nouveau site d'une maison d'édition",
       "pInfos": " Réalisation de la partie Front-End full responsive, DOM dynamique (depuis Json), composants modulaires et réutilisables, code commenté. Respect de l'ancienne charte graphique et création de la nouvelle, infographies et animations.",
@@ -196,7 +196,7 @@
     },
     {
       "pId": "projet20",
-      "pImg": "img/projets/etu.webp",
+      "pImg": "img/Dev/etu.webp",
       "pName": "Guide étudiant",
       "pDescription": "Nouveau site d'une maison d'édition",
       "pInfos": " Réalisation de la partie Front-End full responsive, DOM dynamique (depuis Json), composants modulaires et réutilisables, code commenté. Respect de l'ancienne charte graphique et création de la nouvelle, infographies et animations.",
@@ -245,7 +245,7 @@
     },
     {
       "pId": "projet15",
-      "pImg": "img/projets/Portfolio.webp",
+      "pImg": "img/Dev/Portfolio.webp",
       "pName": "Mon portfolio",
       "pDescription": "",
       "pInfos": "Réalisation de la partie Front-End full responsive, DOM dynamique (depuis Json), composants modulaires et réutilisables, code commenté. Création de la charte graphique, logo, infographies, icônes et animations.",
@@ -294,7 +294,7 @@
     },
     {
       "pId": "projet14",
-      "pImg": "img/projets/Gali.webp",
+      "pImg": "img/Dev/Gali.webp",
       "pName": "Rachel Gali - Autrice SFFF",
       "pDescription": "L'univers d'une apprentie conteuse.",
       "pInfos": "Site full responsive, Liste dynamique des ouvrages, lien vers page dédiée (DOM hydraté par Json), création de template pour les livres (image, vidéos, résumé général, résumé de texte, liens d'achats, liens d'avis...), code commenté. Création de la charte graphique, logo, infographie et animations.",
@@ -345,7 +345,7 @@
 
     {
       "pId": "projet7",
-      "pImg": "img/projets/CultQuiz.webp",
+      "pImg": "img/Dev/CultQuiz.webp",
       "pName": "CultQuiz",
       "pDescription": "Site de quiz sur la Pop-culture.",
       "pInfos": "Projet personnel : création du logo et de la charte graphique, POO, pages dynamiques (depuis fichier Json), rédaction des questions/réponses, affichage du score final et des réponses, animations fluides, fonctionnalité de tri des quiz par sujet, mode multijoueur local, full responsive.",

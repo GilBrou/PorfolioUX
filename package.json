@@ -1,8 +1,8 @@
 {
-  "name": "BU Nîmes Université",
+  "name": "Gillian Brousse - UI/UX Designer",
   "version": "0.0.1",
-  "homepage": "https://bibliotheque.unimes.fr/",
-  "author": "Gillian Brousse (SNAP) / Bu Nîmes Université",
+  "homepage": "",
+  "author": "Gillian Brousse - UI/UX Designer",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -25,8 +25,9 @@
     "rss-parser": "^3.13.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "generate-graph": "node scripts/generateGraphImages.js",
+    "start": "npm run generate-graph && react-scripts start",
+    "build": "npm run generate-graph && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

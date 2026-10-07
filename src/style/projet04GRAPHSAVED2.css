@@ -1,0 +1,58 @@
+/*A4 = 210 × 297 mm → 2480 × 3508 px à 300 DPI.*/
+
+.Frame {
+  width: 175px;
+  aspect-ratio: 190 / 280;
+
+  width: 175px;
+  width: 200px;
+  aspect-ratio: 2480 / 3508;
+
+  transform-origin: center;
+  transition: 0.5s;
+  margin: 40px 15px;
+  display: inline-block;
+  padding: 5px 10px 0px 10px;
+  /*padding: 10px;*/
+  /*padding: 10px 13px 3px 10px;*/
+  box-sizing: border-box;
+  border: 10px solid;
+  border-color: var(--yel) var(--yel3) var(--yel2) var(--yel3);
+  background: var(--beige);
+  box-shadow:
+    inset 0 2px 5px rgba(0, 0, 0, 0.6),
+    0 5px 2px rgba(0, 0, 0, 0.1),
+    0 10px 20px rgba(0, 0, 0, 0.8);
+
+  position: relative;
+  /*overflow: hidden;*/
+}
+
+.Frame p {
+  position: absolute;
+  bottom: -15%;
+  width: 100%;
+  left: 50%;
+  margin: 0 auto;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.Frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /*object-fit: cover;*/
+  border: 2px solid;
+  border-color: #bbbab4 #c7c7bf #e5e4df #c7c7bf;
+  box-shadow:
+    0 -1px 1px rgba(0, 0, 0, 0.1),
+    0 1px 1px 1px rgba(255, 255, 255, 0.7);
+  padding: 0;
+  margin: 0;
+}
+
+.Frame:hover {
+  transform: scale(1.15);
+}

@@ -1,36 +1,48 @@
-/*** PROJECTS MODULE ***/
+import { useState } from "react";
+import projetsGraph from "../datas/projetsGraph.json";
 
 export default function Projet04GRAPH(data) {
-  console.log(data.data);
+  const [projetsRandom] = useState(() =>
+    [...projetsGraph].sort(() => Math.random() - 0.5),
+  );
+
+  const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <div className="container">
+    <div className="container graphCont">
       <h3 className="secTitle01 secTitle02">Graphisme</h3>
 
-      <div className="row otherCardsFade"></div>
+      <div className="row">
+        {projetsRandom.map((d, i) => (
+          <div
+            key={`${d}-${i}`}
+            className="Frame"
+            onClick={() => setSelectedImage(d)}
+          >
+            <p>{d.replace(/\.webp$/, "")}</p>
 
-      <div className="row linedArt">
-        <div className="portfolio-items illus">
-          {data.data?.map((d, i) => (
-            <div
-              key={`${d.title}-${i}`}
-              className="col-sm-5 col-md-2 col-lg-2 Frame"
-            >
-              <div className="portfolio-item">
-                <div className="hover-bg">
-                  <a href={d.largeImage} title={d.title}>
-                    <img
-                      src={d.smallImage}
-                      className="img-responsive"
-                      alt={d.title}
-                    />{" "}
-                  </a>{" "}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+            <img src={`/img/Graph/${d}`} className="img-responsive" alt={d} />
+          </div>
+        ))}
       </div>
+
+      {selectedImage && (
+        <div className="imageModal" onClick={() => setSelectedImage(null)}>
+          <button
+            className="modalClose"
+            onClick={() => setSelectedImage(null)}
+            aria-label="Fermer"
+          >
+            ×
+          </button>
+
+          <img
+            src={`/img/Graph/${selectedImage}`}
+            alt={selectedImage}
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 }

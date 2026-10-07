@@ -1,0 +1,41 @@
+{
+  "name": "Gillian Brousse - UI/UX Designer",
+  "version": "0.0.1",
+  "homepage": "",
+  "author": "Gillian Brousse - UI/UX Designer",
+  "private": true,
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/node": "^24.9.1",
+    "axios": "^1.2.0",
+    "dompurify": "^3.3.0",
+    "react": "^17.0.1",
+    "react-collapsible": "^2.10.0",
+    "react-dom": "^17.0.1",
+    "react-player": "^2.14.1",
+    "react-responsive-modal": "^6.2.0",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "^5.0.1",
+    "react-tooltip": "^5.26.3",
+    "react-xml-parser": "^1.1.8",
+    "react-tooltip": "^4.2.21",
+    "rss-parser": "^3.13.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
