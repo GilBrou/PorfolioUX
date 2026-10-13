@@ -1,9 +1,8 @@
 /*Module*/
-.realisations {
-}
 
 .UXCont .row,
-.graphCont .row {
+.graphCont .row,
+.chiffresCont .row {
 	/*max-width: 80% !important;*/
 
 	gap: 5px;

@@ -1,1 +1,119 @@
 /*Module*/
+/********************************************
+ * CHIFFRES COMPONENT
+ ********************************************/
+
+/* Conteneur principal du bloc chiffres */
+
+/* Variante du bloc chiffres dans la page missions */
+
+.chiffresCont {
+	background: red;
+}
+
+.chiffresContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 15px;
+	width: 300px;
+	height: 150px;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+	background: url("./background/background.webp"), var(--yel);
+	background-attachment: fixed;
+	background-blend-mode: overlay;
+	background-size: cover;
+}
+
+/* Textes internes des cartes */
+.chiffresContainer .num,
+.chiffresContainer .text {
+	color: var(--blackish);
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 400;
+	margin: auto;
+	padding: 5px;
+	text-align: center;
+	width: 100%;
+}
+
+/* Nombre animé */
+.chiffresContainer .num {
+	font-size: 40px;
+	padding: 0;
+	color: var(--blackish) !important;
+
+	font-weight: 600;
+	font-weight: 700;
+}
+
+/* Libellé sous le nombre */
+.chiffresContainer .text {
+	margin-top: -25px;
+}
+
+/********************************************
+ * RESPONSIVE
+ ********************************************/
+/*
+@media (max-width: 900px) {
+	.Chiffres {
+		height: auto;
+		min-height: auto;
+		padding: 80px 25px;
+		gap: 30px;
+	}
+
+	.Chiffres .chiffresContainer {
+		width: 240px;
+		height: 115px;
+	}
+
+	.Chiffres .chiffresContainer .num {
+		font-size: 36px;
+	}
+
+	.Chiffres .chiffresContainer .text {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 594px) {
+	.Chiffres {
+		height: auto;
+		min-height: auto;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		padding: 70px 20px;
+		gap: 20px;
+		overflow: visible;
+		transform: none;
+		background-position: center;
+	}
+
+	.missions .Chiffres {
+		width: 105vw;
+		margin-left: -25px;
+	}
+
+	.Chiffres .chiffresContainer {
+		width: min(100%, 280px);
+		height: auto;
+		min-height: 110px;
+		transform: none;
+	}
+
+	.Chiffres .chiffresContainer .num {
+		font-size: 34px;
+	}
+
+	.Chiffres .chiffresContainer .text {
+		font-size: 16px;
+		margin-top: -15px;
+	}
+}
+*/

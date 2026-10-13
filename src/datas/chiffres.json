@@ -1,0 +1,48 @@
+[
+  {
+    "valeur": "4",
+    "nom": "années d'administration Moodle"
+  },
+  {
+    "valeur": "6000",
+    "nom": "étudiants en moyenne"
+  },
+
+  {
+    "valeur": "24000",
+    "nom": "étudiants en 4 ans"
+  },
+  {
+    "valeur": "835",
+    "nom": "Formateurs et enseignants"
+  },
+
+  {
+    "valeur": "835",
+    "nom": "Formateurs et enseignants accompagnés"
+  },
+
+  {
+    "valeur": "835",
+    "nom": "de modules de cours annuels"
+  },
+
+  {
+    "valeur": "4",
+    "nom": "Tickets journaliers / mesures d'accompagnement ou de paramétrage"
+  },
+  {
+    "valeur": "830",
+    "nom": "Tickets annuels / mesures d'accompagnement ou de paramétrage"
+  },
+
+  {
+    "valeur": "3320",
+    "nom": "Accompagnements à (Tickets ) annuels / mesures d'accompagnement ou de paramétrage"
+  },
+
+  {
+    "valeur": "20",
+    "nom": "Tickets hebdomadaires / mesures d'accompagnement ou de paramétrage"
+  }
+]
