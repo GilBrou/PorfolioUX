@@ -1,0 +1,158 @@
+/*Module*/
+
+.devCont .row {
+  /*background: blue;*/
+  display: flex;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  flex-wrap: wrap;
+  padding-top: 55px;
+  gap: 100px 60px;
+  gap: 15px 37px;
+
+  max-width: 90vw;
+  /*max-width: 80% !important;*/
+}
+
+/*Project cards*/
+
+.realisations .container .row .projectCard {
+  display: flex;
+  flex-direction: column;
+
+  /*margin: auto;*/
+  padding: 0 10px;
+  top: 25px;
+  margin-bottom: 25px;
+  transition: 0.5s;
+  max-width: 400px;
+  max-width: 380px;
+
+  height: stretch;
+
+  align-items: flex-start;
+  justify-content: space-between;
+  justify-content: flex-start;
+  overflow: hidden;
+  /*background: red;*/
+  /*background: blueviolet;*/
+}
+
+/*Project image*/
+.realisations .container .row .projectCard .projectCardImg {
+  height: auto;
+  border: 1px solid var(--yel);
+  box-shadow: 0 6px 0px 0px var(--yel);
+  border-radius: 18px;
+  padding: 5px;
+  max-width: 400px;
+  width: 380px;
+
+  max-width: 380px;
+  width: 378px;
+
+  display: block;
+  flex-shrink: 0;
+  align-self: center;
+  margin: 0;
+  align-self: center !important;
+}
+/*Project image hover animation*/
+.projectCard:hover .projectCardImg {
+  filter: saturate(1.1);
+  transition: 0.5s;
+  pointer-events: none;
+}
+/*Project title*/
+
+.realisations .container .row .projectCard h2 {
+  color: var(--lightB);
+  font-size: 18px;
+  text-align: left;
+  width: 95%;
+  width: fit-content;
+  margin: 15px 0 0 0;
+  padding: 0;
+  pointer-events: none;
+}
+/*Project description*/
+.realisations .container .row .projectCard h3 {
+  font-size: 16px;
+  font-style: italic;
+  color: var(--beige);
+  text-align: left;
+  width: fit-content;
+  margin: 0 0 10px 0;
+  pointer-events: none;
+
+  padding: 0;
+}
+/*Project details*/
+.realisations .container .row .projectCard p {
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  display: none;
+}
+/*Project techs wrapper*/
+.realisations .container .row .projectCard .techs {
+  padding: 5px 0;
+  margin: 5px 0;
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  display: none;
+}
+/*Tech icons*/
+.realisations .container .row .projectCard .techs img {
+  padding: 0;
+  margin: 5px;
+  background: rgba(255, 255, 255, 0.55);
+  padding: 5px;
+  border-radius: 50%;
+}
+/*Buttons wrapper*/
+.realisations .container .row .projectCard .buttonW {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+  /*margin-top: auto;*/
+  /*background: red;*/
+}
+
+/*Buttons*/
+.realisations .container .row .projectCard .urlButton {
+  all: unset;
+  text-transform: uppercase;
+  color: var(--blackish);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 15px;
+  padding: 5px 10px;
+  border: 2px solid var(--yel);
+  border-radius: 12px;
+  text-align: center;
+  margin: auto;
+  color: var(--beige);
+
+  /*
+  display: block;
+  box-sizing: border-box;
+*/
+  text-decoration: none;
+
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.realisations .container .row .projectCard .buttonW .urlButton:hover {
+  transform: scale(1.05);
+  background: var(--yel);
+  color: var(--blackish);
+}

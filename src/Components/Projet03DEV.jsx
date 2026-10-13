@@ -62,7 +62,7 @@ export default function Projet01UX(props) {
                   <h3>{d.pDescription}</h3>
 
                   {/* Project information */}
-                  <p>{d.pInfos}</p>
+                  {/*<p>{d.pInfos}</p>*/}
 
                   {/* Technologies */}
                   <div className="techs">

@@ -76,9 +76,7 @@
           "icon": "img/techIcons/Figma.webp"
         }
       ],
-      "pSite": "https://nda-2.netlify.app/accueil",
-
-      "pCode": "https://github.com/GilBrou/nda"
+      "pSite": "https://bibliotheque.unimes.fr/"
     },
     {
       "pImg": "img/Dev/fondation.webp",
@@ -126,9 +124,7 @@
           "icon": "img/techIcons/Inkscape.webp"
         }
       ],
-      "pSite": "https://nda-2.netlify.app/accueil",
-
-      "pCode": "https://github.com/GilBrou/nda"
+      "pSite": "https://fondation2.unimes.fr/"
     },
     {
       "pImg": "img/Dev/unanimes.webp",
@@ -171,9 +167,7 @@
           "icon": "img/techIcons/Inkscape.webp"
         }
       ],
-      "pSite": "https://nda-2.netlify.app/accueil",
-
-      "pCode": "https://github.com/GilBrou/nda"
+      "pSite": "https://unanimes.unimes.fr/"
     },
     {
       "pImg": "img/Dev/catnum.webp",
@@ -211,9 +205,7 @@
           "icon": "img/techIcons/Figma.webp"
         }
       ],
-      "pSite": "https://nda-2.netlify.app/accueil",
-
-      "pCode": "https://github.com/GilBrou/nda"
+      "pSite": "https://services-numeriques.unimes.fr/"
     },
     {
       "pImg": "img/Dev/etu.webp",
@@ -252,9 +244,7 @@
           "icon": "img/techIcons/Inkscape.webp"
         }
       ],
-      "pSite": "https://nda-2.netlify.app/accueil",
-
-      "pCode": "https://github.com/GilBrou/nda"
+      "pSite": "https://etudiant.unimes.fr/"
     },
     {
       "pImg": "img/Dev/Portfolio.webp",
@@ -297,9 +287,8 @@
           "icon": "img/techIcons/Inkscape.webp"
         }
       ],
-      "pSite": "https://www.gillianbroussedev.com/accueil",
 
-      "pCode": "https://github.com/GilBrou/MonPortfolio"
+      "pCode": ""
     },
     {
       "pImg": "img/dev/nda.webp",
@@ -346,7 +335,6 @@
         }
       ],
       "pSite": "https://nda-2.netlify.app/accueil",
-
       "pCode": "https://github.com/GilBrou/nda"
     },
     {
@@ -394,7 +382,6 @@
         }
       ],
       "pSite": "https://rachelgali.netlify.app",
-
       "pCode": "https://github.com/GilBrou/RachelGali"
     },
     {
@@ -438,8 +425,7 @@
           "icon": "img/techIcons/Inkscape.webp"
         }
       ],
-      "pSite": "https://kzu.netlify.app/",
-      "pCode": "https://github.com/GilBrou/RachelGali"
+      "pSite": "https://kzu.netlify.app/"
     },
     {
       "pImg": "img/Dev/vesper.webp",
@@ -483,7 +469,7 @@
         }
       ],
       "pSite": "https://vesperastria.netlify.app/",
-      "pCode": "https://github.com/GilBrou/RachelGali"
+      "pCode": "https://github.com/GilBrou/vesper"
     },
     {
       "pId": "projet7",
@@ -518,8 +504,7 @@
         }
       ],
       "pSite": "https://gilbrou.github.io/CultQuizProject/",
-      "but1": "Visiter le site",
-      "but2": "Détails du code",
+
       "pCode": "https://github.com/GilBrou/CultQuizProject"
     }
   ]

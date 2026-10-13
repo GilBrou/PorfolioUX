@@ -6,7 +6,21 @@ export default function Projet04GRAPH(data) {
     [...projetsGraph].sort(() => Math.random() - 0.5),
   );
 
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(null);
+
+  // Image suivante
+  const nextImage = (e) => {
+    e.stopPropagation();
+    setSelectedIndex((prev) => (prev + 1) % projetsRandom.length);
+  };
+
+  // Image précédente
+  const prevImage = (e) => {
+    e.stopPropagation();
+    setSelectedIndex(
+      (prev) => (prev - 1 + projetsRandom.length) % projetsRandom.length,
+    );
+  };
 
   return (
     <div className="container graphCont">
@@ -17,28 +31,48 @@ export default function Projet04GRAPH(data) {
           <div
             key={`${d}-${i}`}
             className="Frame"
-            onClick={() => setSelectedImage(d)}
+            onClick={() => setSelectedIndex(i)}
           >
             <img src={`/img/Graph/${d}`} className="img-responsive" alt={d} />
           </div>
         ))}
       </div>
 
-      {selectedImage && (
-        <div className="imageModal" onClick={() => setSelectedImage(null)}>
+      {selectedIndex !== null && (
+        <div className="imageModal" onClick={() => setSelectedIndex(null)}>
+          {/* Bouton fermer */}
           <button
             className="modalClose"
-            onClick={() => setSelectedImage(null)}
+            onClick={() => setSelectedIndex(null)}
             aria-label="Fermer"
           >
             ×
           </button>
 
+          {/* Flèche précédente */}
+          <button
+            className="modalArrow modalPrev"
+            onClick={prevImage}
+            aria-label="Image précédente"
+          >
+            &#10094;
+          </button>
+
+          {/* Image sélectionnée */}
           <img
-            src={`/img/Graph/${selectedImage}`}
-            alt={selectedImage}
+            src={`/img/Graph/${projetsRandom[selectedIndex]}`}
+            alt={projetsRandom[selectedIndex]}
             onClick={(e) => e.stopPropagation()}
           />
+
+          {/* Flèche suivante */}
+          <button
+            className="modalArrow modalNext"
+            onClick={nextImage}
+            aria-label="Image suivante"
+          >
+            &#10095;
+          </button>
         </div>
       )}
     </div>
