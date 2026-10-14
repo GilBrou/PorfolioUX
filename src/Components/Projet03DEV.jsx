@@ -1,10 +1,11 @@
 import ReactTooltip from "react-tooltip";
 import { useEffect, useState } from "react";
+import projetsDev from "../datas/projetsDev.json";
 
 /*** PROJECTS MODULE ***/
 
-export default function Projet01UX(props) {
-  let myproject = props.data;
+export default function Projet03DEV() {
+  let myproject = projetsDev.projetsDev;
 
   /* Tooltip */
   function tTip() {

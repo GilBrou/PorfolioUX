@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import chiffres from "../datas/chiffres.json";
+import chiffres from "../datas/projetsLMS.json";
 import data from "../datas/data.json";
 
 /***PROJECTS MODULE***/

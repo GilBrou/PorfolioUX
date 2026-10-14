@@ -1,7 +1,7 @@
 import { useState } from "react";
 import projetsGraph from "../datas/projetsUX.json";
 
-export default function Projet01UX(data) {
+export default function Projet01UX() {
   const [projetsRandom] = useState(() =>
     [...projetsGraph].sort(() => Math.random() - 0.5),
   );

@@ -6,12 +6,12 @@
 
   {
     "valeur": "600",
-    "nom": "Enseignants et formateurs"
+    "nom": "Enseignants & formateurs"
   },
 
   {
     "valeur": "1575",
-    "nom": "Parcours de formation"
+    "nom": "Modules de cours"
   },
 
   {
@@ -22,6 +22,10 @@
   {
     "valeur": "830",
     "nom": "Accompagnements à la création de cours et résolutions d’incidents techniques"
+  },
+  {
+    "valeur": "830",
+    "nom": "contenus pédagogiques créés & incidents techniques résolus."
   },
 
   {

@@ -1,0 +1,21 @@
+[
+  {
+    "valeur": "6000",
+    "nom": "utilisateurs"
+  },
+
+  {
+    "valeur": "600",
+    "nom": "Enseignants & formateurs"
+  },
+
+  {
+    "valeur": "1575",
+    "nom": "Modules de cours"
+  },
+
+  {
+    "valeur": "830",
+    "nom": "contenus pédagogiques créés & incidents techniques résolus."
+  }
+]

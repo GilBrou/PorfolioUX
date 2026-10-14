@@ -4,9 +4,7 @@ import Intro from "./Components/Intro";
 import Parcours from "./Components/Parcours";
 import Comp from "./Components/Comp";
 import Projets from "./Components/Projets";
-
-import projetsDev from "./datas/projetsDev.json";
-import projetsGraph from "./datas/projetsGraph.json";
+import Envir from "./Components/Envir";
 
 export default function Homepage({ data }) {
   return (
@@ -16,14 +14,9 @@ export default function Homepage({ data }) {
       <Parcours data={data.parcours} />
       <Comp data={data.comp} />
 
-      <Projets
-        data={{
-          pDatas: projetsDev,
-          pDatas2: projetsDev,
-          pDatas3: projetsDev,
-          pDatas4: projetsGraph,
-        }}
-      />
+      <Projets />
+
+      <Envir />
     </div>
   );
 }
