@@ -1,21 +1,31 @@
 [
   {
     "valeur": "6000",
-    "nom": "étudiants"
+    "nom": "utilisateurs"
   },
 
   {
-    "valeur": "835",
-    "nom": "Formateurs et enseignants"
+    "valeur": "600",
+    "nom": "Enseignants et formateurs"
   },
 
   {
-    "valeur": "1200",
-    "nom": "modules de cours"
+    "valeur": "1575",
+    "nom": "Parcours de formation"
   },
 
   {
     "valeur": "830",
-    "nom": "Tickets d'accompagnement ou de paramétrage"
+    "nom": "Créations de contenus pédagogiques et résolutions d’incidents"
+  },
+
+  {
+    "valeur": "830",
+    "nom": "Accompagnements à la création de cours et résolutions d’incidents techniques"
+  },
+
+  {
+    "valeur": "830",
+    "nom": "Demandes de support : création de contenus pédagogiques et résolution d’incidents"
   }
 ]

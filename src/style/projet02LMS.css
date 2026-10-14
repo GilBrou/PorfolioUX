@@ -18,6 +18,8 @@
 	justify-content: center;
 	margin: 15px;
 	width: 300px;
+	width: 350px;
+	/*width: 400px;*/
 	height: 150px;
 	border-radius: 5px;
 	overflow: hidden;
@@ -54,7 +56,7 @@
 
 /* Libellé sous le nombre */
 .chiffresContainer .text {
-	margin-top: -25px;
+	/*margin-top: -25px;*/
 }
 
 /********************************************
