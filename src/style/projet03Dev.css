@@ -103,7 +103,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  display: none;
+  /*display: none;*/
 }
 /*Tech icons*/
 .realisations .container .row .projectCard .techs img {

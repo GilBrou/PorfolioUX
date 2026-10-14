@@ -8,7 +8,7 @@
 /* Variante du bloc chiffres dans la page missions */
 
 .chiffresCont {
-	background: red;
+	/*background: red;*/
 }
 
 .chiffresContainer {
@@ -26,6 +26,7 @@
 	background-attachment: fixed;
 	background-blend-mode: overlay;
 	background-size: cover;
+	padding: 15px;
 }
 
 /* Textes internes des cartes */
@@ -117,3 +118,23 @@
 	}
 }
 */
+
+.chiffresCont .renderP {
+	font-size: 18px;
+	line-height: 1.5em;
+	pointer-events: none;
+	font-weight: normal;
+	margin: auto;
+	text-align: left;
+	width: 80%;
+	text-align: justify;
+}
+
+.lastRenderP {
+	margin-top: 50px !important;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 2em;
+	padding: 0;
+	color: var(--yel);
+}

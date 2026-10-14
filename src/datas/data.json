@@ -162,6 +162,13 @@
       }
     ]
   },
+
+  "real": [
+    "Après plus de 4 années d'admnistration moodle Si mon profil apparaît cohérent avec vos recherches et que vous souhaitez en apprendre plus sur mon expérience professionnelle ou me rencontrer, je vous invite à télécharger/consulter mon CV et à me contacter.",
+    "blebleblebleblebleblebleblebleblebleblebleble Si mon profil apparaît cohérent avec vos recherches et que vous souhaitez en apprendre plus sur mon expérience professionnelle ou me rencontrer, je vous invite à télécharger/consulter mon CV et à me contacter. Si mon profil apparaît cohérent avec vos recherches et que vous souhaitez en apprendre plus sur mon expérience professionnelle ou me rencontrer, je vous invite à télécharger/consulter mon CV et à me contacter.",
+    "Si mon profil apparaît cohérent avec vos recherches et que vous souhaitez en apprendre plus sur mon expérience professionnelle ou me rencontrer, je vous invite à télécharger/consulter mon CV et à me contacter.",
+    "Quelques chiffres annuels"
+  ],
   "cv": {
     "cvImg": "img/Skills.webp",
     "cvImgAlt": "Programming skills",

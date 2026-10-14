@@ -1,9 +1,12 @@
 import { useEffect, useRef } from "react";
 import chiffres from "../datas/chiffres.json";
+import data from "../datas/data.json";
 
 /***PROJECTS MODULE***/
 
 export default function Projet02LMS() {
+  let myrealsP = data.real;
+
   const sectionRef = useRef(null);
   const countersRef = useRef([]);
 
@@ -105,11 +108,23 @@ export default function Projet02LMS() {
     );
   }
 
+  function renderP(item, i) {
+    const isLast = i === myrealsP.length - 1;
+
+    return (
+      <p
+        key={"paragraph" + i}
+        className={`renderP ${isLast ? "lastRenderP" : ""}`}
+      >
+        {item}
+      </p>
+    );
+  }
   /*Main*/
   return (
     <div className="container chiffresCont">
       <h3 className="secTitle01 secTitle02">Digital learning / LMS</h3>
-
+      {Array.isArray(myrealsP) && myrealsP.map((item, i) => renderP(item, i))}
       <div className="row" ref={sectionRef}>
         {Array.isArray(chiffres) &&
           chiffres.map((item, i) => renderChiffres(item, i))}
