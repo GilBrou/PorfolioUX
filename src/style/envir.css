@@ -7,6 +7,23 @@
   pointer-events: unset;
   padding-right: 10vw;
   padding-left: 10vw;
+  margin-bottom: 70px;
+  position: relative;
+  overflow: visible;
+  z-index: 17000;
+}
+
+.envir::before {
+  content: "";
+  position: absolute;
+  border: 1px solid var(--yel);
+  width: 50%;
+  height: 50%;
+  background: blue;
+  left: 0;
+  top: -150px;
+  z-index: 800;
+  overflow: visible;
 }
 
 .envir .ecoCard {
@@ -36,9 +53,11 @@
 .envir .ecoCard img {
   background: white;
   height: 80px;
+  height: 50px;
   width: auto;
   background: white;
   padding: 15px;
+  border-radius: 20px;
 }
 
 .envir .secTitle01 {
