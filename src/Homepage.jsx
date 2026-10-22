@@ -1,6 +1,5 @@
 import Header from "./Components/Header";
 import Intro from "./Components/Intro";
-
 import Parcours from "./Components/Parcours";
 import Comp from "./Components/Comp";
 import Projets from "./Components/Projets";
@@ -11,12 +10,28 @@ export default function Homepage({ data }) {
   return (
     <div className="homepage">
       <Header data={data.nav} />
+
       <Intro data={data.intro} />
-      <Parcours data={data.parcours} />
-      <Comp data={data.comp} />
-      <Projets />
-      <Envir />
-      <CV />
+
+      <div id="parcours">
+        <Parcours data={data.parcours} />
+      </div>
+
+      <div id="competences">
+        <Comp data={data.comp} />
+      </div>
+
+      <div id="projets">
+        <Projets />
+      </div>
+
+      <div id="envir">
+        <Envir />
+      </div>
+
+      <div id="cv">
+        <CV />
+      </div>
     </div>
   );
 }

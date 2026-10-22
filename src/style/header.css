@@ -21,6 +21,13 @@ nav {
   background-size: cover;
 
   /*border-bottom: 2px solid var(--yel); */ /*NEEDS TO APPEAR WHEN SCROLLING ON PARCOURS*/
+
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+nav.scrolled {
+  border-bottom: 2px solid var(--yel);
 }
 
 nav img {

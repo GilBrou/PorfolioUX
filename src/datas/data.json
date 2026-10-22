@@ -172,8 +172,9 @@
   "cv": {
     "cvImg": "img/Skills.webp",
     "cvImgAlt": "Programming skills",
-    "cvParagraphOLD": "Si mon profil apparaît cohérent avec vos recherches et que vous souhaitez en apprendre plus sur mon expérience professionnelle, les spécificités de l'alternance ou me rencontrer, je vous invite à télécharger/consulter mon CV et à me contacter.",
-    "cvParagraph": "Si mon profil apparaît cohérent avec vos recherches et que vous souhaitez en apprendre plus sur mon expérience professionnelle ou me rencontrer, je vous invite à télécharger/consulter mon CV et à me contacter."
+
+    "cvParagraphOLd": "Si mon profil apparaît cohérent avec vos recherches et que vous souhaitez en apprendre plus sur mon expérience professionnelle ou me rencontrer, je vous invite à télécharger mon CV et à me contacter.",
+    "cvParagraph": "Si mon profil correspond à vos attentes et suscite votre intérêt, je vous invite à consulter mon CV pour découvrir plus en détail mon parcours professionnel et les compétences que j’ai développées au fil de mes expériences. Je serais ravi d’échanger avec vous sur vos besoins et les opportunités de collaboration, ainsi que sur la manière dont je pourrais contribuer à vos projets. N’hésitez pas à me contacter pour toute question ou pour convenir d’une rencontre, ce serait un plaisir de faire votre connaissance."
   },
   "contact": {
     "title": "Contact",
@@ -192,82 +193,5 @@
     "linkdnA": "icône Linkedin",
     "GitLink": "https://github.com/GilBrou",
     "linkdLink": "https://fr.linkedin.com/in/gillianbrousse"
-  },
-  "Illustrations": [
-    {
-      "title": "IA",
-      "largeImage": "img/portfolio/01-LARGE.webp",
-      "smallImage": "img/portfolio/01-SMALL.webp"
-    },
-    {
-      "title": "Carnivale",
-      "largeImage": "img/portfolio/02-LARGE.webp",
-      "smallImage": "img/portfolio/02-SMALL.webp"
-    },
-    {
-      "title": "Haunted",
-      "largeImage": "img/portfolio/03-LARGE.webp",
-      "smallImage": "img/portfolio/03-SMALL.webp"
-    },
-    {
-      "title": "Horns",
-      "largeImage": "img/portfolio/04-LARGE.webp",
-      "smallImage": "img/portfolio/04-SMALL.webp"
-    },
-    {
-      "title": "Polar",
-      "largeImage": "img/portfolio/05-LARGE.webp",
-      "smallImage": "img/portfolio/05-SMALL.webp"
-    },
-    {
-      "title": "Time",
-      "largeImage": "img/portfolio/06-LARGE.webp",
-      "smallImage": "img/portfolio/06-SMALL.webp"
-    },
-    {
-      "title": "Foam",
-      "largeImage": "img/portfolio/07-LARGE.webp",
-      "smallImage": "img/portfolio/07-SMALL.webp"
-    },
-    {
-      "title": "Owl",
-      "largeImage": "img/portfolio/08-LARGE.webp",
-      "smallImage": "img/portfolio/08-SMALL.webp"
-    },
-    {
-      "title": "Daemon",
-      "largeImage": "img/portfolio/09-LARGE.webp",
-      "smallImage": "img/portfolio/09-SMALL.webp"
-    },
-    {
-      "title": "Tentacles",
-      "largeImage": "img/portfolio/10-LARGE.webp",
-      "smallImage": "img/portfolio/10-SMALL.webp"
-    },
-    {
-      "title": "The Coming",
-      "largeImage": "img/portfolio/11-LARGE.webp",
-      "smallImage": "img/portfolio/11-SMALL.webp"
-    },
-    {
-      "title": "That Day",
-      "largeImage": "img/portfolio/12-LARGE.webp",
-      "smallImage": "img/portfolio/12-SMALL.webp"
-    },
-    {
-      "title": "Isulka",
-      "largeImage": "img/portfolio/13-LARGE.webp",
-      "smallImage": "img/portfolio/13-SMALL.webp"
-    },
-    {
-      "title": "Pain",
-      "largeImage": "img/portfolio/14-LARGE.webp",
-      "smallImage": "img/portfolio/14-SMALL.webp"
-    },
-    {
-      "title": "Rillroy's",
-      "largeImage": "img/portfolio/15-LARGE.webp",
-      "smallImage": "img/portfolio/15-SMALL.webp"
-    }
-  ]
+  }
 }

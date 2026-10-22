@@ -1,5 +1,22 @@
+import { useState, useEffect } from "react";
+
 /*** HEADER/NAV MODULE ***/
 export default function Header(props) {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      setIsScrolled(window.scrollY > 0);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   function DisplayMenu(myMenu, i) {
     const slug = myMenu
       .normalize("NFD")
@@ -14,8 +31,9 @@ export default function Header(props) {
       </li>
     );
   }
+
   return (
-    <nav>
+    <nav className={isScrolled ? "scrolled" : ""}>
       <a href="/">
         <img
           src={props.data?.logo || "loading..."}
@@ -29,6 +47,7 @@ export default function Header(props) {
             <i className="fa fa-home" aria-hidden="true"></i>
           </a>
         </li>
+
         {props.data?.sectionTitle?.map((myMenu, i) => DisplayMenu(myMenu, i))}
       </ul>
     </nav>
