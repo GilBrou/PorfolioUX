@@ -19,6 +19,8 @@ nav {
   background-attachment: fixed;
   background-blend-mode: overlay;
   background-size: cover;
+
+  /*border-bottom: 2px solid var(--yel); */ /*NEEDS TO APPEAR WHEN SCROLLING ON PARCOURS*/
 }
 
 nav img {

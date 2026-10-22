@@ -6,7 +6,6 @@
 
 @import "./animations.css";
 /*@import "./contact.css";*/
-/*@import "./cv.css";*/
 @import "./header.css";
 
 @import "./intro.css";
@@ -18,6 +17,7 @@
 @import "projet02LMS.css";
 @import "./projet03Dev.css";
 @import "./envir.css";
+@import "./cv.css";
 
 /*@import "./responsive.css";*/
 

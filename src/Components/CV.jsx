@@ -1,54 +1,21 @@
 /***GENERAL***/
 import { Link } from "react-router-dom";
+import myDatas from "../datas/data.json";
 
 /***CV MODULE***/
-function CV(props) {
+export default function CV() {
+  /**console.log(data);*/
+
+  let data = myDatas.cv;
+
   return (
-    <section id="cv">
-      <div className="cv">
-        <div className="container">
-          <div className="row">
-            {/*Left part*/}
-            <div className="col cv-img text-center">
-              {/*Skills image*/}
-              <img
-                src={props.data ? props.data.cvImg : "loading..."}
-                className="img-responsive skillsPhoto"
-                loading="lazy"
-                alt={props.data ? props.data.cvImgAlt : "loading..."}
-              />{" "}
-            </div>
-            {/*Right part*/}
-            <div className="col cv-text text-center">
-              {/*Title*/}
-              <h1 className="text-center">Mon CV</h1>
-              {/*Paragraph*/}
-              <p>{props.data ? props.data.cvParagraph : "loading..."} </p>
-              {/*Buttons wrapper*/}
-              <div className="buttonWrap">
-                {/*PDF consult link*/}
-                <Link to="/CV_Gillian_Brousse.pdf" target="_blank">
-                  {/*Button*/}
-                  <button className="cvConsult">
-                    {/*Buttons text*/}
-                    <h2 className="text-center">Consulter</h2>
-                  </button>
-                </Link>
-                {/*PDF donwload link*/}
-                <Link to="/CV_Gillian_Brousse.pdf" target="_blank" download>
-                  {/*Button*/}
-                  <button className="cvDownload">
-                    {/*Buttons text*/}
-                    <h2 className="text-center">Télécharger</h2>
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div className="cv">
+      <h2 className="text-center">Mon CV</h2>
+      <p>{data ? data.cvParagraph : "loading..."} </p>
+
+      <button>
+        <p className="text-center">Télécharger</p>
+      </button>
+    </div>
   );
 }
-
-export default CV;

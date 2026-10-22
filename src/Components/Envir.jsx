@@ -26,11 +26,11 @@ export default function Envir() {
   }
 
   return ecosysteme ? (
-    <div className="comp envir">
+    <div className="envir">
       <h2 className="secTitle01">ECOSYSTÈME NUMÉRIQUE</h2>
       {ecosysteme.map((item, i) => renderEnvir(item, i))}
     </div>
   ) : (
-    <div className="comp envir">Loading...</div>
+    <div className="envir">Loading...</div>
   );
 }
