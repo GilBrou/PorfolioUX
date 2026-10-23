@@ -79,29 +79,6 @@
   position: relative;
   gap: 15px;
 }
-/*
-.card .inContent::before {
-  position: absolute;
-  content: "";
-  background: var(--yel);
-  width: 30px;
-  height: 15px;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  z-index: 9000;
-  top: 30%;
-  right: -47px;
-  transform: rotate(-90deg);
-}
-
-.parcours .card:nth-of-type(odd) .info .inContent::before {
-  top: 30%;
-  transform: rotate(90deg);
-
-  right: unset;
-  left: -47px;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
-*/
 .parcours .card:nth-of-type(even) .info .inContent {
   flex-direction: row-reverse;
 }
@@ -113,7 +90,6 @@
   border-radius: 20px !important;
   pointer-events: none;
 
-  object-fit: contain;
   object-fit: cover;
 
   position: relative;

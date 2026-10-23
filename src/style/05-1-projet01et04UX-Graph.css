@@ -3,8 +3,6 @@
 .UXCont .row,
 .graphCont .row,
 .chiffresCont .row {
-	/*max-width: 80% !important;*/
-
 	gap: 5px;
 	gap: 15px;
 	display: flex;
@@ -16,12 +14,12 @@
 	max-width: 90vw;
 	padding: 20px;
 }
-
+/*
 .UXCont .row,
 .graphCont .row {
-	max-width: 70vw;
+	max-width: 85vw;
 }
-
+*/
 .Frame {
 	height: 175px;
 	max-width: 300px;
@@ -49,15 +47,17 @@
 
 /* Modale plein écran */
 .imageModal {
+	margin-top: 100px;
 	position: fixed;
 	inset: 0;
-	z-index: 9999;
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 40px;
 	background: rgba(0, 0, 0, 0.9);
 	cursor: zoom-out;
+	z-index: 999999;
 }
 
 /* Image affichée dans la modale */
@@ -86,7 +86,7 @@
 	z-index: 10000;
 	border: 2px solid red;
 	border-radius: 50%;
-	color: white;
+	color: var(--whiteish);
 	box-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
 	transition: 0.4s;
 }
@@ -112,7 +112,8 @@
 	border-radius: 50%;
 
 	background: rgba(255, 255, 255, 0.15);
-	color: white;
+	color: var(--whiteish);
+
 	font-size: 28px;
 	cursor: pointer;
 	border: 2px solid #1f8e10;
@@ -123,7 +124,6 @@
 }
 
 .modalArrow:hover {
-	/*background: rgba(255, 255, 255, 0.35);*/
 	transform: translateY(-50%) scale(1.1);
 }
 
@@ -135,25 +135,4 @@
 /* Flèche suivante */
 .modalNext {
 	right: 25px;
-}
-
-/* Adaptation mobile */
-@media (max-width: 768px) {
-	.modalPrev {
-		left: 10px;
-	}
-
-	.modalNext {
-		right: 10px;
-	}
-
-	.modalArrow {
-		width: 40px;
-		height: 40px;
-		font-size: 22px;
-	}
-
-	.imageModal {
-		padding: 15px;
-	}
 }

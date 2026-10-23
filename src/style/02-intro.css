@@ -54,34 +54,20 @@
 }
 
 .introBox {
-  /*transform: rotate(1deg);*/
   display: flex;
   justify-content: center;
   align-items: center;
-  /*max-width: 60vw;*/
-  max-width: 80vw;
 
-  /*padding: 25px;
-  
-  border-radius: 25px;
-  background: rgba(255, 255, 255, 0.13);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.31);
-  */
+  max-width: 80vw;
 }
 
 .introBox .introPart {
   flex: 1;
   width: 50%;
   margin: auto;
-  /*text-align: justify;*/
 }
 
 .intro .introBox .ileft {
-  /*padding-right: 25px;*/
   flex: 1.5;
   padding-bottom: 20px;
   border-bottom: 1px solid var(--yel);
@@ -106,7 +92,6 @@
   font-weight: 500;
   width: 100%;
   color: var(--blackish);
-  /*line-height: 30px;*/
 }
 
 .introBox .iright img {
@@ -119,23 +104,7 @@
   border: none;
   z-index: 800;
   position: revert;
-  /*box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);*/
-
-  /*
-
-  animation: movingImg 9s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
-    alternate both;
-    */
 }
-
-/*.introBox .iright .imgwrap::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: red;
-  z-index: 1000;
-}*/
 
 .introBox .iright .imgwrap {
   padding: 10px;
@@ -147,9 +116,4 @@
   justify-content: center;
   background: var(--);
   background: var(--yel);
-
-  /*border: 1px solid var(--blackish);
-  border-left: none;
-  border-top: none;
-  border-bottom: none;*/
 }

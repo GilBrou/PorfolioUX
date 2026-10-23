@@ -46,9 +46,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /*
-  border-left: 2px solid var(--yel);
-  border-left: 2px solid red;*/
   width: 100%;
 }
 

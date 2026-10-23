@@ -9,7 +9,6 @@ export default function Envir() {
         href={item.url}
         target="_blank"
       >
-        <h3 className="myEco">{item.name}</h3>
         <img
           src={"/img/icons/" + item.icon || "loading..."}
           alt={item.name || "loading..."}

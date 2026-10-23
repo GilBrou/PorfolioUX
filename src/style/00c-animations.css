@@ -1,5 +1,57 @@
 /***ANIMATIONS***/
 
+/*Alogo*/
+@-webkit-keyframes Alogo {
+	0% {
+		-webkit-transform: rotateY(-70deg);
+		transform: rotateY(-70deg);
+		-webkit-transform-origin: left;
+		transform-origin: left;
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: rotateY(0);
+		transform: rotateY(0);
+		-webkit-transform-origin: left;
+		transform-origin: left;
+		opacity: 1;
+	}
+}
+@keyframes Alogo {
+	0% {
+		-webkit-transform: rotateY(-70deg);
+		transform: rotateY(-70deg);
+		-webkit-transform-origin: left;
+		transform-origin: left;
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: rotateY(0);
+		transform: rotateY(0);
+		-webkit-transform-origin: left;
+		transform-origin: left;
+		opacity: 1;
+	}
+}
+
+/*menuA*/
+@keyframes menuA {
+	0% {
+		-webkit-transform: rotateX(-100deg);
+		transform: rotateX(-100deg);
+		-webkit-transform-origin: top;
+		transform-origin: top;
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: rotateX(0deg);
+		transform: rotateX(0deg);
+		-webkit-transform-origin: top;
+		transform-origin: top;
+		opacity: 1;
+	}
+}
+
 @keyframes animate_169 {
 	0% {
 		transform: rotateY(90deg) rotate(0deg);
@@ -419,5 +471,49 @@
 	}
 	100% {
 		opacity: 1;
+	}
+}
+
+/*iconRotate*/
+@-webkit-keyframes iconRotate {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes iconRotate {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+/*iconRotate2*/
+@-webkit-keyframes iconRotate2 {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes iconRotate2 {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
 	}
 }

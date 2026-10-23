@@ -7,10 +7,8 @@
   position: relative;
   isolation: isolate;
   margin: 118px auto 75px;
-
-  padding: 100px 250px;
-
   padding: 50px 15px 100px 15px;
+  padding: 50px 100px 100px 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -26,7 +24,6 @@
   background-attachment: fixed;
   background-blend-mode: overlay;
   background-size: cover;
-
   clip-path: shape(
     from 0 25px,
     curve to 10.71% 25.5px with 7.14% 26px,
@@ -102,19 +99,13 @@
   transform: scale(1.05);
 }
 
-.envir .ecoCard .myEco {
-  color: black;
-  width: 100%;
-  text-align: center;
-  display: none;
-}
-
 .envir .ecoCard img {
-  background: white;
+  background: var(--whiteish);
+
   height: 80px;
   height: 50px;
   width: auto;
-  background: white;
+
   padding: 15px;
   border-radius: 20px;
 }
