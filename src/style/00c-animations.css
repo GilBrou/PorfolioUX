@@ -52,6 +52,24 @@
 	}
 }
 
+/*animation fade-in*/
+@-webkit-keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 @keyframes animate_169 {
 	0% {
 		transform: rotateY(90deg) rotate(0deg);
