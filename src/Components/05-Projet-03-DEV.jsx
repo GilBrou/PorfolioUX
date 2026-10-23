@@ -1,46 +1,15 @@
-import ReactTooltip from "react-tooltip";
-import { useEffect, useState } from "react";
 import projetsDev from "../datas/projetsDev.json";
 
 /*** PROJECTS MODULE ***/
-
 export default function Projet03DEV() {
   let myproject = projetsDev.projetsDev;
 
   /* Tooltip */
-  function tTip() {
-    const [tip, setTip] = useState(0);
-
-    useEffect(() => {
-      function incrementNum() {
-        setTip(+1);
-      }
-
-      incrementNum();
-    }, []);
-
-    if (tip > 0) {
-      return (
-        <ReactTooltip
-          id="techTip"
-          place="bottom"
-          textColor="#f9d696"
-          arrowColor="#f9d696"
-          border
-          borderColor="#f9d696"
-          effect="solid"
-          backgroundColor="#222020"
-        />
-      );
-    }
-  }
 
   /* Main */
   return (
     <div className="container devCont">
       <h3 className="secTitle01 secTitle02">Développement</h3>
-
-      {tTip()}
 
       {/* Project cards wrapper */}
       <div className="row otherCardsFade">
@@ -61,23 +30,6 @@ export default function Projet03DEV() {
 
                   {/* Project description */}
                   <h3>{d.pDescription}</h3>
-
-                  {/* Project information */}
-                  {/*<p>{d.pInfos}</p>*/}
-
-                  {/* Technologies */}
-                  <div className="techs">
-                    {d.technos.map((technos) => (
-                      <img
-                        key={technos.name}
-                        loading="lazy"
-                        src={technos.icon}
-                        alt={technos.name}
-                        data-tip={technos.name}
-                        data-for="techTip"
-                      />
-                    ))}
-                  </div>
 
                   {/* Buttons */}
                   {(d.pSite || d.pCode) && (

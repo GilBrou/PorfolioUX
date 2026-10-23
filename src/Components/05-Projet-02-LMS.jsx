@@ -10,13 +10,6 @@ export default function Projet02LMS() {
   const sectionRef = useRef(null);
   const countersRef = useRef([]);
 
-  /**
-   * Lance l’animation des chiffres lorsque
-   * le bloc entre dans la zone visible.
-   *
-   * Les durées, seuils et marges sont conservés
-   * pour préserver exactement le rendu actuel.
-   */
   useEffect(() => {
     const section = sectionRef.current;
 

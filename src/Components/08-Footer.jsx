@@ -1,12 +1,7 @@
-import { useState, useEffect } from "react";
-
 /*** HEADER/NAV MODULE ***/
 export default function Footer(props) {
   return (
     <footer className="contact">
-      {/*Icons/Links Wrapper*/}
-      {/*Mail Link*/}
-
       <a href="mailto:gillian.brousse@outlook.fr" className="cInfosDiv">
         <img
           src={props.data ? props.data.mailI : "loading..."}
@@ -15,8 +10,6 @@ export default function Footer(props) {
         />
         <p>{props.data ? props.data.mail : "loading..."} </p>
       </a>
-      {/*Github Link*/}
-
       <a
         className="cInfosDiv"
         href={props.data ? props.data.GitLink : "loading..."}
@@ -28,7 +21,6 @@ export default function Footer(props) {
         />
         <p>{props.data ? props.data.git : "loading..."} </p>
       </a>
-      {/*Linkedin Link*/}
 
       <a
         className="cInfosDiv"

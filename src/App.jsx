@@ -5,11 +5,9 @@ import { useEffect, useState } from "react";
 import { Redirect } from "react-router";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import axios from "axios";
-
 /*** PAGES & COMPOSANTS ***/
 import Homepage from "./Homepage";
-import Loader from "./Components/Loader.jsx";
+import Loader from "./Components/00-Loader.jsx";
 
 /*** DONNÉES LOCALES (JSON) ***/
 import JsonData from "./datas/data.json";

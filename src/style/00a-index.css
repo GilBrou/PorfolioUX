@@ -2,80 +2,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap");
 
 /***COMPONENTS STYLES***/
-@import "./loader.css";
-
-@import "./animations.css";
-/*@import "./contact.css";*/
-@import "./header.css";
-
-@import "./intro.css";
-@import "./comp.css";
-
-@import "./parcours.css";
-@import "./projets.css";
-@import "./projet01et04UX-Graph.css";
-@import "projet02LMS.css";
-@import "./projet03Dev.css";
-@import "./envir.css";
-@import "./cv.css";
-@import "./footer.css";
-
-/*@import "./responsive.css";*/
+@import "./00b-loader.css";
+@import "./00c-animations.css";
+@import "./01-header.css";
+@import "./02-intro.css";
+@import "./03-parcours.css";
+@import "./04-competences.css";
+@import "./05-0-projets.css";
+@import "./05-1-projet01et04UX-Graph.css";
+@import "./05-2-projet02LMS.css";
+@import "./05-3-projet03Dev.css";
+@import "./06-outils.css";
+@import "./07-cv.css";
+@import "./08-footer.css";
+@import "./09-responsive.css";
 
 /*Color Variables*/
 :root {
   --blackish: #222020;
   --whiteish: #f9f7fd;
   --yel: #f9d696;
-  --yel2: #d2b580;
-  --yel3: #e3c48a;
-  --darkB: #0b1326;
-  --darkB: #04070e;
-
   --lightB: #b3dee5;
-  --goldy: #ffa101;
-
   --beige: #fff1f0;
-  --orange: #ff6b6b;
 }
 
 /*General*/
 body,
 html {
-  /*font-family: "Roboto Slab", serif;*/
   font-family: "Sora", sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   font-weight: 400;
   color: var(--beige);
-
   background: url("./background/background.webp"), var(--blackish);
   background-attachment: fixed;
   background-blend-mode: overlay;
   background-size: cover;
-
-  /*background-color: var(--darkB);*/
   max-width: 100vw;
   padding: 0;
   margin: 0;
-
   scroll-behavior: smooth;
-}
-
-[id] {
-  scroll-margin-top: 70px;
-}
-
-#competences {
-  scroll-margin-top: 160px !important;
-}
-
-#outils {
-  scroll-margin-top: 220px !important;
-}
-
-#cv {
-  scroll-margin-top: 150px !important;
 }
 
 a {
@@ -115,4 +81,8 @@ li {
 
 .homepage {
   padding-top: 100px;
+}
+
+[id] {
+  scroll-margin-top: 70px;
 }

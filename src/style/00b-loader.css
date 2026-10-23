@@ -1,0 +1,47 @@
+/********************************************
+ *  * LOADER CONTAINER
+ * 
+ ********************************************/
+
+.loader-container {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-container img {
+  padding: 23px;
+  margin-bottom: 90px;
+  transform: scale(0.8);
+  -webkit-animation: flicker-in-1 2s linear both;
+  animation: flicker-in-1 2s linear both;
+}
+.loader {
+  width: 60px;
+  aspect-ratio: 1;
+  transform: scale(2);
+  transform-origin: center;
+
+  --c: no-repeat linear-gradient(var(--yel) 0 0);
+  opacity: 0.8;
+  background:
+    var(--c) 0 38px,
+    var(--c) right 18px bottom 18px,
+    var(--c) right 18px top 18px,
+    var(--c) 18px 18px,
+    var(--c) 18px 100%,
+    var(--c) 100% 100%,
+    var(--c) 100% 0,
+    var(--c) 0 0;
+
+  animation:
+    l8-1 2s infinite,
+    l8-2 2s infinite;
+}

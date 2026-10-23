@@ -1,23 +1,19 @@
 /*Module*/
+
+#cv {
+  scroll-margin-top: 150px !important;
+}
+
 .cv {
   position: relative;
-  margin: 200px auto;
   margin: 100px auto;
-
   padding: 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  max-width: 50vw;
   max-width: 70vw;
-  /*background: red;*/
-
-  /*border: 2px solid var(--yel);
-  border-radius: 20px;*/
-  /*
-  margin-bottom: 1500px;*/
 }
 
 .cv::before {
@@ -35,7 +31,6 @@
   display: flex;
   justify-content: center;
   align-self: center;
-  /*flex-wrap: wrap;*/
 }
 .cvWrapper .cvWrapperA {
   padding: 25px;
@@ -55,14 +50,10 @@
 
 .cv h2 {
   color: var(--yel);
-  /*width: 100%;*/
   text-align: center;
   padding: 15px 25px;
-  padding: 10px 30px;
-
   border: 2px solid var(--yel);
   border-radius: 20px;
-
   background: url("./background/background.webp"), var(--blackish);
   background-attachment: fixed;
   background-blend-mode: overlay;
@@ -71,7 +62,6 @@
 }
 
 .cv p {
-  /*color: blue;*/
   padding: 0;
   margin: 0;
   font-size: 18px;
@@ -102,23 +92,13 @@
 .btn-169 {
   --icon_width: 8px;
   --icon_height: 10px;
-  --icon_color: var(--beige);
   --icon_color: var(--blackish);
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.05);
   position: relative;
-  padding: 15px 25px 15px 40px;
-  background: radial-gradient(
-    circle at bottom center,
-    #fec35f,
-    #e9772c,
-    #f49d46
-  );
-
+  padding: 15px 25px 15px 55px;
   background: var(--yel);
-  color: #ffffff;
   color: var(--blackish);
-
   transform-style: preserve-3d;
   transition: all 500ms ease-in-out;
   font-family: Arial, Helvetica, sans-serif;
@@ -128,13 +108,10 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  /*font-size: 16px;*/
   font-weight: 600;
   z-index: 1;
   box-sizing: border-box;
-  /* width: 100%; */
   border: 1px solid var(--blackish);
-  font-size: 20px;
   font-size: 24px;
 }
 
@@ -160,11 +137,14 @@
   width: 80px;
   display: block;
   position: absolute;
-  left: -20px;
+
+  left: -10px;
   top: -36px;
   bottom: -40px;
   transform-style: preserve-3d;
   transform: rotateY(90deg) rotate(0deg);
+  margin: 0;
+  top: -32px;
 }
 
 .btn-169 .btn-icon > span {
@@ -189,29 +169,4 @@
     var(--icon_width);
   border-color: var(--icon_color) transparent transparent transparent;
   border-style: solid;
-}
-
-@keyframes animate_169 {
-  0% {
-    transform: rotateY(90deg) rotate(0deg);
-  }
-
-  60% {
-    transform: rotateY(90deg) rotate(-180deg);
-  }
-
-  100% {
-    transform: rotateY(90deg) rotate(-360deg);
-  }
-}
-
-/*** disabled style ***/
-.btn-169:disabled {
-  pointer-events: none;
-  opacity: 0.65;
-  color: #7e7e7e;
-  background: #dcdcdc;
-  box-shadow: none;
-  text-shadow: none;
-  --icon_color: #7e7e7e;
 }

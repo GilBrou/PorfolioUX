@@ -6,7 +6,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 
 /***STYLE***/
-import "./style/index.css";
+import "./style/00a-index.css";
 
 ReactDOM.render(
   <React.StrictMode>

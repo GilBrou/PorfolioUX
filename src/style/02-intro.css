@@ -46,8 +46,6 @@
     curve to 0 calc(100% - 25px) with 7.14% calc(100% - 50px),
     vline to 0
   );
-
-  /*transform: rotate(-1deg);*/
 }
 
 .intro h2 {

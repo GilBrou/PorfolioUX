@@ -1,14 +1,7 @@
-import { useState } from "react";
-
 import ecosysteme from "../datas/ecosysteme.json";
 
 export default function Envir() {
-  //console.log(ecosysteme);
-
   function renderEnvir(item, i) {
-    //console.log(item);
-    //console.log(item.ecoTitre);
-
     return (
       <a
         className="ecoCard"
