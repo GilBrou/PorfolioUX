@@ -1,5 +1,5 @@
 /***CARRER MODULE***/
-function Parcours(props) {
+export default function Parcours(props) {
   return (
     <div className="parcours">
       <h2 className="secTitle01">Mon parcours</h2>
@@ -43,5 +43,3 @@ function Parcours(props) {
     </div>
   );
 }
-
-export default Parcours;

@@ -1,29 +1,8 @@
 [
   {
-    "name": "AdobeInDesign",
-    "icon": "AdobeInDesign.webp",
-    "url": "https://www.adobe.com/products/indesign.html"
-  },
-
-  {
-    "name": "ArticulateRise360",
-    "icon": "ArticulateRise360.webp",
-    "url": "https://rise.articulate.com"
-  },
-  {
-    "name": "ChatGPT",
-    "icon": "ChatGPT.webp",
-    "url": "https://chatgpt.com"
-  },
-  {
-    "name": "compilatio",
-    "icon": "compilatio.webp",
-    "url": "https://www.compilatio.net"
-  },
-  {
-    "name": "Copilot",
-    "icon": "Copilot.webp",
-    "url": "https://copilot.microsoft.com"
+    "name": "HTML5",
+    "icon": "HTML5.webp",
+    "url": "https://html.spec.whatwg.org"
   },
   {
     "name": "CSS3",
@@ -31,19 +10,14 @@
     "url": "https://www.w3.org/Style/CSS"
   },
   {
-    "name": "ElevenLabs",
-    "icon": "ElevenLabs.webp",
-    "url": "https://elevenlabs.io"
+    "name": "javascript",
+    "icon": "javascript.webp",
+    "url": "https://developer.mozilla.org/fr/docs/Web/JavaScript"
   },
   {
-    "name": "Figma",
-    "icon": "Figma.webp",
-    "url": "https://www.figma.com"
-  },
-  {
-    "name": "Genially",
-    "icon": "Genially.webp",
-    "url": "https://genial.ly"
+    "name": "react",
+    "icon": "react.webp",
+    "url": "https://react.dev"
   },
   {
     "name": "Git",
@@ -56,34 +30,9 @@
     "url": "https://github.com"
   },
   {
-    "name": "H5P",
-    "icon": "H5P.webp",
-    "url": "https://h5p.org"
-  },
-  {
-    "name": "HTML5",
-    "icon": "HTML5.webp",
-    "url": "https://html.spec.whatwg.org"
-  },
-  {
-    "name": "Inkscape",
-    "icon": "Inkscape.webp",
-    "url": "https://inkscape.org"
-  },
-  {
-    "name": "javascript",
-    "icon": "javascript.webp",
-    "url": "https://developer.mozilla.org/fr/docs/Web/JavaScript"
-  },
-  {
-    "name": "Krita",
-    "icon": "Krita.webp",
-    "url": "https://krita.org"
-  },
-  {
-    "name": "Marsha education",
-    "icon": "MarshaEducation.webp",
-    "url": "https://www.marsha.education"
+    "name": "wordpress",
+    "icon": "wordpress.webp",
+    "url": "https://wordpress.org"
   },
 
   {
@@ -92,32 +41,44 @@
     "url": "https://moodle.org"
   },
   {
-    "name": "Napkin",
-    "icon": "Napkin.webp",
-    "url": "https://www.napkin.ai"
+    "name": "ArticulateRise360",
+    "icon": "ArticulateRise360.webp",
+    "url": "https://rise.articulate.com"
+  },
+  {
+    "name": "Genially",
+    "icon": "Genially.webp",
+    "url": "https://genial.ly"
   },
 
   {
-    "name": "react",
-    "icon": "react.webp",
-    "url": "https://react.dev"
+    "name": "compilatio",
+    "icon": "compilatio.webp",
+    "url": "https://www.compilatio.net"
+  },
+
+  {
+    "name": "H5P",
+    "icon": "H5P.webp",
+    "url": "https://h5p.org"
   },
   {
     "name": "SCORM",
     "icon": "SCORM.webp",
     "url": "https://scorm.com/scorm-explained"
   },
-
-  {
-    "name": "Shotcut",
-    "icon": "Shotcut.webp",
-    "url": "https://shotcut.org"
-  },
   {
     "name": "Ubicast",
     "icon": "Ubicast.webp",
     "url": "https://www.ubicast.eu"
   },
+
+  {
+    "name": "Marsha education",
+    "icon": "MarshaEducation.webp",
+    "url": "https://www.marsha.education"
+  },
+
   {
     "name": "Wooclap",
     "icon": "Wooclap.webp",
@@ -128,9 +89,56 @@
     "icon": "Wooflash.webp",
     "url": "https://www.wooflash.com"
   },
+
   {
-    "name": "wordpress",
-    "icon": "wordpress.webp",
-    "url": "https://wordpress.org"
+    "name": "Figma",
+    "icon": "Figma.webp",
+    "url": "https://www.figma.com"
+  },
+  {
+    "name": "AdobeInDesign",
+    "icon": "AdobeInDesign.webp",
+    "url": "https://www.adobe.com/products/indesign.html"
+  },
+  {
+    "name": "Inkscape",
+    "icon": "Inkscape.webp",
+    "url": "https://inkscape.org"
+  },
+
+  {
+    "name": "Krita",
+    "icon": "Krita.webp",
+    "url": "https://krita.org"
+  },
+
+  {
+    "name": "Shotcut",
+    "icon": "Shotcut.webp",
+    "url": "https://shotcut.org"
+  },
+
+  {
+    "name": "ChatGPT",
+    "icon": "ChatGPT.webp",
+    "url": "https://chatgpt.com"
+  },
+
+  {
+    "name": "Copilot",
+    "icon": "Copilot.webp",
+    "url": "https://copilot.microsoft.com"
+  },
+
+  {
+    "name": "ElevenLabs",
+    "icon": "ElevenLabs.webp",
+    "url": "https://elevenlabs.io"
+  },
+
+  {
+    "name": "Napkin",
+    "icon": "Napkin.webp",
+    "url": "https://www.napkin.ai"
   }
 ]

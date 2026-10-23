@@ -5,6 +5,8 @@ import Comp from "./Components/Comp";
 import Projets from "./Components/Projets";
 import Envir from "./Components/Envir";
 import CV from "./Components/CV";
+import Footer from "./Components/Footer";
+import datas from "./datas/data.json";
 
 export default function Homepage({ data }) {
   return (
@@ -25,12 +27,15 @@ export default function Homepage({ data }) {
         <Projets />
       </div>
 
-      <div id="envir">
+      <div id="outils">
         <Envir />
       </div>
 
       <div id="cv">
         <CV />
+      </div>
+      <div id="contact">
+        <Footer data={datas.contact} />
       </div>
     </div>
   );

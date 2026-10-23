@@ -18,6 +18,7 @@
 @import "./projet03Dev.css";
 @import "./envir.css";
 @import "./cv.css";
+@import "./footer.css";
 
 /*@import "./responsive.css";*/
 
@@ -62,9 +63,21 @@ html {
 }
 
 [id] {
-  scroll-margin-top: 100px;
   scroll-margin-top: 70px;
 }
+
+#competences {
+  scroll-margin-top: 160px !important;
+}
+
+#outils {
+  scroll-margin-top: 220px !important;
+}
+
+#cv {
+  scroll-margin-top: 150px !important;
+}
+
 a {
   font-family: "Sora", sans-serif;
   font-size: 16px;

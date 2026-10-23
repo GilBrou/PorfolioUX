@@ -110,16 +110,16 @@
   height: auto;
   width: 350px;
   float: left;
-  border-radius: 20px;
+  border-radius: 20px !important;
   pointer-events: none;
 
-  width: 350px;
-  height: auto;
   object-fit: contain;
-  float: left;
-  border-radius: 20px;
-  pointer-events: none;
+  object-fit: cover;
+
   position: relative;
+  width: 250px;
+  height: 200px;
+  background: red;
 }
 
 .parcours .card .info .inContent p {

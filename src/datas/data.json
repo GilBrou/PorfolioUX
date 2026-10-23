@@ -2,7 +2,14 @@
   "nav": {
     "logo": "img/GbLogo.webp",
     "nom": "Gillian Brousse - UI/UX Designer - Digital learning",
-    "sectionTitle": ["Parcours", "Compétences", "Réalisations", "CV", "Contact"]
+    "sectionTitle": [
+      "Parcours",
+      "Compétences",
+      "Réalisations",
+      "Outils",
+      "CV",
+      "Contact"
+    ]
   },
   "intro": {
     "title": "Bienvenue",
@@ -18,21 +25,20 @@
 
   "parcours": [
     {
-      "parcoursTitle1": "2005 - 2016 : Restauration",
-      "parcoursSubTitle": "BEP et BAC PRO Hôtellerie-Restauration",
-      "parcoursTitle2": "Commis, Second et Chef - du salon de thé au restaurant gastronomique",
-      "parcoursImg": "img/parcours/CV1.webp",
-      "parcoursImgAlt": "Carrière cuisinier",
-      "parcoursParagraph": "De prime abord, on pourrait penser que les métiers de bouche n'ont pas grand-chose à voir avec celui de développeur... Pourtant, connaissances des bonnes pratiques, travail d'équipe, gestion du stress, passion et motivation sont autant de savoir-faire et de savoir-être que j'ai mobilisé au quotidien en tant que cuisinier. Finalement, élaborer un produit en alliant techniques formelles, maîtrise des normes, rigueur et créativité tout en respectant un cahier des charges et une deadline est une description de tâche aussi pertinente dans le monde du développement que dans une cuisine."
+      "parcoursTitle1": "Depuis 2023 : UI/UX Design",
+      "parcoursTitle2": "UI/UX Designer - Digital Learning",
+      "parcoursImg": "img/parcours/CV5.webp",
+      "parcoursImgAlt": "Carrière UI/UX designer",
+      "parcoursParagraph": "En 2023, j’ai eu l’opportunité d’intégrer Nîmes Université dans le cadre de l'appel à manifestations d'intérêt DemoES financé par l’État et opéré par l’Agence nationale de la recherche. Cette expérience m'a permis de développer une approche pluridisciplinaire autour de l’UI/UX design et du Digital Learning. J’ai travaillé sur la conception d’interfaces et de parcours pour le web, les applications et les plateformes d’apprentissage, ainsi que sur le développement de solutions web et l’administration de Moodle. Cette expérience m’a également permis de concevoir des dispositifs de formation interactifs et immersifs et de renforcer mes compétences en communication visuelle."
     },
-
     {
-      "parcoursSubTitle": " Certificat de Qualification Professionnelle en vente",
-      "parcoursTitle2": "Employé de vente, Co-créateur, Créateur et Gestionnaire d'entreprise",
-      "parcoursImg": "img/parcours/CV2.webp",
-      "parcoursImgAlt": "Carrière Commerçant",
-      "parcoursTitle1": "2011 - 2020 : Commerce",
-      "parcoursParagraph": "En parallèle de ma carrière en restauration, j'ai ressenti le besoin d'entreprendre et j'ai créé successivement : un e-commerce de vêtements et produits axés sur la Pop-culture, une boutique de bijoux et accessoires et un magasin de décoration et cadeaux. De cette manière, j'ai acquis des compétences utiles à tous métiers, de la relation client (conseil, fidélisation, techniques de vente) à la gestion d'entreprise (législation, administratif, relations fournisseurs). Afin de parfaire cette expérience, j'ai également suivi une formation et obtenu un diplôme dans la vente."
+      "parcoursTitle1": "2022 : Développement",
+
+      "parcoursSubTitle": "Diplôme RNCP Développeur concepteur logiciel",
+      "parcoursTitle2": "Développeur Front-End",
+      "parcoursImg": "img/parcours/CV4.webp",
+      "parcoursImgAlt": "Carrière Développeur 1",
+      "parcoursParagraph": "Bien que j’aie géré des sites via CMS pendant des années, mes premières lignes de code remontent à 2020, lorsque je réalise un petit jeu rétro se déroulant dans l’univers de mon roman à l’aide du moteur Adventure Game Studio et son langage dérivé du C++. Ce premier défi passionnant entérine rapidement mon envie d’apprendre, puis de me reconvertir dans ce milieu. Après une formation diplômante d’un an auprès de l'organisme OpenClassrooms, me voici développeur Front-End / UX Designer, prêt à intégrer l’entreprise qui me permettra de consolider mes compétences et d’en acquérir de nouvelles."
     },
 
     {
@@ -45,21 +51,20 @@
     },
 
     {
-      "parcoursTitle1": "2022 : Développement",
-
-      "parcoursSubTitle": "Diplôme RNCP Développeur concepteur logiciel",
-      "parcoursTitle2": "Développeur Front-End",
-      "parcoursImg": "img/parcours/CV4.webp",
-      "parcoursImgAlt": "Carrière Développeur 1",
-      "parcoursParagraph": "Bien que j’aie géré des sites via CMS pendant des années, mes premières lignes de code remontent à 2020, lorsque je réalise un petit jeu rétro se déroulant dans l’univers de mon roman à l’aide du moteur Adventure Game Studio et son langage dérivé du C++. Ce premier défi passionnant entérine rapidement mon envie d’apprendre, puis de me reconvertir dans ce milieu. Après une formation diplômante d’un an auprès de l'organisme OpenClassrooms, me voici développeur Front-End / UX Designer, prêt à intégrer l’entreprise qui me permettra de consolider mes compétences et d’en acquérir de nouvelles."
+      "parcoursSubTitle": " Certificat de Qualification Professionnelle en vente",
+      "parcoursTitle2": "Employé de vente, Co-créateur, Créateur et Gestionnaire d'entreprise",
+      "parcoursImg": "img/parcours/CV2.webp",
+      "parcoursImgAlt": "Carrière Commerçant",
+      "parcoursTitle1": "2011 - 2020 : Commerce",
+      "parcoursParagraph": "En parallèle de ma carrière en restauration, j'ai ressenti le besoin d'entreprendre et j'ai créé successivement : un e-commerce de vêtements et produits axés sur la Pop-culture, une boutique de bijoux et accessoires et un magasin de décoration et cadeaux. De cette manière, j'ai acquis des compétences utiles à tous métiers, de la relation client (conseil, fidélisation, techniques de vente) à la gestion d'entreprise (législation, administratif, relations fournisseurs). Afin de parfaire cette expérience, j'ai également suivi une formation et obtenu un diplôme dans la vente."
     },
-
     {
-      "parcoursTitle1": "Depuis 2023 : UI/UX Design",
-      "parcoursTitle2": "UI/UX Designer - Digital Learning",
-      "parcoursImg": "img/parcours/CV4.webp",
-      "parcoursImgAlt": "Carrière UI/UX designer",
-      "parcoursParagraph": "En 2023, j’ai eu l’opportunité d’intégrer Nîmes Université dans le cadre de l'appel à manifestations d'intérêt DemoES financé par l’État et opéré par l’Agence nationale de la recherche. Cette expérience m'a permis de développer une approche pluridisciplinaire autour de l’UI/UX design et du Digital Learning. J’ai travaillé sur la conception d’interfaces et de parcours pour le web, les applications et les plateformes d’apprentissage, ainsi que sur le développement de solutions web et l’administration de Moodle. Cette expérience m’a également permis de concevoir des dispositifs de formation interactifs et immersifs et de renforcer mes compétences en communication visuelle."
+      "parcoursTitle1": "2005 - 2016 : Restauration",
+      "parcoursSubTitle": "BEP et BAC PRO Hôtellerie-Restauration",
+      "parcoursTitle2": "Commis, Second et Chef - du salon de thé au restaurant gastronomique",
+      "parcoursImg": "img/parcours/CV1.webp",
+      "parcoursImgAlt": "Carrière cuisinier",
+      "parcoursParagraph": "De prime abord, on pourrait penser que les métiers de bouche n'ont pas grand-chose à voir avec celui de développeur... Pourtant, connaissances des bonnes pratiques, travail d'équipe, gestion du stress, passion et motivation sont autant de savoir-faire et de savoir-être que j'ai mobilisé au quotidien en tant que cuisinier. Finalement, élaborer un produit en alliant techniques formelles, maîtrise des normes, rigueur et créativité tout en respectant un cahier des charges et une deadline est une description de tâche aussi pertinente dans le monde du développement que dans une cuisine."
     }
   ],
   "comp": {
@@ -174,7 +179,11 @@
     "cvImgAlt": "Programming skills",
 
     "cvParagraphOLd": "Si mon profil apparaît cohérent avec vos recherches et que vous souhaitez en apprendre plus sur mon expérience professionnelle ou me rencontrer, je vous invite à télécharger mon CV et à me contacter.",
-    "cvParagraph": "Si mon profil correspond à vos attentes et suscite votre intérêt, je vous invite à consulter mon CV pour découvrir plus en détail mon parcours professionnel et les compétences que j’ai développées au fil de mes expériences. Je serais ravi d’échanger avec vous sur vos besoins et les opportunités de collaboration, ainsi que sur la manière dont je pourrais contribuer à vos projets. N’hésitez pas à me contacter pour toute question ou pour convenir d’une rencontre, ce serait un plaisir de faire votre connaissance."
+    "cvParagraph": [
+      "Si mon profil correspond à vos attentes et suscite votre intérêt, je vous invite à consulter mon CV pour découvrir plus en détail mon parcours professionnel et les compétences que j’ai développées au fil de mes expériences. ",
+      "Je serais ravi d’échanger avec vous sur vos besoins et les opportunités de collaboration, ainsi que sur la manière dont je pourrais contribuer à vos projets.",
+      " N’hésitez pas à me contacter pour toute question ou pour convenir d’une rencontre, ce serait un plaisir de faire votre connaissance."
+    ]
   },
   "contact": {
     "title": "Contact",

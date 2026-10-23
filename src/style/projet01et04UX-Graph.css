@@ -17,14 +17,22 @@
 	padding: 20px;
 }
 
+.UXCont .row,
+.graphCont .row {
+	max-width: 70vw;
+}
+
 .Frame {
-	height: 150px;
+	height: 175px;
 	max-width: 300px;
 	transition: 0.5s;
 	overflow: hidden;
 	cursor: pointer;
 	margin: 15px auto;
 	margin: auto;
+
+	height: 100px;
+	max-width: 300px;
 }
 
 /*.UXCont */

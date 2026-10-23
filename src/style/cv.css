@@ -2,6 +2,7 @@
 .cv {
   position: relative;
   margin: 200px auto;
+  margin: 100px auto;
 
   padding: 25px;
   display: flex;
@@ -10,11 +11,13 @@
   align-items: center;
   gap: 20px;
   max-width: 50vw;
-  /*max-width: 70vw;*/
+  max-width: 70vw;
   /*background: red;*/
 
-  border: 2px solid var(--yel);
-  border-radius: 20px;
+  /*border: 2px solid var(--yel);
+  border-radius: 20px;*/
+  /*
+  margin-bottom: 1500px;*/
 }
 
 .cv::before {
@@ -22,14 +25,49 @@
   content: "";
   height: 225px;
   border: 1px solid var(--yel);
-  top: -227px;
+  top: -127px;
   left: 50%;
+}
+
+.cvWrapper {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  /*flex-wrap: wrap;*/
+}
+.cvWrapper .cvWrapperA {
+  padding: 25px;
+}
+
+.cvWrapper .cvWrapperA .cvImg {
+  width: 250px;
+}
+
+.cvWrapper .cvWrapperB {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
 }
 
 .cv h2 {
   color: var(--yel);
-  width: 100%;
+  /*width: 100%;*/
   text-align: center;
+  padding: 15px 25px;
+  padding: 10px 30px;
+
+  border: 2px solid var(--yel);
+  border-radius: 20px;
+
+  background: url("./background/background.webp"), var(--blackish);
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-size: cover;
+  z-index: 5000;
 }
 
 .cv p {

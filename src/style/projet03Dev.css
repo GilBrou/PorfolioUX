@@ -9,6 +9,8 @@
   padding-top: 55px;
   gap: 100px 60px;
   gap: 15px 37px;
+  gap: 20px 42px;
+  gap: 55px 42px;
 
   max-width: 90vw;
   /*max-width: 80% !important;*/
@@ -27,6 +29,7 @@
   transition: 0.5s;
   max-width: 400px;
   max-width: 380px;
+  max-width: 320px;
 
   height: stretch;
 
@@ -34,8 +37,17 @@
   justify-content: space-between;
   justify-content: flex-start;
   overflow: hidden;
-  /*background: red;*/
-  /*background: blueviolet;*/
+  /*background: orangered;*/
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 18px;
+  padding: 0 20px 20px 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  /*border: 1px solid rgba(255, 255, 255, 0.3);*/
 }
 
 /*Project image*/
@@ -50,6 +62,7 @@
 
   max-width: 380px;
   width: 378px;
+  width: 318px;
 
   display: block;
   flex-shrink: 0;
@@ -103,7 +116,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  /*display: none;*/
+  display: none;
 }
 /*Tech icons*/
 .realisations .container .row .projectCard .techs img {
@@ -116,6 +129,7 @@
 /*Buttons wrapper*/
 .realisations .container .row .projectCard .buttonW {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -123,7 +137,7 @@
   position: relative;
   width: 100%;
   /*margin-top: auto;*/
-  /*background: red;*/
+  margin-top: auto;
 }
 
 /*Buttons*/
@@ -140,7 +154,6 @@
   text-align: center;
   margin: auto;
   color: var(--beige);
-
   /*
   display: block;
   box-sizing: border-box;
@@ -149,6 +162,15 @@
 
   cursor: pointer;
   transition: 0.4s;
+  width: 90%;
+}
+
+.realisations .container .row .projectCard .urlButton:last-of-type {
+  margin-top: 10px;
+}
+
+.realisations .container .row .projectCard .urlButton:first-of-type {
+  margin-top: 0px;
 }
 
 .realisations .container .row .projectCard .buttonW .urlButton:hover {
