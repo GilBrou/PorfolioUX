@@ -59,6 +59,7 @@
   background-blend-mode: overlay;
   background-size: cover;
   z-index: 5000;
+  pointer-events: none;
 }
 
 .cv p {
