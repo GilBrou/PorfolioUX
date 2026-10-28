@@ -129,7 +129,7 @@ export default function Header(props) {
 
   return (
     <nav className={isScrolled ? "scrolled" : ""}>
-      <a href="/">
+      <a href="/" className="imgWrapNav">
         <img
           src={props.data?.logo || "loading..."}
           alt={props.data?.nom || "loading..."}

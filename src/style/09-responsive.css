@@ -1,4 +1,54 @@
-@media (max-width: 1199px) {
+@media (max-width: 1138px) {
+	nav ul li a {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 1072px) {
+	nav ul li a {
+		font-size: 15px;
+	}
+
+	nav img {
+		width: 250px;
+	}
+}
+
+@media (max-width: 930px) {
+	nav img {
+		width: 200px;
+	}
+}
+
+@media (max-width: 874px) {
+	nav {
+		flex-direction: column;
+	}
+	.imgWrapNav {
+		padding: 15px 15px 0 15px;
+	}
+	nav img {
+		width: 250px;
+	}
+	nav ul {
+		margin: 0 auto;
+	}
+
+	.intro {
+		margin-top: 75px;
+	}
+
+	.introBox .iright img {
+		width: 200px;
+	}
+
+	.intro .introBox p {
+		font-size: 15px;
+	}
+	.secTitle01 {
+		font-size: 2em;
+		font-size: 1.5em !important;
+	}
 }
 
 /* Adaptation mobile */
@@ -19,6 +69,32 @@
 
 	.imageModal {
 		padding: 15px;
+	}
+
+	.introBox {
+		flex-direction: column-reverse;
+	}
+
+	.introBox .introPart {
+		width: 100%;
+	}
+}
+
+@media (max-width: 696px) {
+	nav ul {
+		flex-wrap: wrap;
+		/*background: blue;*/
+		padding-bottom: 15px;
+	}
+
+	nav ul li:not(:first-of-type) {
+		/*background: red;*/
+	}
+}
+
+@media (max-width: 468px) {
+	.introBox .iright img {
+		width: 175px;
 	}
 }
 
