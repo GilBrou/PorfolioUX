@@ -90,11 +90,23 @@
 	nav ul li:not(:first-of-type) {
 		/*background: red;*/
 	}
+
+	.intro {
+		margin-top: 100px;
+	}
 }
 
 @media (max-width: 468px) {
 	.introBox .iright img {
 		width: 175px;
+	}
+
+	.introBox .introPart {
+		width: 100%;
+	}
+
+	.introBox {
+		max-width: 99vw;
 	}
 }
 
