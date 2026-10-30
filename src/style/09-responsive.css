@@ -1,9 +1,27 @@
+@media (max-width: 1300px) {
+	.parcours {
+		/*	max-width: unset;*/
+	}
+}
 @media (max-width: 1138px) {
 	nav ul li a {
 		font-size: 16px;
 	}
 }
+@media (max-width: 1092px) {
+	.card:last-of-type::after {
+		bottom: -162px;
+		right: 45%;
+		height: 160px;
+		width: 50%;
+		width: 30%;
+		border-radius: 0 50px;
+		border-bottom: none;
+		border-left: none;
 
+		border-color: red;
+	}
+}
 @media (max-width: 1072px) {
 	nav ul li a {
 		font-size: 15px;
@@ -11,6 +29,16 @@
 
 	nav img {
 		width: 250px;
+	}
+
+	.inContent,
+	.parcours .card:nth-of-type(even) .info .inContent {
+		flex-direction: column;
+	}
+	.parcours .card .info .inContent .cardImg {
+		float: unset;
+		width: 100% !important;
+		/*border-radius: unset !important;*/
 	}
 }
 
