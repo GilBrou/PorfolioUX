@@ -3,25 +3,30 @@
 		/*	max-width: unset;*/
 	}
 }
+
+@media (max-width: 1182px) {
+	.cv {
+		max-width: unset;
+	}
+}
+
 @media (max-width: 1138px) {
 	nav ul li a {
 		font-size: 16px;
 	}
 }
-@media (max-width: 1092px) {
-	.card:last-of-type::after {
-		bottom: -162px;
-		right: 45%;
-		height: 160px;
-		width: 50%;
-		width: 30%;
-		border-radius: 0 50px;
-		border-bottom: none;
-		border-left: none;
 
-		border-color: red;
+@media (max-width: 1116px) {
+	.card:last-of-type::before {
+		border-bottom: none;
+		border-radius: 20px 0;
+		height: 150%;
+	}
+	.card:last-of-type::after {
+		display: none;
 	}
 }
+
 @media (max-width: 1072px) {
 	nav ul li a {
 		font-size: 15px;
@@ -45,6 +50,21 @@
 @media (max-width: 930px) {
 	nav img {
 		width: 200px;
+	}
+
+	.comp .compPart::after {
+		display: none;
+	}
+
+	.comp .compPart .myCompCard {
+		width: 100% !important;
+	}
+
+	.comp .compPart .myCompCard:nth-of-type(3),
+	.comp .compPart .myCompCard:nth-of-type(4),
+	.comp .compPart .myCompCard:nth-of-type(5) {
+		margin-top: unset;
+		text-align: unset;
 	}
 }
 
@@ -76,6 +96,16 @@
 	.secTitle01 {
 		font-size: 2em;
 		font-size: 1.5em !important;
+	}
+
+	.envir {
+		padding: 50px 15px 100px 15px;
+	}
+	.cvWrapper {
+		flex-direction: column;
+	}
+	.cvWrapperA {
+		text-align: center;
 	}
 }
 
@@ -115,12 +145,63 @@
 		padding-bottom: 15px;
 	}
 
+	.cv .cvWrapperA {
+		display: none;
+	}
+
 	nav ul li:not(:first-of-type) {
 		/*background: red;*/
 	}
 
 	.intro {
 		margin-top: 100px;
+	}
+}
+@media (max-width: 884px) {
+	.realisations {
+		padding: 15px;
+		border-left: unset;
+	}
+	.realisations:first-of-type::before {
+		display: none;
+	}
+
+	.realisations .container {
+		padding: unset;
+	}
+
+	.chiffresCont .secTitle02 {
+		margin-top: 55px;
+	}
+
+	.chiffresCont .renderP {
+		width: 95%;
+	}
+
+	.UXCont .row,
+	.graphCont .row,
+	.chiffresCont .row {
+		max-width: unset;
+	}
+
+	.chiffresContainer {
+		width: 100%;
+	}
+}
+
+@media (max-width: 844px) {
+	.devCont .row {
+		max-width: unset;
+	}
+	/*	.projectCard {
+		max-width: unset;
+	}*/
+}
+
+@media (max-width: 802px) {
+	.realisations .container .row .projectCard {
+		max-width: unset;
+		width: 100%;
 	}
 }
 
