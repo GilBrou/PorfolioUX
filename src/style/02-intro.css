@@ -50,6 +50,7 @@
   animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 0.8s both;
 
   width: 100%;
+  padding: 75px 0px 50px 0px;
 }
 
 .intro h2 {

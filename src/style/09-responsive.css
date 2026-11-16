@@ -203,9 +203,40 @@
 		max-width: unset;
 		width: 100%;
 	}
+
+	.parcours .inContent p {
+		/*background: red;*/
+		font-size: 16px !important;
+	}
+
+	.cInfosDiv img {
+		width: 42px;
+	}
+}
+
+@media (max-width: 500px) {
+	footer {
+		flex-direction: column !important;
+		padding-top: 85px;
+	}
+
+	.cInfosDiv {
+		margin: 25px auto;
+	}
 }
 
 @media (max-width: 468px) {
+	nav {
+		padding-bottom: 20px;
+	}
+	.intro {
+		/*padding: 0;*/
+		padding-left: 10px;
+		padding-right: 10px;
+		/*background: red;*/
+		max-width: 96vw;
+		text-align: justify;
+	}
 	.introBox .iright img {
 		width: 175px;
 	}
@@ -216,6 +247,45 @@
 
 	.introBox {
 		max-width: 99vw;
+	}
+
+	.realisations .container.chiffresCont {
+		max-width: 93%;
+	}
+
+	.realisations .container.chiffresCont p {
+		font-size: 16px;
+	}
+
+	.chiffresContainer .text {
+		font-size: 15px;
+	}
+
+	.chiffresContainer .num {
+		font-size: 28px;
+	}
+
+	.devCont .projectCard {
+		width: 70% !important;
+	}
+
+	.realisations .container .row .projectCard .projectCardImg {
+		max-width: 100%;
+	}
+
+	.envir .ecoCard img {
+		height: 40px;
+	}
+
+	.cvWrapper .cvWrapperB {
+		padding: 25px 0 !important;
+	}
+}
+
+@media (max-width: 331px) {
+	nav ul li {
+		padding: 2px;
+		margin: auto 3px;
 	}
 }
 
