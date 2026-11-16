@@ -9,6 +9,7 @@ import Projet01UX from "./Components/05-Projet-01-UX";
 import Projet02LMS from "./Components/05-Projet-02-LMS";
 import Projet03DEV from "./Components/05-Projet-03-DEV";
 import Projet04GRAPH from "./Components/05-Projet-04-GRAPH";
+import AnimatedBackground from "./Components/AnimatedBackground.jsx";
 
 export default function Homepage({ data }) {
   return (
@@ -47,6 +48,7 @@ export default function Homepage({ data }) {
       <div id="contact">
         <Footer data={data.contact} />
       </div>
+      <AnimatedBackground />
     </div>
   );
 }

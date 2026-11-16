@@ -1,7 +1,4 @@
 @media (max-width: 1300px) {
-	.parcours {
-		/*	max-width: unset;*/
-	}
 }
 
 @media (max-width: 1182px) {
@@ -43,7 +40,6 @@
 	.parcours .card .info .inContent .cardImg {
 		float: unset;
 		width: 100% !important;
-		/*border-radius: unset !important;*/
 	}
 }
 
@@ -109,7 +105,6 @@
 	}
 }
 
-/* Adaptation mobile */
 @media (max-width: 768px) {
 	.modalPrev {
 		left: 10px;
@@ -141,16 +136,12 @@
 @media (max-width: 696px) {
 	nav ul {
 		flex-wrap: wrap;
-		/*background: blue;*/
+
 		padding-bottom: 15px;
 	}
 
 	.cv .cvWrapperA {
 		display: none;
-	}
-
-	nav ul li:not(:first-of-type) {
-		/*background: red;*/
 	}
 
 	.intro {
@@ -193,9 +184,6 @@
 	.devCont .row {
 		max-width: unset;
 	}
-	/*	.projectCard {
-		max-width: unset;
-	}*/
 }
 
 @media (max-width: 802px) {
@@ -205,7 +193,6 @@
 	}
 
 	.parcours .inContent p {
-		/*background: red;*/
 		font-size: 16px !important;
 	}
 
@@ -230,10 +217,9 @@
 		padding-bottom: 20px;
 	}
 	.intro {
-		/*padding: 0;*/
 		padding-left: 10px;
 		padding-right: 10px;
-		/*background: red;*/
+
 		max-width: 96vw;
 		text-align: justify;
 	}
@@ -288,65 +274,3 @@
 		margin: auto 3px;
 	}
 }
-
-/********************************************
- * RESPONSIVE
- ********************************************/
-/*
-@media (max-width: 900px) {
-	.Chiffres {
-		height: auto;
-		min-height: auto;
-		padding: 80px 25px;
-		gap: 30px;
-	}
-
-	.Chiffres .chiffresContainer {
-		width: 240px;
-		height: 115px;
-	}
-
-	.Chiffres .chiffresContainer .num {
-		font-size: 36px;
-	}
-
-	.Chiffres .chiffresContainer .text {
-		font-size: 18px;
-	}
-}
-
-@media (max-width: 594px) {
-	.Chiffres {
-		height: auto;
-		min-height: auto;
-		flex-direction: column;
-		flex-wrap: nowrap;
-		padding: 70px 20px;
-		gap: 20px;
-		overflow: visible;
-		transform: none;
-		background-position: center;
-	}
-
-	.missions .Chiffres {
-		width: 105vw;
-		margin-left: -25px;
-	}
-
-	.Chiffres .chiffresContainer {
-		width: min(100%, 280px);
-		height: auto;
-		min-height: 110px;
-		transform: none;
-	}
-
-	.Chiffres .chiffresContainer .num {
-		font-size: 34px;
-	}
-
-	.Chiffres .chiffresContainer .text {
-		font-size: 16px;
-		margin-top: -15px;
-	}
-}
-*/

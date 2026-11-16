@@ -1,15 +1,4 @@
 /*Module*/
-/********************************************
- * CHIFFRES COMPONENT
- ********************************************/
-
-/* Conteneur principal du bloc chiffres */
-
-/* Variante du bloc chiffres dans la page missions */
-
-.chiffresCont {
-	/*background: red;*/
-}
 
 .chiffresContainer {
 	display: flex;

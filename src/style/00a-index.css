@@ -16,6 +16,7 @@
 @import "./07-cv.css";
 @import "./08-footer.css";
 @import "./09-responsive.css";
+@import "./10-animback.css";
 
 /*Color Variables*/
 :root {
@@ -82,6 +83,7 @@ li {
 
 .homepage {
   padding-top: 100px;
+  position: relative;
 }
 
 [id] {

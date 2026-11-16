@@ -1,6 +1,6 @@
 .parcours {
   padding: 100px 25px;
-  /*max-width: 68vw;*/
+
   max-width: 80vw;
   margin: auto;
   position: relative;
@@ -65,7 +65,6 @@
 .parcours .card .info .title2 {
   color: var(--lightB);
   font-size: 20px;
-  /*line-height: 12px;*/
   text-align: justify;
   margin-top: 15px;
   pointer-events: none;
@@ -94,7 +93,6 @@
   position: relative;
   width: 250px;
   height: 200px;
-  /*border: 1px solid var(--beige);*/
 }
 
 .parcours .card .info .inContent p {
@@ -165,9 +163,6 @@
   border-left: none;
 }
 
-/*.card:last-of-type::before {
-  border-color: blue !important;
-}*/
 .card:first-of-type::before {
   top: -250px;
 }
