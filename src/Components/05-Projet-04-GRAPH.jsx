@@ -33,11 +33,17 @@ export default function Projet04GRAPH(data) {
             className="Frame"
             onClick={() => setSelectedIndex(i)}
           >
-            <img src={`/img/Graph/${d}`} className="img-responsive" alt={d} />
+            {/* Miniature */}
+            <img
+              src={`/img/graph/mini/${d}`}
+              className="img-responsive"
+              alt={d}
+            />
           </div>
         ))}
       </div>
 
+      {/* MODALE */}
       {selectedIndex !== null && (
         <div className="imageModal" onClick={() => setSelectedIndex(null)}>
           {/* Bouton fermer */}
@@ -58,9 +64,9 @@ export default function Projet04GRAPH(data) {
             &#10094;
           </button>
 
-          {/* Image sélectionnée */}
+          {/* Image originale */}
           <img
-            src={`/img/Graph/${projetsRandom[selectedIndex]}`}
+            src={`/img/graph/${projetsRandom[selectedIndex]}`}
             alt={projetsRandom[selectedIndex]}
             onClick={(e) => e.stopPropagation()}
           />

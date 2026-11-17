@@ -33,11 +33,13 @@ export default function Projet01UX() {
             className="Frame"
             onClick={() => setSelectedIndex(i)}
           >
-            <img src={`/img/Ux/${d}`} className="img-responsive" alt={d} />
+            {/* Miniature */}
+            <img src={`/img/Ux/mini/${d}`} className="img-responsive" alt={d} />
           </div>
         ))}
       </div>
 
+      {/* MODALE */}
       {selectedIndex !== null && (
         <div className="imageModal" onClick={() => setSelectedIndex(null)}>
           {/* Bouton fermer */}
@@ -58,7 +60,7 @@ export default function Projet01UX() {
             &#10094;
           </button>
 
-          {/* Image sélectionnée */}
+          {/* Image originale */}
           <img
             src={`/img/Ux/${projetsRandom[selectedIndex]}`}
             alt={projetsRandom[selectedIndex]}
