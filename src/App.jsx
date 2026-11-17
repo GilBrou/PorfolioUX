@@ -108,11 +108,11 @@ export default function App() {
     <Router>
       <div className="app">
         <Switch>
-          <Route exact path="/accueil">
+          <Route exact path="/">
             <Homepage data={allDatas} />
           </Route>
           <Route>
-            <Redirect to="/accueil" />
+            <Redirect to="/" />
           </Route>
         </Switch>
 

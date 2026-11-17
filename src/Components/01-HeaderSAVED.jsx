@@ -10,15 +10,14 @@ function slugify(text) {
     .replace(/^-+|-+$/g, "");
 }
 
-/*** HEADER/NAV MODULE ***/
-export default function Header(props) {
+/*** HEADER / NAV MODULE ***/
+export default function Header({ data, activePage, setActivePage }) {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSlug, setActiveSlug] = useState("");
-  const [isHomeActive, setIsHomeActive] = useState(() => !window.location.hash);
 
-  const menuItems = props.data?.sectionTitle ?? [];
+  // Récupération des éléments du menu
+  const menuItems = data?.sectionTitle ?? [];
 
-  // État de la navigation au scroll
+  // Gestion du scroll
   useEffect(() => {
     function handleScroll() {
       setIsScrolled(window.scrollY > 0);
@@ -35,80 +34,11 @@ export default function Header(props) {
     };
   }, []);
 
-  // Synchronisation URL + détection des sections visibles
-  useEffect(() => {
-    function handleHashChange() {
-      const slug = decodeURIComponent(window.location.hash.slice(1));
-
-      setActiveSlug(slug);
-      setIsHomeActive(!slug);
-    }
-
-    function handleScroll() {
-      if (window.scrollY <= 5) {
-        setActiveSlug("");
-        setIsHomeActive(true);
-      } else {
-        setIsHomeActive(false);
-      }
-    }
-
-    handleHashChange();
-
-    window.addEventListener("hashchange", handleHashChange);
-    window.addEventListener("scroll", handleScroll, {
-      passive: true,
-    });
-
-    const sections = menuItems
-      .map((title) => document.getElementById(slugify(title)))
-      .filter(Boolean);
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        // En haut : aucun élément n'a la classe active
-        if (window.scrollY <= 5) {
-          setActiveSlug("");
-          setIsHomeActive(true);
-          return;
-        }
-
-        const visibleSections = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-
-        if (visibleSections.length > 0) {
-          setActiveSlug(visibleSections[0].target.id);
-          setIsHomeActive(false);
-        }
-      },
-      {
-        rootMargin: "-20% 0px -65% 0px",
-        threshold: 0,
-      },
-    );
-
-    sections.forEach((section) => observer.observe(section));
-
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-      window.removeEventListener("scroll", handleScroll);
-      observer.disconnect();
-    };
-  }, [menuItems]);
-
-  // Clic Home : remonter sans recharger
+  // Retour à l'introduction
   function handleHomeClick(e) {
     e.preventDefault();
 
-    setActiveSlug("");
-    setIsHomeActive(true);
-
-    window.history.replaceState(
-      null,
-      "",
-      window.location.pathname + window.location.search,
-    );
+    setActivePage("intro");
 
     window.scrollTo({
       top: 0,
@@ -116,40 +46,55 @@ export default function Header(props) {
     });
   }
 
-  // Génération des liens de navigation
-  function DisplayMenu(myMenu, i) {
+  // Navigation entre les rubriques
+  function handleMenuClick(e, myMenu) {
+    e.preventDefault();
+
     const slug = slugify(myMenu);
 
-    return (
-      <li key={"menuItem" + i} className={activeSlug === slug ? "active" : ""}>
-        <a href={`#${slug}`}>{myMenu}</a>
-      </li>
-    );
+    setActivePage(slug);
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }
 
   return (
     <nav className={isScrolled ? "scrolled" : ""}>
-      <a href="/" className="imgWrapNav">
-        <img
-          src={props.data?.logo || "loading..."}
-          alt={props.data?.nom || "loading..."}
-        />
+      {/* LOGO */}
+      <a href="#top" className="imgWrapNav" onClick={handleHomeClick}>
+        <img src={data?.logo || "loading..."} alt={data?.nom || "Logo"} />
       </a>
 
+      {/* MENU */}
       <ul>
         {/* HOME */}
-        <li className={isHomeActive ? "active2" : ""}>
+        <li className={activePage === "intro" ? "active2" : ""}>
           <a
             href="#top"
             onClick={handleHomeClick}
-            aria-label="Retour en haut de page"
+            aria-label="Retour à l'introduction"
           >
             <i className="fa fa-home" aria-hidden="true"></i>
           </a>
         </li>
 
-        {/* SECTIONS */}
-        {menuItems.map((myMenu, i) => DisplayMenu(myMenu, i))}
+        {/* RUBRIQUES */}
+        {menuItems.map((myMenu, i) => {
+          const slug = slugify(myMenu);
+
+          return (
+            <li
+              key={"menuItem" + i}
+              className={activePage === slug ? "active" : ""}
+            >
+              <a href={`#${slug}`} onClick={(e) => handleMenuClick(e, myMenu)}>
+                {myMenu}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

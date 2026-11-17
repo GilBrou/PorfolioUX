@@ -16,16 +16,16 @@
   max-width: 70vw;
   margin: auto;
 }
-/*
+
 .cv::before {
   position: absolute;
   content: "";
-  height: 225px;
+  height: 255px;
   border: 1px solid var(--yel);
   top: -127px;
   left: 50%;
 }
-*/
+
 .cvWrapper {
   width: 100%;
   height: fit-content;

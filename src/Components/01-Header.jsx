@@ -11,7 +11,12 @@ function slugify(text) {
 }
 
 /*** HEADER / NAV MODULE ***/
-export default function Header({ data, activePage, setActivePage }) {
+export default function Header({
+  data,
+  activePage,
+  setActivePage,
+  showBorder,
+}) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   // Récupération des éléments du menu
@@ -60,8 +65,16 @@ export default function Header({ data, activePage, setActivePage }) {
     });
   }
 
+  // Classes CSS du menu
+  const navClass = [
+    isScrolled ? "scrolled" : "",
+    showBorder ? "has-border" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <nav className={isScrolled ? "scrolled" : ""}>
+    <nav className={navClass}>
       {/* LOGO */}
       <a href="#top" className="imgWrapNav" onClick={handleHomeClick}>
         <img src={data?.logo || "loading..."} alt={data?.nom || "Logo"} />

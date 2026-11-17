@@ -21,9 +21,20 @@ nav {
   border-bottom: 2px solid transparent;
   transition: border-bottom 0.3s ease;
 }
+/*
 
 nav.scrolled {
   border-bottom: 2px solid var(--yel);
+}
+*/
+/* Bordure uniquement selon la rubrique active */
+nav.has-border {
+  border-bottom: 2px solid var(--yel);
+}
+
+/* Pas de bordure par défaut */
+nav {
+  border-bottom: none;
 }
 
 nav img {
