@@ -58,8 +58,8 @@
 
   z-index: -1;
 }
-
-.envir::after {
+/*
+ .envir::after {
   content: "";
   position: absolute;
   width: 47%;
@@ -73,8 +73,7 @@
   border-bottom: unset;
   border-radius: 0 20px;
   z-index: -2;
-}
-
+}*/
 .envir h2 {
   border-bottom: 1px solid vvar(--blackish);
   color: var(--blackish);

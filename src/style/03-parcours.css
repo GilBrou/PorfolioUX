@@ -5,8 +5,9 @@
   margin: auto;
   position: relative;
   z-index: 500;
-  -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 1.2s both;
-  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 1.2s both;
+  /*-webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 1.2s both;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 1.2s both;*/
+  overflow: hidden;
 }
 
 .parcours .card {
@@ -26,7 +27,7 @@
   z-index: 2;
   padding-right: 25px;
 }
-
+/*
 .parcours::before {
   content: "";
   position: absolute;
@@ -37,7 +38,7 @@
   border-radius: 50px 0;
   pointer-events: none;
   z-index: -1;
-}
+}*/
 
 .parcours .card .info {
   display: flex;
@@ -161,6 +162,13 @@
   border-radius: 0 50px;
   border-bottom: none;
   border-left: none;
+  display: none;
+}
+
+.card:last-of-type::before {
+  border-bottom: unset;
+  border-radius: 20px 0 0 0;
+  height: 200%;
 }
 
 .card:first-of-type::before {

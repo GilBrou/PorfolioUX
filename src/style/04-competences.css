@@ -7,7 +7,7 @@
 .comp {
   z-index: 100;
   margin-top: 35px;
-  padding: 75px 25px 125px 25px;
+  padding: 75px 25px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -15,11 +15,12 @@
   z-index: 800;
   align-items: center;
   pointer-events: none;
-  background: url("./background/background.webp"), var(--yel);
+  /*background: url("./background/background.webp"), var(--yel);
   background-attachment: fixed;
   background-blend-mode: overlay;
   background-size: cover;
-  overflow: visible;
+  overflow: visible;*/
+  /*
   clip-path: shape(
     from 0 25px,
     curve to 10.71% 25.5px with 7.14% 26px,
@@ -50,14 +51,15 @@
     curve to 10.71% calc(100% - 35.5px) with 14.29% calc(100% - 21px),
     curve to 0 calc(100% - 25px) with 7.14% calc(100% - 50px),
     vline to 0
-  );
+  );*/
+  margin-bottom: 35px;
 }
 
 .comp h2 {
-  border-bottom: 1px solid vvar(--blackish);
-  color: var(--blackish);
+  /*border-bottom: 1px solid vvar(--blackish);*/
+  /*color: var(--blackish);*/
   width: 100%;
-  margin: 25px auto 25px auto;
+  margin: 25px auto 50px auto;
 }
 
 .comp .compPart {
@@ -80,6 +82,7 @@
   content: "";
   height: 60%;
   border: 2px solid var(--blackish);
+  border: 2px solid var(--yel);
   width: 98%;
   top: 50%;
   left: 0;
@@ -122,6 +125,10 @@
 .comp .compPart .myCompCard .myComp {
   color: var(--yel);
   background: var(--blackish);
+
+  color: var(--blackish);
+  background: var(--yel);
+
   width: stretch;
   text-align: center;
   padding: 10px;

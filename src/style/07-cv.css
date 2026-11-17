@@ -6,16 +6,17 @@
 
 .cv {
   position: relative;
-  margin: 100px auto;
-  padding: 25px;
+  /*  padding: 100px auto;*/
+  padding: 100px 25px 25px 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 20px;
   max-width: 70vw;
+  margin: auto;
 }
-
+/*
 .cv::before {
   position: absolute;
   content: "";
@@ -24,7 +25,7 @@
   top: -127px;
   left: 50%;
 }
-
+*/
 .cvWrapper {
   width: 100%;
   height: fit-content;

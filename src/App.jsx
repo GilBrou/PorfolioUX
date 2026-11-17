@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 /*** PAGES & COMPOSANTS ***/
 import Homepage from "./Homepage";
 import Loader from "./Components/00-Loader.jsx";
+import AnimatedBackground from "./Components/AnimatedBackground.jsx";
 
 /*** DONNÉES LOCALES (JSON) ***/
 import JsonData from "./datas/data.json";
@@ -114,6 +115,9 @@ export default function App() {
             <Redirect to="/accueil" />
           </Route>
         </Switch>
+
+        {/* FOND ANIMÉ */}
+        <AnimatedBackground />
       </div>
     </Router>
   );

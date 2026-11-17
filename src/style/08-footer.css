@@ -4,7 +4,7 @@ footer {
   background-blend-mode: overlay;
   background-size: cover;
 
-  clip-path: shape(
+  /*  clip-path: shape(
     from 0 25px,
     curve to 10.71% 25.5px with 7.14% 26px,
     curve to 17.86% 21.5px with 14.29% 25px,
@@ -22,9 +22,41 @@ footer {
     vline to 100%,
     hline to 0,
     vline to 0
+  );*/
+
+  clip-path: shape(
+    from 0 25px,
+    curve to 10.71% 25.5px with 7.14% 26px,
+    curve to 17.86% 21.5px with 14.29% 25px,
+    curve to 25% 9.5px with 21.43% 18px,
+    curve to 32.14% 19.5px with 28.57% 1px,
+    curve to 39.29% 21.5px with 35.71% 38px,
+    curve to 46.43% 3.5px with 42.86% 5px,
+    curve to 53.57% 19px with 50% 2px,
+    curve to 60.71% 26.5px with 57.14% 36px,
+    curve to 67.86% 17px with 64.29% 17px,
+    curve to 75% 19px with 71.43% 17px,
+    curve to 82.14% 25.5px with 78.57% 21px,
+    curve to 89.29% 20px with 85.71% 30px,
+    curve to 100% 25px with 92.86% 10px,
+    vline to calc(100% - 25px),
+    curve to 89.29% calc(100% - 35.5px) with 92.86% calc(100% - 29px),
+    curve to 82.14% calc(100% - 36px) with 85.71% calc(100% - 42px),
+    curve to 75% calc(100% - 15.5px) with 78.57% calc(100% - 30px),
+    curve to 67.86% calc(100% - 23.5px) with 71.43% calc(100% - 1px),
+    curve to 60.71% calc(100% - 38px) with 64.29% calc(100% - 46px),
+    curve to 53.57% calc(100% - 22px) with 57.14% calc(100% - 30px),
+    curve to 46.43% calc(100% - 29.5px) with 50% calc(100% - 14px),
+    curve to 39.29% calc(100% - 31px) with 42.86% calc(100% - 45px),
+    curve to 32.14% calc(100% - 13px) with 35.71% calc(100% - 17px),
+    curve to 25% calc(100% - 25px) with 28.57% calc(100% - 9px),
+    curve to 17.86% calc(100% - 31px) with 21.43% calc(100% - 41px),
+    curve to 10.71% calc(100% - 35.5px) with 14.29% calc(100% - 21px),
+    curve to 0 calc(100% - 25px) with 7.14% calc(100% - 50px),
+    vline to 0
   );
 
-  min-height: 185px;
+  min-height: 285px;
 
   max-width: 100vw;
 
@@ -33,6 +65,7 @@ footer {
   justify-content: space-around;
   padding: 0px 25px;
   margin: 0;
+  margin-top: 200px;
   padding: 15px 0 15px 0;
 }
 
