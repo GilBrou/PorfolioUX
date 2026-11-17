@@ -17,6 +17,12 @@ export default function Homepage({ data }) {
   // Intro affichée au chargement
   const [activePage, setActivePage] = useState("intro");
 
+  // Rubriques qui affichent la bordure inférieure du menu
+  const pagesWithBorder = ["parcours", "projets", "realisations", "cv"];
+
+  // Détermine si la bordure doit être affichée
+  const showBorder = pagesWithBorder.includes(activePage);
+
   // Affichage dynamique des rubriques
   function renderContent() {
     switch (activePage) {
@@ -65,6 +71,7 @@ export default function Homepage({ data }) {
         data={data.nav}
         activePage={activePage}
         setActivePage={setActivePage}
+        showBorder={showBorder}
       />
 
       {/* CONTENU SÉLECTIONNÉ */}

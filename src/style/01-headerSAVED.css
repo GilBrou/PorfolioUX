@@ -1,0 +1,204 @@
+nav {
+  border: unset;
+  /*  max-width: 100vw;*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 25px;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100000;
+
+  background: url("./background/background.webp"), var(--blackish);
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-size: cover;
+
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+/*
+
+nav.scrolled {
+  border-bottom: 2px solid var(--yel);
+}
+*/
+/* Bordure uniquement selon la rubrique active */
+nav.has-border {
+  border-bottom: 2px solid var(--yel);
+}
+
+/* Pas de bordure par défaut */
+nav {
+  border-bottom: none;
+}
+
+nav img {
+  width: 350px;
+  /*-webkit-animation: Alogo 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both;
+  animation: Alogo 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both;*/
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  list-style: none;
+  height: 80px;
+  padding: 0;
+}
+
+nav ul li {
+  width: fit-content;
+  padding: 5px;
+  margin: auto 7px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  justify-content: center;
+}
+
+nav ul li a {
+  font-size: 18px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.5s ease;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+
+  background: linear-gradient(90deg, transparent, var(--yel), transparent);
+
+  background-size: 300% 100%;
+  background-position: 200% 0;
+
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+nav ul li:not(.active) a:hover {
+  color: var(--yel);
+}
+
+nav ul li:not(.active) a:hover::after {
+  opacity: 1;
+  animation: shimmer111 2s linear infinite;
+}
+
+nav ul li.active a {
+  color: var(--whiteish);
+}
+
+nav ul li.active a::after {
+  opacity: 1;
+  animation: none;
+  background-position: center;
+}
+
+nav ul li.active a:hover {
+  color: var(--whiteish);
+}
+
+nav ul li.active a:hover::after {
+  opacity: 1;
+  animation: none;
+}
+
+nav ul li a i {
+  padding-bottom: 5px;
+}
+
+@keyframes shimmer111 {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/*Scrollable section title entrance animation*/
+nav ul li {
+  /*animation: menuA 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    calc(0.5s + (var(--i) * 0.1s)) both;*/
+}
+
+nav ul li:nth-of-type(1) {
+  --i: 0;
+}
+nav ul li:nth-of-type(2) {
+  --i: 1;
+}
+nav ul li:nth-of-type(3) {
+  --i: 2;
+}
+nav ul li:nth-of-type(4) {
+  --i: 3;
+}
+nav ul li:nth-of-type(5) {
+  --i: 4;
+}
+nav ul li:nth-of-type(6) {
+  --i: 5;
+}
+nav ul li:nth-of-type(7) {
+  --i: 6;
+}
+
+/* HOME : état spécial, sans classe active */
+nav ul li.active2 a {
+  color: var(--whiteish);
+  color: var(--yel);
+}
+
+/* Soulignement fixe pour Home */
+nav ul li.active2 a::after {
+  opacity: 1;
+  animation: none;
+  background-position: center;
+  display: none;
+}
+
+/* Aucun changement au survol de Home */
+nav ul li.active2 a:hover {
+  color: var(--whiteish);
+}
+
+nav ul li.active2 a:hover::after {
+  opacity: 1;
+  animation: none;
+}
+
+/* Sections non actives : animation au survol */
+nav ul li:not(.active):not(.active2) a:hover {
+  color: var(--yel);
+}
+
+nav ul li:not(.active):not(.active2) a:hover::after {
+  opacity: 1;
+  animation: shimmer111 2s linear infinite;
+}
+
+/* Sections actives */
+nav ul li.active a {
+  color: var(--whiteish);
+}
+
+nav ul li.active a::after {
+  opacity: 1;
+  animation: none;
+  background-position: center;
+}

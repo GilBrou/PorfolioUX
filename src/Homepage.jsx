@@ -13,6 +13,14 @@ import Projet02LMS from "./Components/05-Projet-02-LMS";
 import Projet03DEV from "./Components/05-Projet-03-DEV";
 import Projet04GRAPH from "./Components/05-Projet-04-GRAPH";
 
+// Sommaire des réalisations
+const sectionsRealisations = [
+  { id: "projet-ux", label: "UI / UX" },
+  { id: "projet-lms", label: "Digital Learning / LMS" },
+  { id: "projet-dev", label: "Développement" },
+  { id: "projet-graph", label: "Graphisme" },
+];
+
 export default function Homepage({ data }) {
   // Intro affichée au chargement
   const [activePage, setActivePage] = useState("intro");
@@ -23,6 +31,36 @@ export default function Homepage({ data }) {
   // Détermine si la bordure doit être affichée
   const showBorder = pagesWithBorder.includes(activePage);
 
+  function scrollToSection(e, id) {
+    e.preventDefault();
+
+    const section = document.getElementById(id);
+    if (!section) return;
+
+    const header = document.querySelector("nav");
+    const sommaire = document.querySelector(".sommaireRealisations");
+
+    const headerHeight = header?.getBoundingClientRect().height || 0;
+    const sommaireHeight = sommaire?.getBoundingClientRect().height || 0;
+
+    // Décalage personnalisé pour chaque projet
+    const offsets = {
+      "projet-ux": 150,
+      "projet-lms": 0,
+      "projet-dev": 0,
+      "projet-graph": 0,
+    };
+
+    const extraOffset = offsets[id] ?? 20;
+    const offset = headerHeight + sommaireHeight + extraOffset;
+
+    const top = section.getBoundingClientRect().top + window.scrollY - offset;
+
+    window.scrollTo({
+      top,
+      behavior: "smooth",
+    });
+  }
   // Affichage dynamique des rubriques
   function renderContent() {
     switch (activePage) {
@@ -42,10 +80,21 @@ export default function Homepage({ data }) {
             <div className="realisations">
               <h2 className="secTitle01">Exemples de réalisations</h2>
 
-              <Projet01UX />
-              <Projet02LMS />
-              <Projet03DEV />
-              <Projet04GRAPH />
+              <div id="projet-ux">
+                <Projet01UX />
+              </div>
+
+              <div id="projet-lms">
+                <Projet02LMS />
+              </div>
+
+              <div id="projet-dev">
+                <Projet03DEV />
+              </div>
+
+              <div id="projet-graph">
+                <Projet04GRAPH />
+              </div>
             </div>
           </section>
         );
@@ -73,6 +122,24 @@ export default function Homepage({ data }) {
         setActivePage={setActivePage}
         showBorder={showBorder}
       />
+
+      {/* SOMMAIRE SOUS LE HEADER */}
+      {(activePage === "projets" || activePage === "realisations") && (
+        <div className="sommaireRealisations">
+          <ul>
+            {sectionsRealisations.map((section) => (
+              <li key={section.id}>
+                <a
+                  href={`#${section.id}`}
+                  onClick={(e) => scrollToSection(e, section.id)}
+                >
+                  {section.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {/* CONTENU SÉLECTIONNÉ */}
       <main key={activePage}>{renderContent()}</main>

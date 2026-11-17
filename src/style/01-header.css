@@ -1,12 +1,16 @@
+/* ==========================================
+   HEADER PRINCIPAL
+========================================== */
+
 nav {
   border: unset;
-  /*  max-width: 100vw;*/
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   padding: 0 25px;
   margin: 0;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -21,32 +25,23 @@ nav {
   border-bottom: 2px solid transparent;
   transition: border-bottom 0.3s ease;
 }
-/*
 
-nav.scrolled {
-  border-bottom: 2px solid var(--yel);
-}
-*/
-/* Bordure uniquement selon la rubrique active */
+/* Bordure selon la rubrique active */
 nav.has-border {
   border-bottom: 2px solid var(--yel);
 }
 
-/* Pas de bordure par défaut */
-nav {
-  border-bottom: none;
-}
-
+/* Images du Header */
 nav img {
   width: 350px;
-  /*-webkit-animation: Alogo 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both;
-  animation: Alogo 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both;*/
 }
 
+/* Liste principale */
 nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
+
   width: fit-content;
   list-style: none;
   height: 80px;
@@ -57,6 +52,7 @@ nav ul li {
   width: fit-content;
   padding: 5px;
   margin: auto 7px;
+
   display: flex;
   align-items: center;
   text-transform: uppercase;
@@ -71,6 +67,7 @@ nav ul li a {
   transition: color 0.5s ease;
 }
 
+/* Soulignement animé */
 nav ul li a::after {
   content: "";
   position: absolute;
@@ -88,6 +85,7 @@ nav ul li a::after {
   transition: opacity 0.5s;
 }
 
+/* Survol */
 nav ul li:not(.active) a:hover {
   color: var(--yel);
 }
@@ -97,6 +95,7 @@ nav ul li:not(.active) a:hover::after {
   animation: shimmer111 2s linear infinite;
 }
 
+/* Sections actives */
 nav ul li.active a {
   color: var(--whiteish);
 }
@@ -120,6 +119,7 @@ nav ul li a i {
   padding-bottom: 5px;
 }
 
+/* Animation shimmer */
 @keyframes shimmer111 {
   0% {
     background-position: 200% 0;
@@ -130,41 +130,40 @@ nav ul li a i {
   }
 }
 
-/*Scrollable section title entrance animation*/
-nav ul li {
-  /*animation: menuA 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-    calc(0.5s + (var(--i) * 0.1s)) both;*/
-}
-
+/* Animation des éléments du menu */
 nav ul li:nth-of-type(1) {
   --i: 0;
 }
+
 nav ul li:nth-of-type(2) {
   --i: 1;
 }
+
 nav ul li:nth-of-type(3) {
   --i: 2;
 }
+
 nav ul li:nth-of-type(4) {
   --i: 3;
 }
+
 nav ul li:nth-of-type(5) {
   --i: 4;
 }
+
 nav ul li:nth-of-type(6) {
   --i: 5;
 }
+
 nav ul li:nth-of-type(7) {
   --i: 6;
 }
 
-/* HOME : état spécial, sans classe active */
+/* HOME */
 nav ul li.active2 a {
-  color: var(--whiteish);
   color: var(--yel);
 }
 
-/* Soulignement fixe pour Home */
 nav ul li.active2 a::after {
   opacity: 1;
   animation: none;
@@ -172,7 +171,6 @@ nav ul li.active2 a::after {
   display: none;
 }
 
-/* Aucun changement au survol de Home */
 nav ul li.active2 a:hover {
   color: var(--whiteish);
 }
@@ -182,7 +180,7 @@ nav ul li.active2 a:hover::after {
   animation: none;
 }
 
-/* Sections non actives : animation au survol */
+/* Sections non actives */
 nav ul li:not(.active):not(.active2) a:hover {
   color: var(--yel);
 }
@@ -192,13 +190,214 @@ nav ul li:not(.active):not(.active2) a:hover::after {
   animation: shimmer111 2s linear infinite;
 }
 
-/* Sections actives */
-nav ul li.active a {
-  color: var(--whiteish);
+/* ==========================================
+   SOMMAIRE RÉALISATIONS
+========================================== */
+
+.sommaireRealisations {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 55px;
+
+  padding: 0 25px;
+  margin: 0;
+
+  position: fixed;
+  top: 110px;
+  top: 80px;
+  left: 0;
+  right: 0;
+
+  z-index: 109999;
+
+  background: url("./background/background.webp"), var(--blackish);
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-size: cover;
+
+  border-bottom: 2px solid var(--yel);
+  margin-bottom: 0;
 }
 
-nav ul li.active a::after {
+/* Liste centrée */
+.sommaireRealisations ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 97%;
+  height: 55px;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Éléments */
+.sommaireRealisations ul li {
+  width: fit-content;
+  padding: 5px;
+  margin: auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-transform: uppercase;
+}
+
+/* Liens */
+.sommaireRealisations ul li a {
+  font-size: 15px;
+  padding-bottom: 5px;
+
+  text-decoration: none;
+  position: relative;
+
+  transition: color 0.5s ease;
+}
+
+/* Soulignement animé */
+.sommaireRealisations ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: linear-gradient(90deg, transparent, var(--yel), transparent);
+
+  background-size: 300% 100%;
+  background-position: 200% 0;
+
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+/* Survol */
+.sommaireRealisations ul li a:hover {
+  color: var(--yel);
+}
+
+.sommaireRealisations ul li a:hover::after {
   opacity: 1;
-  animation: none;
-  background-position: center;
+  animation: shimmer111 2s linear infinite;
+}
+
+/* ==========================================
+   CONTENU PRINCIPAL
+========================================== */
+
+/* Décalage sous le Header */
+.homepage main {
+  /*padding-top: 80px;*/
+}
+
+/* Décalage supplémentaire lorsque le sommaire existe */
+.homepage main:has(#realisations) {
+  /*padding-top: 135px;*/
+}
+
+/* ==========================================
+   RESPONSIVE TABLETTE ET MOBILE
+========================================== */
+
+@media screen and (max-width: 768px) {
+  /* Header */
+  nav {
+    padding: 0 12px;
+  }
+
+  nav img {
+    width: 180px;
+  }
+
+  nav ul {
+    height: 80px;
+  }
+
+  nav ul li {
+    margin: auto 4px;
+    padding: 3px;
+  }
+
+  nav ul li a {
+    font-size: 12px;
+  }
+
+  /* Sommaire */
+  .sommaireRealisations {
+    top: 80px;
+
+    justify-content: flex-start;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 0;
+
+    scrollbar-width: none;
+  }
+
+  .sommaireRealisations::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sommaireRealisations ul {
+    width: max-content;
+    min-width: 100%;
+
+    justify-content: flex-start;
+
+    height: 55px;
+    padding: 0 15px;
+    gap: 20px;
+  }
+
+  .sommaireRealisations ul li {
+    flex-shrink: 0;
+    margin: 0;
+    padding: 5px;
+  }
+
+  .sommaireRealisations ul li a {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  /* Contenu */
+  .homepage main {
+    padding-top: 80px;
+  }
+
+  .homepage main:has(#realisations) {
+    padding-top: 135px;
+  }
+}
+
+/* ==========================================
+   PETITS ÉCRANS
+========================================== */
+
+@media screen and (max-width: 480px) {
+  nav img {
+    width: 130px;
+  }
+
+  nav ul li a {
+    font-size: 10px;
+  }
+
+  .sommaireRealisations ul {
+    gap: 15px;
+  }
+
+  .sommaireRealisations ul li a {
+    font-size: 11px;
+  }
 }

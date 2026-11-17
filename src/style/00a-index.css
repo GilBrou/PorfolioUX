@@ -85,7 +85,18 @@ li {
   padding-top: 100px;
   position: relative;
 }
-
+/*
 [id] {
   scroll-margin-top: 70px;
 }
+
+#projet-lms,
+#projet-dev,
+#projet-graph {
+  scroll-margin-top: 150px;
+}
+
+#projet-ux {
+  scroll-margin-top: -800px;
+}
+*/
