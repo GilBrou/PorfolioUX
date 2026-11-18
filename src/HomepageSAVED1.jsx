@@ -22,35 +22,57 @@ const sectionsRealisations = [
 ];
 
 export default function Homepage({ data }) {
-  // Intro affichée au chargement
+  // Page principale active
   const [activePage, setActivePage] = useState("intro");
 
-  // Rubriques qui affichent la bordure inférieure du menu
-  const pagesWithBorder = ["parcours", "projets", "realisations", "cv"];
+  // Sous-section active
+  const [activeSection, setActiveSection] = useState("projet-ux");
 
-  // Détermine si la bordure doit être affichée
+  // Rubriques qui affichent la bordure inférieure du menu
+  const pagesWithBorder = [
+    "parcours",
+    "competences",
+    "projets",
+    "realisations",
+    "cv",
+  ];
+
   const showBorder = pagesWithBorder.includes(activePage);
 
   // Navigation du sommaire réalisations
   function scrollToSection(e, id) {
     e.preventDefault();
 
+    // Mise à jour du sous-menu actif
+    setActiveSection(id);
+
     const section = document.getElementById(id);
+    if (!section) return;
 
-    if (section) {
-      const headerHeight = document.querySelector("nav")?.offsetHeight || 0;
+    const header = document.querySelector("nav");
+    const sommaire = document.querySelector(".sommaireRealisations");
 
-      const top =
-        section.getBoundingClientRect().top +
-        window.scrollY -
-        headerHeight -
-        15;
+    const headerHeight = header?.getBoundingClientRect().height || 0;
 
-      window.scrollTo({
-        top,
-        behavior: "smooth",
-      });
-    }
+    const sommaireHeight = sommaire?.getBoundingClientRect().height || 0;
+
+    // Décalage personnalisé pour chaque projet
+    const offsets = {
+      "projet-ux": 150,
+      "projet-lms": 0,
+      "projet-dev": 0,
+      "projet-graph": 0,
+    };
+
+    const extraOffset = offsets[id] ?? 20;
+    const offset = headerHeight + sommaireHeight + extraOffset;
+
+    const top = section.getBoundingClientRect().top + window.scrollY - offset;
+
+    window.scrollTo({
+      top,
+      behavior: "smooth",
+    });
   }
 
   // Affichage dynamique des rubriques
@@ -107,7 +129,7 @@ export default function Homepage({ data }) {
 
   return (
     <div className="homepage">
-      {/* HEADER TOUJOURS VISIBLE */}
+      {/* HEADER PRINCIPAL */}
       <Header
         data={data.nav}
         activePage={activePage}
@@ -115,7 +137,7 @@ export default function Homepage({ data }) {
         showBorder={showBorder}
       />
 
-      {/* SOMMAIRE SOUS LE HEADER */}
+      {/* SECOND SOMMAIRE */}
       {(activePage === "projets" || activePage === "realisations") && (
         <div className="sommaireRealisations">
           <ul>
@@ -123,6 +145,7 @@ export default function Homepage({ data }) {
               <li key={section.id}>
                 <a
                   href={`#${section.id}`}
+                  className={activeSection === section.id ? "active" : ""}
                   onClick={(e) => scrollToSection(e, section.id)}
                 >
                   {section.label}
@@ -133,7 +156,7 @@ export default function Homepage({ data }) {
         </div>
       )}
 
-      {/* CONTENU SÉLECTIONNÉ */}
+      {/* CONTENU */}
       <main key={activePage}>{renderContent()}</main>
     </div>
   );

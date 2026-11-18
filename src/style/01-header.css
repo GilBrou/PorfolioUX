@@ -23,7 +23,7 @@ nav {
   background-size: cover;
 
   border-bottom: 2px solid transparent;
-  transition: border-bottom 0.3s ease;
+  /*transition: border-bottom 0.3s ease;*/
 }
 
 /* Bordure selon la rubrique active */
@@ -301,6 +301,34 @@ nav ul li:not(.active):not(.active2) a:hover::after {
 /* Décalage supplémentaire lorsque le sommaire existe */
 .homepage main:has(#realisations) {
   /*padding-top: 135px;*/
+}
+
+/* Liens du second sommaire */
+.sommaireRealisations ul li a {
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Survol */
+.sommaireRealisations ul li a:hover {
+  color: var(--yel);
+}
+
+/* Lien actif */
+.sommaireRealisations ul li a.active {
+  color: var(--yel);
+}
+
+/* Soulignement du lien actif */
+.sommaireRealisations ul li a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--yel), transparent);
 }
 
 /* ==========================================

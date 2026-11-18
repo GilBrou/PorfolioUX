@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Header from "./Components/01-Header";
 import Intro from "./Components/02-Intro";
@@ -15,43 +15,145 @@ import Projet04GRAPH from "./Components/05-Projet-04-GRAPH";
 
 // Sommaire des réalisations
 const sectionsRealisations = [
-  { id: "projet-ux", label: "UI / UX" },
-  { id: "projet-lms", label: "Digital Learning / LMS" },
-  { id: "projet-dev", label: "Développement" },
-  { id: "projet-graph", label: "Graphisme" },
+  { id: "ui-ux-design", label: "UI / UX" },
+  { id: "digital-learning-et-lms", label: "Digital Learning / LMS" },
+  { id: "developpement", label: "Développement" },
+  { id: "creations-graphiques", label: "Graphisme" },
 ];
 
+// Lecture de l'URL au chargement
+
+function getRouteFromHash() {
+  const hash = window.location.hash.replace(/^#/, "");
+
+  // Sous-rubriques des réalisations
+  if (hash.startsWith("realisations/")) {
+    const sectionId = hash.split("/")[1];
+
+    const project = sectionsRealisations.find(
+      (section) => section.id === sectionId,
+    );
+
+    if (project) {
+      return {
+        page: "realisations",
+        section: project.id,
+      };
+    }
+  }
+
+  // Rubriques principales : slugs inchangés
+  const validPages = [
+    "intro",
+    "parcours",
+    "competences",
+    "projets",
+    "realisations",
+    "outils",
+    "cv",
+    "contact",
+  ];
+
+  return {
+    page: validPages.includes(hash) ? hash : "intro",
+    section: "ui-ux-design",
+  };
+}
+
 export default function Homepage({ data }) {
-  // Intro affichée au chargement
-  const [activePage, setActivePage] = useState("intro");
+  // Initialisation depuis l'URL
+  const [initialRoute] = useState(getRouteFromHash);
+
+  const [activePage, setActivePage] = useState(initialRoute.page);
+  const [activeSection, setActiveSection] = useState(initialRoute.section);
+
+  // Navigation vers une rubrique principale
+  function navigateToPage(page) {
+    setActivePage(page);
+
+    const url =
+      page === "intro"
+        ? window.location.pathname + window.location.search
+        : `#${page}`;
+
+    window.history.pushState(null, "", url);
+  }
+
+  function navigateToSection(id) {
+    setActiveSection(id);
+
+    const url = `#realisations/${id}`;
+
+    if (window.location.hash !== url) {
+      window.history.pushState(null, "", url);
+    }
+  }
+
+  // Gestion des boutons précédent / suivant du navigateur
+  useEffect(() => {
+    function handlePopState() {
+      const route = getRouteFromHash();
+
+      setActivePage(route.page);
+      setActiveSection(route.section);
+    }
+
+    window.addEventListener("popstate", handlePopState);
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, []);
 
   // Rubriques qui affichent la bordure inférieure du menu
-  const pagesWithBorder = ["parcours", "projets", "realisations", "cv"];
+  const pagesWithBorder = [
+    "parcours",
+    "competences",
+    "projets",
+    "realisations",
+    "cv",
+  ];
 
-  // Détermine si la bordure doit être affichée
   const showBorder = pagesWithBorder.includes(activePage);
 
-  function scrollToSection(e, id) {
-    e.preventDefault();
+  // Défilement vers une sous-rubrique
+  useEffect(() => {
+    if (activePage !== "projets" && activePage !== "realisations") {
+      return;
+    }
 
-    const section = document.getElementById(id);
+    // On vérifie que l'URL correspond bien à une sous-rubrique
+
+    /*
+    if (window.location.hash !== `#${activeSection}`) {
+      return;
+    }
+
+    */
+
+    if (window.location.hash !== `#realisations/${activeSection}`) {
+      return;
+    }
+
+    const section = document.getElementById(activeSection);
     if (!section) return;
 
     const header = document.querySelector("nav");
     const sommaire = document.querySelector(".sommaireRealisations");
 
     const headerHeight = header?.getBoundingClientRect().height || 0;
+
     const sommaireHeight = sommaire?.getBoundingClientRect().height || 0;
 
-    // Décalage personnalisé pour chaque projet
     const offsets = {
-      "projet-ux": 150,
-      "projet-lms": 0,
-      "projet-dev": 0,
-      "projet-graph": 0,
+      "ui-ux-design": 150,
+      "digital-learning-et-lms": 0,
+      developpement: 0,
+      "creations-graphiques": 0,
     };
 
-    const extraOffset = offsets[id] ?? 20;
+    const extraOffset = offsets[activeSection] ?? 20;
+
     const offset = headerHeight + sommaireHeight + extraOffset;
 
     const top = section.getBoundingClientRect().top + window.scrollY - offset;
@@ -60,7 +162,14 @@ export default function Homepage({ data }) {
       top,
       behavior: "smooth",
     });
+  }, [activePage, activeSection]);
+
+  // Clic sur le sous-menu
+  function scrollToSection(e, id) {
+    e.preventDefault();
+    navigateToSection(id);
   }
+
   // Affichage dynamique des rubriques
   function renderContent() {
     switch (activePage) {
@@ -80,19 +189,19 @@ export default function Homepage({ data }) {
             <div className="realisations">
               <h2 className="secTitle01">Exemples de réalisations</h2>
 
-              <div id="projet-ux">
+              <div id="ui-ux-design">
                 <Projet01UX />
               </div>
 
-              <div id="projet-lms">
+              <div id="digital-learning-et-lms">
                 <Projet02LMS />
               </div>
 
-              <div id="projet-dev">
+              <div id="developpement">
                 <Projet03DEV />
               </div>
 
-              <div id="projet-graph">
+              <div id="creations-graphiques">
                 <Projet04GRAPH />
               </div>
             </div>
@@ -115,15 +224,15 @@ export default function Homepage({ data }) {
 
   return (
     <div className="homepage">
-      {/* HEADER TOUJOURS VISIBLE */}
+      {/* HEADER PRINCIPAL */}
       <Header
         data={data.nav}
         activePage={activePage}
-        setActivePage={setActivePage}
+        setActivePage={navigateToPage}
         showBorder={showBorder}
       />
 
-      {/* SOMMAIRE SOUS LE HEADER */}
+      {/* SECOND SOMMAIRE */}
       {(activePage === "projets" || activePage === "realisations") && (
         <div className="sommaireRealisations">
           <ul>
@@ -131,6 +240,7 @@ export default function Homepage({ data }) {
               <li key={section.id}>
                 <a
                   href={`#${section.id}`}
+                  className={activeSection === section.id ? "active" : ""}
                   onClick={(e) => scrollToSection(e, section.id)}
                 >
                   {section.label}
@@ -141,7 +251,7 @@ export default function Homepage({ data }) {
         </div>
       )}
 
-      {/* CONTENU SÉLECTIONNÉ */}
+      {/* CONTENU */}
       <main key={activePage}>{renderContent()}</main>
     </div>
   );

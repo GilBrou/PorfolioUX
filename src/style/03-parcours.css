@@ -27,7 +27,7 @@
   z-index: 2;
   padding-right: 25px;
 }
-/*
+
 .parcours::before {
   content: "";
   position: absolute;
@@ -38,7 +38,7 @@
   border-radius: 50px 0;
   pointer-events: none;
   z-index: -1;
-}*/
+}
 
 .parcours .card .info {
   display: flex;
