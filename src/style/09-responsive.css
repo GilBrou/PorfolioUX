@@ -64,7 +64,7 @@
 	}
 }
 
-@media (max-width: 874px) {
+@media (max-width: 884px) {
 	nav {
 		flex-direction: column;
 	}
@@ -102,6 +102,45 @@
 	}
 	.cvWrapperA {
 		text-align: center;
+	}
+	.sommaireRealisations {
+		top: 145px;
+	}
+	#realisations {
+		padding-top: 115px;
+	}
+	.realisations {
+		padding: 15px;
+		border-left: unset;
+	}
+	.realisations:first-of-type::before {
+		display: none;
+	}
+
+	.realisations .container {
+		padding: unset;
+	}
+
+	.chiffresCont .secTitle02 {
+		margin-top: 55px;
+	}
+
+	.chiffresCont .renderP {
+		width: 95%;
+	}
+
+	.UXCont .row,
+	.graphCont .row,
+	.chiffresCont .row {
+		max-width: unset;
+	}
+
+	.chiffresContainer {
+		width: 100%;
+	}
+
+	.imageModal {
+		margin-top: 200px;
 	}
 }
 
@@ -147,36 +186,31 @@
 	.intro {
 		margin-top: 100px;
 	}
-}
-@media (max-width: 884px) {
-	.realisations {
-		padding: 15px;
-		border-left: unset;
+
+	.sommaireRealisations {
+		top: 160px;
+		width: unset;
+		margin-top: 20px;
+		padding-bottom: 20px;
 	}
-	.realisations:first-of-type::before {
-		display: none;
+	#realisations {
+		padding-top: 150px;
 	}
 
-	.realisations .container {
-		padding: unset;
+	.sommaireRealisations ul {
+		justify-content: center;
+		flex-wrap: wrap;
 	}
 
-	.chiffresCont .secTitle02 {
-		margin-top: 55px;
+	.sommaireRealisations ul li {
+		margin: auto 10px;
 	}
 
-	.chiffresCont .renderP {
-		width: 95%;
+	.sommaireRealisations ul li a {
+		font-size: 14px;
 	}
-
-	.UXCont .row,
-	.graphCont .row,
-	.chiffresCont .row {
-		max-width: unset;
-	}
-
-	.chiffresContainer {
-		width: 100%;
+	.imageModal {
+		margin-top: 250px;
 	}
 }
 
@@ -228,11 +262,11 @@
 	}
 
 	.introBox .introPart {
-		width: 100%;
+		width: 95%;
 	}
 
 	.introBox {
-		max-width: 99vw;
+		max-width: 95vw;
 	}
 
 	.realisations .container.chiffresCont {
@@ -268,9 +302,39 @@
 	}
 }
 
+@media (max-width: 375px) {
+	.sommaireRealisations {
+		margin-top: 40px;
+		padding-top: 15px;
+		border-top: 1px solid var(--yel);
+	}
+	#realisations {
+		padding-top: 180px;
+	}
+}
+
+@media (max-width: 344px) {
+	.sommaireRealisations ul li a {
+		font-size: 13px;
+	}
+}
+
 @media (max-width: 331px) {
 	nav ul li {
 		padding: 2px;
 		margin: auto 3px;
+	}
+}
+
+@media (max-width: 331px) {
+	.sommaireRealisations {
+		padding-bottom: 50px;
+	}
+	#realisations {
+		padding-top: 220px;
+	}
+
+	.imageModal {
+		margin-top: 275px;
 	}
 }

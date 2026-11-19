@@ -331,12 +331,10 @@ nav ul li:not(.active):not(.active2) a:hover::after {
   background: linear-gradient(90deg, transparent, var(--yel), transparent);
 }
 
-/* ==========================================
-   RESPONSIVE TABLETTE ET MOBILE
-========================================== */
+/* 
 
 @media screen and (max-width: 768px) {
-  /* Header */
+  
   nav {
     padding: 0 12px;
   }
@@ -358,7 +356,7 @@ nav ul li:not(.active):not(.active2) a:hover::after {
     font-size: 12px;
   }
 
-  /* Sommaire */
+  
   .sommaireRealisations {
     top: 80px;
 
@@ -398,7 +396,7 @@ nav ul li:not(.active):not(.active2) a:hover::after {
     white-space: nowrap;
   }
 
-  /* Contenu */
+  
   .homepage main {
     padding-top: 80px;
   }
@@ -407,10 +405,6 @@ nav ul li:not(.active):not(.active2) a:hover::after {
     padding-top: 135px;
   }
 }
-
-/* ==========================================
-   PETITS ÉCRANS
-========================================== */
 
 @media screen and (max-width: 480px) {
   nav img {
@@ -429,3 +423,4 @@ nav ul li:not(.active):not(.active2) a:hover::after {
     font-size: 11px;
   }
 }
+*/

@@ -68,7 +68,7 @@
 /* Bouton fermer */
 .modalClose {
 	position: absolute;
-	top: 30px;
+	top: 60px;
 	right: 30px;
 	border: none;
 	background: transparent;

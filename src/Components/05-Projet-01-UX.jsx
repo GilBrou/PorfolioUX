@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import projetsGraph from "../datas/projetsUX.json";
 
 export default function Projet01UX() {
@@ -7,6 +7,29 @@ export default function Projet01UX() {
   );
 
   const [selectedIndex, setSelectedIndex] = useState(null);
+
+  // Bloquer le scroll lorsque la modale est ouverte
+  useEffect(() => {
+    if (selectedIndex !== null) {
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+    } else {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+    }
+
+    // Restaurer le scroll à la fermeture ou au démontage
+    return () => {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+    };
+  }, [selectedIndex]);
 
   // Image suivante
   const nextImage = (e) => {
