@@ -1,23 +1,27 @@
+/***** PROJET 03 - DEVELOPMENT COMPONENT *****/
+
 import projetsDev from "../datas/projetsDev.json";
 
 /*** PROJECTS MODULE ***/
+
 export default function Projet03DEV() {
+  // Récupère la liste des projets de développement depuis les données JSON.
   let myproject = projetsDev.projetsDev;
 
-  /* Tooltip */
+  /*** AFFICHAGE DES PROJETS ***/
 
-  /* Main */
   return (
     <div className="container devCont">
+      {/* TITRE DE LA RUBRIQUE */}
       <h3 className="secTitle01 secTitle02">Développement</h3>
 
-      {/* Project cards wrapper */}
+      {/* CONTENEUR DES CARTES PROJETS */}
       <div className="row otherCardsFade">
         {myproject
           ? myproject.map((d, i) => {
               return (
                 <div key={d.pId ?? i} className="projectCard thathCard">
-                  {/* Project image */}
+                  {/* Image illustrative du projet. */}
                   <img
                     src={d.pImg}
                     loading="lazy"
@@ -25,16 +29,16 @@ export default function Projet03DEV() {
                     alt={d.pName}
                   />
 
-                  {/* Project title */}
+                  {/* Nom du projet. */}
                   <h2>{d.pName}</h2>
 
-                  {/* Project description */}
+                  {/* Description du projet. */}
                   <h3>{d.pDescription}</h3>
 
-                  {/* Buttons */}
+                  {/* BOUTONS DE NAVIGATION : affichés si au moins un lien existe. */}
                   {(d.pSite || d.pCode) && (
                     <div className="buttonW">
-                      {/* Website */}
+                      {/* Lien vers le site du projet. */}
                       {d.pSite && (
                         <a
                           className="urlButton"
@@ -46,7 +50,7 @@ export default function Projet03DEV() {
                         </a>
                       )}
 
-                      {/* Source code */}
+                      {/* Lien vers le code source du projet. */}
                       {d.pCode && (
                         <a
                           className="urlButton"

@@ -1,24 +1,30 @@
-/*Module*/
-
+/* Module : affichage des chiffres clés */
 .chiffresContainer {
+	/* Organisation et alignement du contenu */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+
+	/* Dimensions et espacement */
 	margin: 15px;
 	width: 300px;
 	height: 115px;
+	padding: 15px;
+
+	/* Apparence de la carte */
 	border-radius: 5px;
 	overflow: hidden;
 	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+
+	/* Fond texturé */
 	background: url("./background/background.webp"), var(--yel);
 	background-attachment: fixed;
 	background-blend-mode: overlay;
 	background-size: cover;
-	padding: 15px;
 }
 
-/* Textes internes des cartes */
+/* Mise en forme des textes internes des cartes */
 .chiffresContainer .num,
 .chiffresContainer .text {
 	color: var(--blackish);
@@ -31,7 +37,7 @@
 	width: 100%;
 }
 
-/* Nombre animé */
+/* Mise en valeur du nombre animé */
 .chiffresContainer .num {
 	font-size: 40px;
 	padding: 0;
@@ -39,6 +45,7 @@
 	font-weight: 700;
 }
 
+/* Texte descriptif associé aux chiffres */
 .chiffresCont .renderP {
 	font-size: 18px;
 	line-height: 1.5em;
@@ -50,6 +57,7 @@
 	text-align: justify;
 }
 
+/* Dernier paragraphe affiché */
 .lastRenderP {
 	margin-top: 50px !important;
 	text-transform: uppercase;

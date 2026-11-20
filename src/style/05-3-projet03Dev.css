@@ -1,142 +1,191 @@
-/*Module*/
-
+/* Module : développement */
 .devCont .row {
+  /* Organisation et alignement des cartes */
   display: flex;
   justify-content: center !important;
   align-items: flex-start !important;
   flex-wrap: wrap;
+
+  /* Espacement entre les cartes */
   padding-top: 55px;
   gap: 55px 42px;
+
+  /* Largeur maximale du conteneur */
   max-width: 90vw;
 }
 
-/*Project cards*/
-
+/* Cartes des projets */
 .realisations .container .row .projectCard {
+  /* Organisation du contenu */
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  /* Dimensions et espacement */
   padding: 0 10px;
   top: 25px;
   margin-bottom: 25px;
-  transition: 0.5s;
   max-width: 320px;
   height: stretch;
-  align-items: flex-start;
 
-  justify-content: flex-start;
+  /* Gestion du contenu */
   overflow: hidden;
 
+  /* Animation */
+  transition: 0.5s;
+
+  /* Apparence de la carte */
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
   border-radius: 18px;
 
+  /* Espacement intérieur et fond */
   padding: 20px;
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+  /* Effet de transparence et de flou */
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
 
-/*Project image*/
+/* Image du projet */
 .realisations .container .row .projectCard .projectCardImg {
+  /* Dimensions */
   height: auto;
-  border: 1px solid var(--yel);
-  box-shadow: 0 6px 0px 0px var(--yel);
-  border-radius: 18px;
-  padding: 5px;
   max-width: 400px;
   width: 380px;
 
+  /* Dimensions finales appliquées */
   max-width: 380px;
   width: 378px;
   width: 318px;
 
+  /* Bordure et ombre */
+  border: 1px solid var(--yel);
+  box-shadow: 0 6px 0px 0px var(--yel);
+  border-radius: 18px;
+  padding: 5px;
+
+  /* Positionnement et comportement */
   display: block;
   flex-shrink: 0;
   align-self: center;
   margin: 0;
   align-self: center !important;
 }
-/*Project image hover animation*/
+
+/* Animation de l'image au survol de la carte */
 .projectCard:hover .projectCardImg {
   filter: saturate(1.1);
   transition: 0.5s;
   pointer-events: none;
 }
-/*Project title*/
 
+/* Titre du projet */
 .realisations .container .row .projectCard h2 {
   color: var(--lightB);
   font-size: 18px;
   text-align: left;
+
+  /* Largeur et espacement */
   width: 95%;
   width: fit-content;
   margin: 15px 0 0 0;
   padding: 0;
+
+  /* Désactive les interactions avec le texte */
   pointer-events: none;
 }
-/*Project description*/
+
+/* Description courte du projet */
 .realisations .container .row .projectCard h3 {
   font-size: 16px;
   font-style: italic;
   color: var(--beige);
   text-align: left;
+
+  /* Dimensions et marges */
   width: fit-content;
   margin: 0 0 10px 0;
-  pointer-events: none;
-
   padding: 0;
+
+  /* Désactive les interactions avec le texte */
+  pointer-events: none;
 }
-/*Project details*/
+
+/* Détails du projet */
 .realisations .container .row .projectCard p {
   text-align: justify;
   margin: 0;
   padding: 0;
+
+  /* Désactive les interactions et masque le paragraphe */
   pointer-events: none;
   display: none;
 }
 
-/*Buttons wrapper*/
+/* Conteneur des boutons */
 .realisations .container .row .projectCard .buttonW {
+  /* Organisation des boutons */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
+  /* Positionnement et dimensions */
   margin-top: 10px;
   position: relative;
   width: 100%;
+
+  /* Place le conteneur en bas de la carte */
   margin-top: auto;
 }
 
-/*Buttons*/
+/* Boutons des projets */
 .realisations .container .row .projectCard .urlButton {
+  /* Réinitialisation des styles natifs */
   all: unset;
+
+  /* Typographie */
   text-transform: uppercase;
   color: var(--blackish);
   font-size: 16px;
   font-weight: 500;
+
+  /* Espacement intérieur */
   padding: 10px 15px;
   padding: 5px 10px;
+
+  /* Bordure et apparence */
   border: 2px solid var(--yel);
   border-radius: 12px;
   text-align: center;
+
+  /* Positionnement et dimensions */
   margin: auto;
+  width: 90%;
+
+  /* Couleur et interaction */
   color: var(--beige);
   text-decoration: none;
   cursor: pointer;
   transition: 0.4s;
-  width: 90%;
 }
 
+/* Espacement du dernier bouton */
 .realisations .container .row .projectCard .urlButton:last-of-type {
   margin-top: 10px;
 }
 
+/* Position du premier bouton */
 .realisations .container .row .projectCard .urlButton:first-of-type {
   margin-top: 0px;
 }
 
+/* Effet au survol des boutons */
 .realisations .container .row .projectCard .buttonW .urlButton:hover {
   transform: scale(1.05);
   background: var(--yel);

@@ -1,20 +1,32 @@
-/*Module*/
+/* ==========================================
+   MODULE INTRODUCTION
+========================================== */
+
 .intro {
+  /* Espacement et positionnement */
   margin: 0;
-  margin-top: 50px;
-  padding: 75px 25px 50px 25px;
+  margin-top: 15vh;
+  padding: 75px 0 50px 0;
   position: relative;
+  width: 100%;
+
+  /* Organisation du contenu */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  z-index: 99999;
   align-items: center;
+  justify-content: center;
 
+  /* Gestion de la superposition et des interactions */
+  z-index: 99999;
   pointer-events: none;
+
+  /* Arrière-plan et effets visuels */
   background: url("./background/background.webp"), var(--yel);
   background-attachment: fixed;
   background-blend-mode: overlay;
   background-size: cover;
+
+  /* Contour ondulé */
   clip-path: shape(
     from 0 25px,
     curve to 10.71% 25.5px with 7.14% 26px,
@@ -46,79 +58,84 @@
     curve to 0 calc(100% - 25px) with 7.14% calc(100% - 50px),
     vline to 0
   );
-  /*  -webkit-animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 0.8s both;
-  animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 0.8s both;*/
-
-  width: 100%;
-  padding: 75px 0px 50px 0px;
-  margin-top: 15vh;
 }
 
+/* Titre du module */
 .intro h2 {
   border-bottom: 1px solid vvar(--blackish);
   color: var(--blackish);
 }
 
+/* Conteneur des deux parties */
 .introBox {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   max-width: 80vw;
 }
 
+/* Parties gauche et droite */
 .introBox .introPart {
   flex: 1;
   width: 50%;
   margin: auto;
 }
 
+/* Partie gauche */
 .intro .introBox .ileft {
   flex: 1.5;
   padding-bottom: 20px;
-  border-bottom: 1px solid var(--yel);
-  border-color: var(--blackish);
   border: none;
 }
+
+/* Partie droite */
 .intro .introBox .iright {
   padding: 10px 0;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   position: relative;
   z-index: 800;
 }
 
+/* Texte et images du conteneur */
 .intro .introBox p,
 .intro .introBox img {
   padding: 0;
   margin: 0;
+
+  width: 100%;
+
   font-size: 18px;
   font-weight: 500;
-  width: 100%;
   color: var(--blackish);
 }
 
+/* Image de la partie droite */
 .introBox .iright img {
   margin: 0;
   width: 250px;
-  border-radius: 50%;
-  border: 1px solid var(--yel);
-  border-color: var(--blackish);
+
   border: none;
+  border-radius: 50%;
+
   z-index: 800;
   position: revert;
 }
 
+/* Conteneur circulaire de l'image */
 .introBox .iright .imgwrap {
-  padding: 10px;
   padding: 20px;
   border-radius: 50%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: var(--);
+
   background: var(--yel);
 }

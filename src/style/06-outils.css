@@ -1,14 +1,22 @@
-/*Module*/
+/* Module : environnement et outils */
 
+/* Ajustement du défilement vers la section des outils */
 #outils {
   scroll-margin-top: 220px !important;
 }
+
+/* Conteneur principal de l'environnement */
 .envir {
+  /* Positionnement et isolation des éléments */
   position: relative;
   isolation: isolate;
+
+  /* Marges et espacements intérieurs */
   margin: 118px auto 75px;
   padding: 50px 15px 100px 15px;
   padding: 50px 100px 100px 100px;
+
+  /* Organisation des éléments */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -16,14 +24,19 @@
   gap: 20px;
 }
 
+/* Fond décoratif avec contour ondulé */
 .envir::before {
   content: "";
   position: absolute;
   inset: 0;
+
+  /* Fond texturé */
   background: url("./background/background.webp"), var(--yel);
   background-attachment: fixed;
   background-blend-mode: overlay;
   background-size: cover;
+
+  /* Découpe personnalisée du fond */
   clip-path: shape(
     from 0 25px,
     curve to 10.71% 25.5px with 7.14% 26px,
@@ -56,10 +69,13 @@
     vline to 0
   );
 
+  /* Place le fond derrière le contenu */
   z-index: -1;
 }
+
+/* Ancien élément décoratif supérieur, actuellement désactivé */
 /*
- .envir::after {
+.envir::after {
   content: "";
   position: absolute;
   width: 47%;
@@ -73,7 +89,10 @@
   border-bottom: unset;
   border-radius: 0 20px;
   z-index: -2;
-}*/
+}
+*/
+
+/* Titre de la section environnement */
 .envir h2 {
   border-bottom: 1px solid vvar(--blackish);
   color: var(--blackish);
@@ -81,35 +100,46 @@
   margin: 25px auto 25px auto;
 }
 
+/* Cartes présentant les outils et environnements */
 .envir .ecoCard {
+  /* Organisation et alignement du contenu */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  /* Animation et comportement */
   transform: scale(1);
   transition: 0.4s;
-  border-radius: 20px;
   overflow: hidden;
 
+  /* Apparence de la carte */
+  border-radius: 20px;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
+/* Effet de zoom au survol des cartes */
 .envir .ecoCard:hover {
   transform: scale(1.05);
 }
 
+/* Logos des outils et environnements */
 .envir .ecoCard img {
+  /* Couleur de fond */
   background: var(--whiteish);
   background: white;
 
+  /* Dimensions */
   height: 80px;
   height: 50px;
   width: auto;
 
+  /* Espacement et arrondis */
   padding: 15px;
   border-radius: 20px;
 }
 
+/* Titre principal de la section */
 .envir .secTitle01 {
   padding: 0;
   width: 100%;

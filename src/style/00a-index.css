@@ -1,7 +1,7 @@
-/***FONTS***/
+/*** IMPORTATION DES POLICES ***/
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap");
 
-/***COMPONENTS STYLES***/
+/*** IMPORTATION DES STYLES DES COMPOSANTS ***/
 @import "./00b-loader.css";
 @import "./00c-animations.css";
 @import "./01-header.css";
@@ -18,7 +18,7 @@
 @import "./09-responsive.css";
 @import "./10-animback.css";
 
-/*Color Variables*/
+/*** VARIABLES DE COULEURS ***/
 :root {
   --blackish: #222020;
   --whiteish: #f9f7fd;
@@ -27,7 +27,9 @@
   --beige: #fff1f0;
 }
 
-/*General*/
+/*** STYLES GÉNÉRAUX ***/
+
+/* Définition des styles globaux du document */
 body,
 html {
   font-family: "Sora", sans-serif;
@@ -46,16 +48,20 @@ html {
   overflow-x: hidden;
 }
 
+/* Définition de la police et de la taille des liens */
 a {
   font-family: "Sora", sans-serif;
   font-size: 16px;
 }
+
+/* Mise en forme des titres de niveau 2 */
 h2 {
   font-family: "Space Grotesk", sans-serif;
   text-transform: uppercase;
   font-size: 2em;
 }
 
+/* Style commun aux titres de section */
 .secTitle01 {
   width: 100%;
   text-align: center;
@@ -70,6 +76,7 @@ h2 {
   padding-bottom: 10px;
 }
 
+/* Suppression du soulignement et conservation de la couleur héritée des liens */
 a:hover,
 a:focus,
 a {
@@ -77,14 +84,19 @@ a {
   color: inherit;
 }
 
+/* Suppression de la décoration du texte des éléments de liste */
 li {
   text-decoration: none;
 }
 
+/* Positionnement et espacement du conteneur principal de la page d'accueil */
 .homepage {
   padding-top: 100px;
   position: relative;
 }
+
+/*** RÈGLES DE DÉFILEMENT PERSONNALISÉES (DÉSACTIVÉES) ***/
+
 /*
 [id] {
   scroll-margin-top: 70px;

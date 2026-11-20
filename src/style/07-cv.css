@@ -1,22 +1,31 @@
-/*Module*/
+/* Module : curriculum vitae */
 
+/* Ajustement du défilement vers la section CV */
 #cv {
   scroll-margin-top: 150px !important;
 }
 
+/* Conteneur principal de la section CV */
 .cv {
   position: relative;
+
+  /* Espacement intérieur */
   /*  padding: 100px auto;*/
   padding: 100px 25px 25px 25px;
+
+  /* Organisation et alignement des éléments */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 20px;
+
+  /* Dimensions et centrage */
   max-width: 70vw;
   margin: auto;
 }
 
+/* Trait décoratif vertical au-dessus de la section */
 .cv::before {
   position: absolute;
   content: "";
@@ -26,6 +35,7 @@
   left: 50%;
 }
 
+/* Conteneur des éléments du CV */
 .cvWrapper {
   width: 100%;
   height: fit-content;
@@ -33,49 +43,68 @@
   justify-content: center;
   align-self: center;
 }
+
+/* Première partie du CV */
 .cvWrapper .cvWrapperA {
   padding: 25px;
 }
 
+/* Image ou aperçu du CV */
 .cvWrapper .cvWrapperA .cvImg {
   width: 250px;
 }
 
+/* Deuxième partie du CV */
 .cvWrapper .cvWrapperB {
+  /* Organisation et alignement */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  /* Espacement intérieur */
   padding: 25px;
 }
 
+/* Titre de la section CV */
 .cv h2 {
   color: var(--yel);
   text-align: center;
   padding: 15px 25px;
+
+  /* Bordure et arrondis */
   border: 2px solid var(--yel);
   border-radius: 20px;
+
+  /* Fond texturé */
   background: url("./background/background.webp"), var(--blackish);
   background-attachment: fixed;
   background-blend-mode: overlay;
   background-size: cover;
+
+  /* Superposition et interactions */
   z-index: 5000;
   pointer-events: none;
 }
 
+/* Paragraphes de la section CV */
 .cv p {
   padding: 0;
   margin: 0;
+
+  /* Typographie */
   font-size: 18px;
   font-weight: 500;
   width: 100%;
   line-height: 1.5em;
+
+  /* Alignement et interactions */
   pointer-events: none;
   text-align: justify;
   font-weight: normal;
 }
 
-/*Buttons text*/
+/* Texte à l'intérieur des boutons */
 .cv button p {
   text-transform: uppercase;
   color: var(--blackish);
@@ -85,39 +114,60 @@
   pointer-events: none;
 }
 
+/* État au survol des boutons CV (aucun style défini) */
 .cv button:hover {
 }
 
+/* Bouton CV avec icône animée */
 .btn-169 {
+  /* Variables de dimension et de couleur de l'icône */
   --icon_width: 8px;
   --icon_height: 10px;
   --icon_color: var(--blackish);
+
+  /* Forme et bordure */
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.05);
+
+  /* Positionnement et espacement */
   position: relative;
   padding: 15px 25px 15px 55px;
+
+  /* Couleurs */
   background: var(--yel);
   color: var(--blackish);
+
+  /* Animation et rendu 3D */
   transform-style: preserve-3d;
   transition: all 500ms ease-in-out;
+
+  /* Typographie */
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+
+  /* Interaction */
   cursor: pointer;
   text-decoration: none;
   user-select: none;
+
+  /* Alignement du contenu */
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-weight: 600;
+
+  /* Superposition et dimensions */
   z-index: 1;
   box-sizing: border-box;
   border: 1px solid var(--blackish);
-  font-size: 24px;
 }
 
+/* Gestion du modèle de boîte du contenu du bouton */
 .btn-169 > span {
   box-sizing: border-box;
 }
 
+/* Apparence du bouton au survol */
 .btn-169:hover {
   background: radial-gradient(circle at center center, #f9f9f9, #a7a7a7);
   background: var(--blackish);
@@ -125,27 +175,36 @@
   color: var(--yel);
 }
 
+/* Animation de l'icône au survol du bouton */
 .btn-169:hover .btn-icon {
   transition: all 800ms ease-in-out;
   transform: rotateY(90deg) rotate(-360deg);
 
+  /* Changement de couleur de l'icône */
   --icon_color: var(--yel);
 }
 
+/* Icône animée du bouton */
 .btn-169 .btn-icon {
   width: 80px;
   display: block;
   position: absolute;
 
+  /* Positionnement de l'icône */
   left: -10px;
   top: -36px;
   bottom: -40px;
+
+  /* Transformation 3D */
   transform-style: preserve-3d;
   transform: rotateY(90deg) rotate(0deg);
+
+  /* Réinitialisation des marges et position finale */
   margin: 0;
   top: -32px;
 }
 
+/* Élément central de l'icône */
 .btn-169 .btn-icon > span {
   position: absolute;
   background: var(--icon_color);
@@ -156,14 +215,21 @@
   transform: rotateY(-90deg);
 }
 
+/* Pointe de l'icône créée avec un pseudo-élément */
 .btn-169 > .btn-icon > span::before {
   position: absolute;
   content: "";
+
+  /* Positionnement */
   top: 100%;
   left: 0;
   margin-left: calc((var(--icon_width) * -1) + var(--icon_width) / 2);
+
+  /* Dimensions du triangle */
   width: 0;
   height: 0;
+
+  /* Création du triangle avec les bordures */
   border-width: calc(var(--icon_width) + 5px) var(--icon_width) 0
     var(--icon_width);
   border-color: var(--icon_color) transparent transparent transparent;

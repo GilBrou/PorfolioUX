@@ -1,6 +1,14 @@
+/***** HEADER COMPONENT *****/
+
 import { useState, useEffect } from "react";
 
 /*** SLUG HELPER ***/
+
+/**
+ * Convertit un texte en slug utilisable dans une URL.
+ * Supprime les accents, passe le texte en minuscules
+ * et remplace les espaces et caractères spéciaux par des tirets.
+ */
 function slugify(text) {
   return text
     .normalize("NFD")
@@ -11,35 +19,46 @@ function slugify(text) {
 }
 
 /*** HEADER / NAV MODULE ***/
+
 export default function Header({
   data,
   activePage,
   setActivePage,
   showBorder,
 }) {
+  // Indique si la page a été défilée verticalement.
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Récupération des éléments du menu
+  // Récupère les éléments du menu depuis les données transmises.
   const menuItems = data?.sectionTitle ?? [];
 
-  // Gestion du scroll
+  /**
+   * Surveille la position de défilement de la page.
+   * Active ou désactive la classe correspondante sur le menu.
+   */
   useEffect(() => {
     function handleScroll() {
       setIsScrolled(window.scrollY > 0);
     }
 
+    // Ajoute un écouteur de défilement avec optimisation passive.
     window.addEventListener("scroll", handleScroll, {
       passive: true,
     });
 
+    // Initialise l'état en fonction de la position actuelle.
     handleScroll();
 
+    // Supprime l'écouteur lors du démontage du composant.
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  // Retour à l'introduction
+  /**
+   * Gère le clic sur le logo ou l'icône d'accueil.
+   * Réactive la rubrique d'introduction et remonte en haut de page.
+   */
   function handleHomeClick(e) {
     e.preventDefault();
 
@@ -51,7 +70,11 @@ export default function Header({
     });
   }
 
-  // Navigation entre les rubriques
+  /**
+   * Gère la navigation entre les rubriques principales.
+   * Convertit le nom de la rubrique en slug,
+   * met à jour la page active et remonte en haut de page.
+   */
   function handleMenuClick(e, myMenu) {
     e.preventDefault();
 
@@ -65,7 +88,9 @@ export default function Header({
     });
   }
 
-  // Classes CSS du menu
+  /*** CONFIGURATION DES CLASSES CSS ***/
+
+  // Construit les classes du menu selon son état et la rubrique active.
   const navClass = [
     isScrolled ? "scrolled" : "",
     showBorder ? "has-border" : "",
@@ -73,16 +98,18 @@ export default function Header({
     .filter(Boolean)
     .join(" ");
 
+  /*** STRUCTURE DU MENU ***/
+
   return (
     <nav className={navClass}>
-      {/* LOGO */}
+      {/* LOGO : permet de revenir à la page d'introduction. */}
       <a href="#top" className="imgWrapNav" onClick={handleHomeClick}>
         <img src={data?.logo || "loading..."} alt={data?.nom || "Logo"} />
       </a>
 
-      {/* MENU */}
+      {/* MENU PRINCIPAL */}
       <ul>
-        {/* HOME */}
+        {/* ACCUEIL : affiche l'icône et indique la rubrique active. */}
         <li className={activePage === "intro" ? "active2" : ""}>
           <a
             href="#top"
@@ -93,7 +120,7 @@ export default function Header({
           </a>
         </li>
 
-        {/* RUBRIQUES */}
+        {/* RUBRIQUES : génère les liens de navigation depuis les données. */}
         {menuItems.map((myMenu, i) => {
           const slug = slugify(myMenu);
 

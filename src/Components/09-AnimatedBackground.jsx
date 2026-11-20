@@ -1,10 +1,12 @@
-/***** ANIMATED BACKGROUND COMPONENT *****/
+/***** COMPOSANT D'ARRIÈRE-PLAN ANIMÉ *****/
 
 import { useMemo } from "react";
 
 export default function AnimatedBackground() {
+  /*** LISTE DES ICÔNES À ANIMER ***/
+
   const icons = [
-    // UX / UI Design
+    // Icônes liées au design UX/UI et au développement.
     "fa-palette",
     "fa-layer-group",
     "fa-eye",
@@ -16,16 +18,27 @@ export default function AnimatedBackground() {
     "fa-book-open",
   ];
 
+  /*** GÉNÉRATION DES STYLES ALÉATOIRES ***/
+
+  // Calcule les propriétés visuelles de chaque icône une seule fois.
   const styles = useMemo(() => {
     return icons.map(() => {
+      // Position horizontale de l'icône dans la fenêtre.
       const randLeft = Math.floor(Math.random() * 90) + 1;
+
+      // Taille aléatoire de l'icône.
       const randFontSize = Math.floor(Math.random() * 1.5) + 1.5;
+
+      // Angle de rotation initial.
       const randRotation = Math.floor(Math.random() * 360) + 1;
+
+      // Délai aléatoire avant le démarrage de l'animation.
       const randDelay = Math.floor(Math.random() * 5) + 1;
-      /*const randDuration = Math.floor(Math.random() * 10) + 5;*/
-      /*const randDuration = Math.floor(Math.random() * 20) + 20;*/
+
+      // Durée aléatoire de l'animation.
       const randDuration = Math.floor(Math.random() * 30) + 30;
 
+      // Regroupe les propriétés CSS générées pour chaque icône.
       return {
         position: "absolute",
         left: `${randLeft}vw`,
@@ -37,8 +50,11 @@ export default function AnimatedBackground() {
     });
   }, []);
 
+  /*** AFFICHAGE DE L'ARRIÈRE-PLAN ***/
+
   return (
     <div className="presContainer" aria-hidden="true">
+      {/* Affiche chaque icône avec ses styles et son animation propres. */}
       {icons.map((icon, i) => (
         <i
           key={i}

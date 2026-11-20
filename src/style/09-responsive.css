@@ -1,30 +1,43 @@
+/* Adaptations responsive : ajustements selon la largeur de l'écran */
+
+/* Écrans jusqu'à 1300px */
 @media (max-width: 1300px) {
 }
 
+/* Écrans jusqu'à 1182px */
 @media (max-width: 1182px) {
+	/* Élargissement de la section CV */
 	.cv {
 		max-width: unset;
 	}
 }
 
+/* Écrans jusqu'à 1138px */
 @media (max-width: 1138px) {
+	/* Réduction de la taille des liens de navigation */
 	nav ul li a {
 		font-size: 16px;
 	}
 }
 
+/* Écrans jusqu'à 1116px */
 @media (max-width: 1116px) {
+	/* Adaptation de la décoration de la dernière carte du parcours */
 	.card:last-of-type::before {
 		border-bottom: none;
 		border-radius: 20px 0;
 		height: 150%;
 	}
+
+	/* Masquage du second élément décoratif */
 	.card:last-of-type::after {
 		display: none;
 	}
 }
 
+/* Écrans jusqu'à 1072px */
 @media (max-width: 1072px) {
+	/* Ajustement de la navigation */
 	nav ul li a {
 		font-size: 15px;
 	}
@@ -33,29 +46,37 @@
 		width: 250px;
 	}
 
+	/* Passage du contenu en colonne */
 	.inContent,
 	.parcours .card:nth-of-type(even) .info .inContent {
 		flex-direction: column;
 	}
+
+	/* Adaptation des images du parcours */
 	.parcours .card .info .inContent .cardImg {
 		float: unset;
 		width: 100% !important;
 	}
 }
 
+/* Écrans jusqu'à 930px */
 @media (max-width: 930px) {
+	/* Réduction de la largeur du logo */
 	nav img {
 		width: 200px;
 	}
 
+	/* Masquage des éléments décoratifs des compétences */
 	.comp .compPart::after {
 		display: none;
 	}
 
+	/* Les cartes de compétences occupent toute la largeur */
 	.comp .compPart .myCompCard {
 		width: 100% !important;
 	}
 
+	/* Réinitialisation des marges et de l'alignement */
 	.comp .compPart .myCompCard:nth-of-type(3),
 	.comp .compPart .myCompCard:nth-of-type(4),
 	.comp .compPart .myCompCard:nth-of-type(5) {
@@ -64,20 +85,26 @@
 	}
 }
 
+/* Écrans jusqu'à 884px */
 @media (max-width: 884px) {
+	/* Navigation organisée en colonne */
 	nav {
 		flex-direction: column;
 	}
+
 	.imgWrapNav {
 		padding: 15px 15px 0 15px;
 	}
+
 	nav img {
 		width: 250px;
 	}
+
 	nav ul {
 		margin: 0 auto;
 	}
 
+	/* Ajustement de l'espacement de l'introduction */
 	.intro {
 		margin-top: 75px;
 	}
@@ -89,30 +116,43 @@
 	.intro .introBox p {
 		font-size: 15px;
 	}
+
+	/* Réduction de la taille des titres de section */
 	.secTitle01 {
 		font-size: 2em;
 		font-size: 1.5em !important;
 	}
 
+	/* Réduction des espacements de la section environnement */
 	.envir {
 		padding: 50px 15px 100px 15px;
 	}
+
+	/* Organisation verticale du contenu CV */
 	.cvWrapper {
 		flex-direction: column;
 	}
+
 	.cvWrapperA {
 		text-align: center;
 	}
+
+	/* Repositionnement du sommaire des réalisations */
 	.sommaireRealisations {
 		top: 145px;
 	}
+
 	#realisations {
 		padding-top: 115px;
 	}
+
+	/* Adaptation des modules de réalisations */
 	.realisations {
 		padding: 15px;
 		border-left: unset;
 	}
+
+	/* Masquage de la décoration supérieure */
 	.realisations:first-of-type::before {
 		display: none;
 	}
@@ -121,30 +161,37 @@
 		padding: unset;
 	}
 
+	/* Espacement du sous-titre des chiffres clés */
 	.chiffresCont .secTitle02 {
 		margin-top: 55px;
 	}
 
+	/* Élargissement du texte descriptif */
 	.chiffresCont .renderP {
 		width: 95%;
 	}
 
+	/* Suppression de la largeur maximale des galeries */
 	.UXCont .row,
 	.graphCont .row,
 	.chiffresCont .row {
 		max-width: unset;
 	}
 
+	/* Les cartes de chiffres occupent toute la largeur */
 	.chiffresContainer {
 		width: 100%;
 	}
 
+	/* Décalage vertical de la modale */
 	.imageModal {
 		margin-top: 200px;
 	}
 }
 
+/* Écrans jusqu'à 768px */
 @media (max-width: 768px) {
+	/* Rapprochement des flèches de navigation des bords */
 	.modalPrev {
 		left: 10px;
 	}
@@ -153,50 +200,60 @@
 		right: 10px;
 	}
 
+	/* Réduction de la taille des flèches */
 	.modalArrow {
 		width: 40px;
 		height: 40px;
 		font-size: 22px;
 	}
 
+	/* Réduction de l'espacement intérieur de la modale */
 	.imageModal {
 		padding: 15px;
 	}
 
+	/* Inversion de l'ordre des éléments de l'introduction */
 	.introBox {
 		flex-direction: column-reverse;
 	}
 
+	/* Les parties de l'introduction occupent toute la largeur */
 	.introBox .introPart {
 		width: 100%;
 	}
 }
 
+/* Écrans jusqu'à 696px */
 @media (max-width: 696px) {
+	/* Navigation sur plusieurs lignes */
 	nav ul {
 		flex-wrap: wrap;
-
 		padding-bottom: 15px;
 	}
 
+	/* Masquage de l'image d'aperçu du CV */
 	.cv .cvWrapperA {
 		display: none;
 	}
 
+	/* Ajustement de l'espacement de l'introduction */
 	.intro {
 		margin-top: 100px;
 	}
 
+	/* Adaptation du sommaire des réalisations */
 	.sommaireRealisations {
 		top: 160px;
 		width: unset;
 		margin-top: 20px;
 		padding-bottom: 20px;
 	}
+
 	#realisations {
 		padding-top: 150px;
 	}
 
+	/* Centrage et retour à la ligne des liens du sommaire */
 	.sommaireRealisations ul {
 		justify-content: center;
 		flex-wrap: wrap;
@@ -209,54 +266,69 @@
 	.sommaireRealisations ul li a {
 		font-size: 14px;
 	}
+
+	/* Décalage vertical supplémentaire de la modale */
 	.imageModal {
 		margin-top: 250px;
 	}
 }
 
+/* Écrans jusqu'à 844px */
 @media (max-width: 844px) {
+	/* Suppression de la largeur maximale des cartes de développement */
 	.devCont .row {
 		max-width: unset;
 	}
 }
 
+/* Écrans jusqu'à 802px */
 @media (max-width: 802px) {
+	/* Les cartes de projet occupent toute la largeur disponible */
 	.realisations .container .row .projectCard {
 		max-width: unset;
 		width: 100%;
 	}
 
+	/* Réduction de la taille du texte du parcours */
 	.parcours .inContent p {
 		font-size: 16px !important;
 	}
 
+	/* Réduction de la taille des icônes de contact */
 	.cInfosDiv img {
 		width: 42px;
 	}
 }
 
+/* Écrans jusqu'à 500px */
 @media (max-width: 500px) {
+	/* Organisation verticale du pied de page */
 	footer {
 		flex-direction: column !important;
 		padding-top: 85px;
 	}
 
+	/* Centrage des informations de contact */
 	.cInfosDiv {
 		margin: 25px auto;
 	}
 }
 
+/* Écrans jusqu'à 468px */
 @media (max-width: 468px) {
+	/* Ajustement de la navigation */
 	nav {
 		padding-bottom: 20px;
 	}
+
+	/* Adaptation du bloc d'introduction */
 	.intro {
 		padding-left: 10px;
 		padding-right: 10px;
-
 		max-width: 96vw;
 		text-align: justify;
 	}
+
 	.introBox .iright img {
 		width: 175px;
 	}
@@ -269,10 +341,12 @@
 		max-width: 95vw;
 	}
 
+	/* Réduction de la largeur du conteneur des chiffres */
 	.realisations .container.chiffresCont {
 		max-width: 93%;
 	}
 
+	/* Ajustement de la typographie des chiffres */
 	.realisations .container.chiffresCont p {
 		font-size: 16px;
 	}
@@ -285,55 +359,70 @@
 		font-size: 28px;
 	}
 
+	/* Réduction de la largeur des cartes de développement */
 	.devCont .projectCard {
 		width: 70% !important;
 	}
 
+	/* Adaptation des images des projets */
 	.realisations .container .row .projectCard .projectCardImg {
 		max-width: 100%;
 	}
 
+	/* Réduction de la hauteur des logos d'outils */
 	.envir .ecoCard img {
 		height: 40px;
 	}
 
+	/* Réduction de l'espacement dans le bloc CV */
 	.cvWrapper .cvWrapperB {
 		padding: 25px 0 !important;
 	}
 }
 
+/* Écrans jusqu'à 375px */
 @media (max-width: 375px) {
+	/* Ajustement du sommaire des réalisations */
 	.sommaireRealisations {
 		margin-top: 40px;
 		padding-top: 15px;
 		border-top: 1px solid var(--yel);
 	}
+
 	#realisations {
 		padding-top: 180px;
 	}
 }
 
+/* Écrans jusqu'à 344px */
 @media (max-width: 344px) {
+	/* Réduction de la taille des liens du sommaire */
 	.sommaireRealisations ul li a {
 		font-size: 13px;
 	}
 }
 
+/* Écrans jusqu'à 331px */
 @media (max-width: 331px) {
+	/* Réduction des espacements des éléments de navigation */
 	nav ul li {
 		padding: 2px;
 		margin: auto 3px;
 	}
 }
 
+/* Écrans jusqu'à 331px */
 @media (max-width: 331px) {
+	/* Ajustement du sommaire sur les très petits écrans */
 	.sommaireRealisations {
 		padding-bottom: 50px;
 	}
+
 	#realisations {
 		padding-top: 220px;
 	}
 
+	/* Décalage supplémentaire de la modale */
 	.imageModal {
 		margin-top: 275px;
 	}

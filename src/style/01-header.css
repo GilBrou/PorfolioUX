@@ -3,27 +3,31 @@
 ========================================== */
 
 nav {
+  /* Bordure et disposition des éléments */
   border: unset;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
+  /* Espacement intérieur et extérieur */
   padding: 0 25px;
   margin: 0;
 
+  /* Positionnement fixe en haut de la page */
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100000;
 
+  /* Arrière-plan et effets visuels */
   background: url("./background/background.webp"), var(--blackish);
   background-attachment: fixed;
   background-blend-mode: overlay;
   background-size: cover;
 
+  /* Bordure inférieure */
   border-bottom: 2px solid transparent;
-  /*transition: border-bottom 0.3s ease;*/
 }
 
 /* Bordure selon la rubrique active */
@@ -31,23 +35,24 @@ nav.has-border {
   border-bottom: 2px solid var(--yel);
 }
 
-/* Images du Header */
+/* Image du header */
 nav img {
   width: 350px;
 }
 
-/* Liste principale */
+/* Liste principale de navigation */
 nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
 
   width: fit-content;
-  list-style: none;
   height: 80px;
   padding: 0;
+  list-style: none;
 }
 
+/* Éléments de la liste */
 nav ul li {
   width: fit-content;
   padding: 5px;
@@ -55,10 +60,12 @@ nav ul li {
 
   display: flex;
   align-items: center;
-  text-transform: uppercase;
   justify-content: center;
+
+  text-transform: uppercase;
 }
 
+/* Liens de navigation */
 nav ul li a {
   font-size: 18px;
   padding-bottom: 5px;
@@ -67,17 +74,17 @@ nav ul li a {
   transition: color 0.5s ease;
 }
 
-/* Soulignement animé */
+/* Soulignement animé des liens */
 nav ul li a::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
+
   width: 100%;
   height: 2px;
 
   background: linear-gradient(90deg, transparent, var(--yel), transparent);
-
   background-size: 300% 100%;
   background-position: 200% 0;
 
@@ -85,17 +92,18 @@ nav ul li a::after {
   transition: opacity 0.5s;
 }
 
-/* Survol */
+/* Changement de couleur au survol des liens non actifs */
 nav ul li:not(.active) a:hover {
   color: var(--yel);
 }
 
+/* Animation du soulignement au survol */
 nav ul li:not(.active) a:hover::after {
   opacity: 1;
   animation: shimmer111 2s linear infinite;
 }
 
-/* Sections actives */
+/* Apparence de la rubrique active */
 nav ul li.active a {
   color: var(--whiteish);
 }
@@ -106,6 +114,7 @@ nav ul li.active a::after {
   background-position: center;
 }
 
+/* Conservation de la couleur au survol de la rubrique active */
 nav ul li.active a:hover {
   color: var(--whiteish);
 }
@@ -115,11 +124,12 @@ nav ul li.active a:hover::after {
   animation: none;
 }
 
+/* Icônes dans les liens */
 nav ul li a i {
   padding-bottom: 5px;
 }
 
-/* Animation shimmer */
+/* Animation du reflet lumineux */
 @keyframes shimmer111 {
   0% {
     background-position: 200% 0;
@@ -130,7 +140,7 @@ nav ul li a i {
   }
 }
 
-/* Animation des éléments du menu */
+/* Index d'animation attribué à chaque élément du menu */
 nav ul li:nth-of-type(1) {
   --i: 0;
 }
@@ -159,7 +169,7 @@ nav ul li:nth-of-type(7) {
   --i: 6;
 }
 
-/* HOME */
+/* Apparence du lien d'accueil */
 nav ul li.active2 a {
   color: var(--yel);
 }
@@ -171,6 +181,7 @@ nav ul li.active2 a::after {
   display: none;
 }
 
+/* Changement de couleur du lien d'accueil au survol */
 nav ul li.active2 a:hover {
   color: var(--whiteish);
 }
@@ -180,7 +191,7 @@ nav ul li.active2 a:hover::after {
   animation: none;
 }
 
-/* Sections non actives */
+/* Survol des rubriques non actives */
 nav ul li:not(.active):not(.active2) a:hover {
   color: var(--yel);
 }
@@ -194,6 +205,7 @@ nav ul li:not(.active):not(.active2) a:hover::after {
    SOMMAIRE RÉALISATIONS
 ========================================== */
 
+/* Conteneur du second menu */
 .sommaireRealisations {
   display: flex;
   align-items: center;
@@ -204,25 +216,26 @@ nav ul li:not(.active):not(.active2) a:hover::after {
 
   padding: 0 25px;
   margin: 0;
+  margin-bottom: 0;
 
+  /* Positionnement sous le header principal */
   position: fixed;
-  top: 110px;
   top: 80px;
   left: 0;
   right: 0;
-
   z-index: 109999;
 
+  /* Arrière-plan et effets visuels */
   background: url("./background/background.webp"), var(--blackish);
   background-attachment: fixed;
   background-blend-mode: overlay;
   background-size: cover;
 
+  /* Bordure inférieure */
   border-bottom: 2px solid var(--yel);
-  margin-bottom: 0;
 }
 
-/* Liste centrée */
+/* Liste centrée du sommaire */
 .sommaireRealisations ul {
   display: flex;
   align-items: center;
@@ -236,7 +249,7 @@ nav ul li:not(.active):not(.active2) a:hover::after {
   margin: 0;
 }
 
-/* Éléments */
+/* Éléments du sommaire */
 .sommaireRealisations ul li {
   width: fit-content;
   padding: 5px;
@@ -249,7 +262,7 @@ nav ul li:not(.active):not(.active2) a:hover::after {
   text-transform: uppercase;
 }
 
-/* Liens */
+/* Liens du sommaire */
 .sommaireRealisations ul li a {
   font-size: 15px;
   padding-bottom: 5px;
@@ -257,10 +270,10 @@ nav ul li:not(.active):not(.active2) a:hover::after {
   text-decoration: none;
   position: relative;
 
-  transition: color 0.5s ease;
+  transition: color 0.3s ease;
 }
 
-/* Soulignement animé */
+/* Soulignement des liens */
 .sommaireRealisations ul li a::after {
   content: "";
   position: absolute;
@@ -271,7 +284,6 @@ nav ul li:not(.active):not(.active2) a:hover::after {
   height: 2px;
 
   background: linear-gradient(90deg, transparent, var(--yel), transparent);
-
   background-size: 300% 100%;
   background-position: 200% 0;
 
@@ -279,11 +291,12 @@ nav ul li:not(.active):not(.active2) a:hover::after {
   transition: opacity 0.5s;
 }
 
-/* Survol */
+/* Couleur des liens au survol */
 .sommaireRealisations ul li a:hover {
   color: var(--yel);
 }
 
+/* Animation du soulignement au survol */
 .sommaireRealisations ul li a:hover::after {
   opacity: 1;
   animation: shimmer111 2s linear infinite;
@@ -293,16 +306,6 @@ nav ul li:not(.active):not(.active2) a:hover::after {
    CONTENU PRINCIPAL
 ========================================== */
 
-/* Décalage sous le Header */
-.homepage main {
-  /*padding-top: 80px;*/
-}
-
-/* Décalage supplémentaire lorsque le sommaire existe */
-.homepage main:has(#realisations) {
-  /*padding-top: 135px;*/
-}
-
 /* Liens du second sommaire */
 .sommaireRealisations ul li a {
   position: relative;
@@ -310,12 +313,12 @@ nav ul li:not(.active):not(.active2) a:hover::after {
   transition: color 0.3s ease;
 }
 
-/* Survol */
+/* Couleur des liens au survol */
 .sommaireRealisations ul li a:hover {
   color: var(--yel);
 }
 
-/* Lien actif */
+/* Couleur du lien actif */
 .sommaireRealisations ul li a.active {
   color: var(--yel);
 }
@@ -326,101 +329,9 @@ nav ul li:not(.active):not(.active2) a:hover::after {
   position: absolute;
   left: 0;
   bottom: -5px;
+
   width: 100%;
   height: 2px;
+
   background: linear-gradient(90deg, transparent, var(--yel), transparent);
 }
-
-/* 
-
-@media screen and (max-width: 768px) {
-  
-  nav {
-    padding: 0 12px;
-  }
-
-  nav img {
-    width: 180px;
-  }
-
-  nav ul {
-    height: 80px;
-  }
-
-  nav ul li {
-    margin: auto 4px;
-    padding: 3px;
-  }
-
-  nav ul li a {
-    font-size: 12px;
-  }
-
-  
-  .sommaireRealisations {
-    top: 80px;
-
-    justify-content: flex-start;
-
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    padding: 0;
-
-    scrollbar-width: none;
-  }
-
-  .sommaireRealisations::-webkit-scrollbar {
-    display: none;
-  }
-
-  .sommaireRealisations ul {
-    width: max-content;
-    min-width: 100%;
-
-    justify-content: flex-start;
-
-    height: 55px;
-    padding: 0 15px;
-    gap: 20px;
-  }
-
-  .sommaireRealisations ul li {
-    flex-shrink: 0;
-    margin: 0;
-    padding: 5px;
-  }
-
-  .sommaireRealisations ul li a {
-    font-size: 12px;
-    white-space: nowrap;
-  }
-
-  
-  .homepage main {
-    padding-top: 80px;
-  }
-
-  .homepage main:has(#realisations) {
-    padding-top: 135px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  nav img {
-    width: 130px;
-  }
-
-  nav ul li a {
-    font-size: 10px;
-  }
-
-  .sommaireRealisations ul {
-    gap: 15px;
-  }
-
-  .sommaireRealisations ul li a {
-    font-size: 11px;
-  }
-}
-*/

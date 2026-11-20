@@ -1,27 +1,33 @@
-/* MODULE */
+/*** MODULE COMPÉTENCES ***/
 
+/* Ajuste la position de défilement de la section. */
 #competences {
   scroll-margin-top: 160px !important;
 }
+
+/*** CONTENEUR PRINCIPAL ***/
 
 .comp {
   position: relative;
   isolation: isolate;
 
+  /* Organise les éléments verticalement et les centre. */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  /* Définit les espacements du module. */
   padding-top: 50px;
   margin-bottom: 35px;
 
+  /* Désactive les interactions avec les éléments du module. */
   pointer-events: none;
+
   z-index: 800;
 }
 
-/* Trait vertical derrière le titre */
-
+/* Ajoute un trait vertical décoratif derrière le titre. */
 .comp::before {
   content: "";
   position: absolute;
@@ -31,6 +37,7 @@
 
   background: var(--yel);
 
+  /* Positionne le trait au centre, au-dessus du conteneur. */
   top: -77px;
   left: 50%;
   transform: translateX(-50%);
@@ -39,7 +46,7 @@
   pointer-events: none;
 }
 
-/* TITRE */
+/*** TITRE DU MODULE ***/
 
 .comp h2 {
   position: relative;
@@ -48,6 +55,7 @@
   width: 100%;
   margin: 25px auto 50px auto;
 
+  /* Applique l'image de fond et sa couleur de superposition. */
   background: url("./background/background.webp"), var(--blackish);
 
   background-attachment: fixed;
@@ -55,13 +63,14 @@
   background-size: cover;
 }
 
-/* PARTIE COMPÉTENCES */
+/*** PARTIE COMPÉTENCES ***/
 
 .comp .compPart {
   width: 90%;
   margin: auto;
   padding: 15px;
 
+  /* Aligne les cartes et autorise leur retour à la ligne. */
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -73,8 +82,7 @@
   overflow: hidden;
 }
 
-/* Cadre des compétences */
-
+/* Ajoute un cadre décoratif derrière les cartes. */
 .comp .compPart::after {
   content: "";
   position: absolute;
@@ -85,6 +93,7 @@
   border: 2px solid var(--yel);
   border-radius: 20px;
 
+  /* Centre le cadre dans son conteneur. */
   top: 50%;
   left: 0;
   right: 0;
@@ -94,9 +103,10 @@
   z-index: -1;
 }
 
-/* CARTES */
+/*** CARTES DE COMPÉTENCES ***/
 
 .comp .compPart .myCompCard {
+  /* Organise le contenu de chaque carte en colonne. */
   display: flex;
   flex-direction: column;
 
@@ -107,9 +117,11 @@
 
   position: relative;
 
+  /* Définit les bordures et les angles des cartes. */
   border: 2px solid var(--blackish);
   border-radius: 20px;
 
+  /* Applique l'image de fond et sa couleur de superposition. */
   background: url("./background/background.webp"), var(--yel);
 
   background-attachment: fixed;
@@ -120,15 +132,13 @@
   color: var(--blackish);
 }
 
-/* Deux premières cartes */
-
+/* Élargit les deux premières cartes. */
 .comp .compPart .myCompCard:nth-of-type(1),
 .comp .compPart .myCompCard:nth-of-type(2) {
   width: 40%;
 }
 
-/* Trois dernières cartes */
-
+/* Décale les trois dernières cartes vers le bas. */
 .comp .compPart .myCompCard:nth-of-type(3),
 .comp .compPart .myCompCard:nth-of-type(4),
 .comp .compPart .myCompCard:nth-of-type(5) {
@@ -136,7 +146,7 @@
   text-align: center;
 }
 
-/* TITRES DES CARTES */
+/*** TITRES DES CARTES ***/
 
 .comp .compPart .myCompCard .myComp {
   color: var(--blackish);
@@ -147,21 +157,25 @@
   text-align: center;
   padding: 10px;
 
+  /* Arrondit uniquement les angles supérieurs du titre. */
   border-radius: 20px 20px 0 0;
   margin: 0;
 }
 
-/* CONTENU DES CARTES */
+/*** CONTENU DES CARTES ***/
 
+/* Définit les espacements du contenu textuel. */
 .comp .compPart .myCompCard .pComp {
   margin: 0;
   padding: 0 10px;
 }
 
+/* Espacement entre les paragraphes. */
 .comp .compPart .myCompCard .pComp p {
   margin: 5px 0;
 }
 
+/* Renforce la graisse des textes mis en évidence. */
 .comp .compPart .myCompCard .pComp strong {
   font-weight: bolder;
 }

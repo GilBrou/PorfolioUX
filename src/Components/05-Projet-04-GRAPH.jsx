@@ -1,14 +1,21 @@
 import { useState, useEffect } from "react";
 import projetsGraph from "../datas/projetsGraph.json";
 
+/***** PROJET 04 - GRAPHISME *****/
+
 export default function Projet04GRAPH() {
+  // Mélange aléatoirement l'ordre des images au premier affichage.
   const [projetsRandom] = useState(() =>
     [...projetsGraph].sort(() => Math.random() - 0.5),
   );
 
+  // Stocke l'index de l'image sélectionnée.
+  // La valeur null indique qu'aucune image n'est ouverte.
   const [selectedIndex, setSelectedIndex] = useState(null);
 
-  // Bloquer le scroll lorsque la modale est ouverte
+  /*** GESTION DU SCROLL DE LA PAGE ***/
+
+  // Bloque le défilement de la page lorsque la modale est ouverte.
   useEffect(() => {
     if (selectedIndex !== null) {
       document.documentElement.style.overflow = "hidden";
@@ -16,12 +23,14 @@ export default function Projet04GRAPH() {
       document.body.style.position = "fixed";
       document.body.style.width = "100%";
     } else {
+      // Rétablit le défilement lorsque la modale est fermée.
       document.documentElement.style.overflow = "";
       document.body.style.overflow = "";
       document.body.style.position = "";
       document.body.style.width = "";
     }
 
+    // Nettoie les styles lors du démontage du composant.
     return () => {
       document.documentElement.style.overflow = "";
       document.body.style.overflow = "";
@@ -30,13 +39,15 @@ export default function Projet04GRAPH() {
     };
   }, [selectedIndex]);
 
-  // Image suivante
+  /*** NAVIGATION ENTRE LES IMAGES ***/
+
+  // Affiche l'image suivante et revient à la première en fin de liste.
   const nextImage = (e) => {
     e.stopPropagation();
     setSelectedIndex((prev) => (prev + 1) % projetsRandom.length);
   };
 
-  // Image précédente
+  // Affiche l'image précédente et revient à la dernière en début de liste.
   const prevImage = (e) => {
     e.stopPropagation();
     setSelectedIndex(
@@ -44,10 +55,13 @@ export default function Projet04GRAPH() {
     );
   };
 
+  /*** AFFICHAGE DE LA GALERIE ***/
+
   return (
     <div className="container graphCont">
+      {/* Titre de la rubrique. */}
       <h3 className="secTitle01 secTitle02">Graphisme</h3>
-
+      {/* Galerie des miniatures. */}
       <div className="row">
         {projetsRandom.map((d, i) => (
           <div
@@ -63,10 +77,11 @@ export default function Projet04GRAPH() {
           </div>
         ))}
       </div>
-
-      {/* MODALE */}
+      /*** MODALE D'AFFICHAGE DES IMAGES ***/
+      {/* La modale apparaît uniquement lorsqu'une image est sélectionnée. */}
       {selectedIndex !== null && (
         <div className="imageModal" onClick={() => setSelectedIndex(null)}>
+          {/* Bouton de fermeture de la modale. */}
           <button
             className="modalClose"
             onClick={() => setSelectedIndex(null)}
@@ -75,6 +90,7 @@ export default function Projet04GRAPH() {
             ×
           </button>
 
+          {/* Bouton de navigation vers l'image précédente. */}
           <button
             className="modalArrow modalPrev"
             onClick={prevImage}
@@ -83,12 +99,14 @@ export default function Projet04GRAPH() {
             &#10094;
           </button>
 
+          {/* Image sélectionnée en grand format. */}
           <img
             src={`/img/graph/${projetsRandom[selectedIndex]}`}
             alt={projetsRandom[selectedIndex]}
             onClick={(e) => e.stopPropagation()}
           />
 
+          {/* Bouton de navigation vers l'image suivante. */}
           <button
             className="modalArrow modalNext"
             onClick={nextImage}

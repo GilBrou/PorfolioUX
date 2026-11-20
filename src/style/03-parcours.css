@@ -1,19 +1,29 @@
-.parcours {
-  padding: 100px 25px;
+/*** SECTION PARCOURS ***/
 
+.parcours {
+  /* Définit les espacements et la largeur de la section. */
+  padding: 100px 25px;
   max-width: 80vw;
   margin: auto;
+
+  /* Définit le positionnement et l'ordre d'affichage. */
   position: relative;
   z-index: 500;
-  /*-webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 1.2s both;
-  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 1.2s both;*/
+
+  /* Animation d'apparition désactivée. */
+  /* -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 1.2s both;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 1.2s both; */
+
   overflow: hidden;
 }
+
+/*** STRUCTURE DES CARTES ***/
 
 .parcours .card {
   position: relative;
 }
 
+/* Ajoute une bordure décorative à chaque carte. */
 .parcours .card::before {
   content: "";
   position: absolute;
@@ -22,12 +32,15 @@
   pointer-events: none;
 }
 
+/*** TITRES DE LA SECTION ***/
+
 .parcours h2 {
   position: relative;
   z-index: 2;
   padding-right: 25px;
 }
 
+/* Ajoute un élément décoratif au-dessus de la section. */
 .parcours::before {
   content: "";
   position: absolute;
@@ -40,6 +53,9 @@
   z-index: -1;
 }
 
+/*** CONTENU DES CARTES ***/
+
+/* Organise les informations de chaque carte en colonne. */
 .parcours .card .info {
   display: flex;
   flex-direction: column;
@@ -47,15 +63,16 @@
   padding: 10px;
 }
 
+/* Style du titre principal de chaque carte. */
 .parcours .card .info .title {
   color: var(--yel);
   position: relative;
   margin: unset;
   margin-bottom: 10px;
-
   pointer-events: none;
 }
 
+/* Style du sous-titre de chaque carte. */
 .parcours .card .info .subTitle {
   text-align: justify;
   font-style: italic;
@@ -63,6 +80,7 @@
   pointer-events: none;
 }
 
+/* Style du titre secondaire. */
 .parcours .card .info .title2 {
   color: var(--lightB);
   font-size: 20px;
@@ -71,21 +89,28 @@
   pointer-events: none;
 }
 
+/* Aligne les titres à droite sur les cartes paires. */
 .parcours .card:nth-of-type(even) .info .title,
 .parcours .card:nth-of-type(even) .info .subTitle,
 .parcours .card:nth-of-type(even) .info .title2 {
   text-align: right;
 }
 
+/*** ORGANISATION DU CONTENU INTERNE ***/
+
+/* Dispose l'image et le texte côte à côte. */
 .parcours .card .info .inContent {
   display: flex;
   position: relative;
   gap: 15px;
 }
+
+/* Inverse l'ordre de l'image et du texte sur les cartes paires. */
 .parcours .card:nth-of-type(even) .info .inContent {
   flex-direction: row-reverse;
 }
 
+/* Définit les dimensions et l'apparence des images. */
 .parcours .card .info .inContent .cardImg {
   float: left;
   border-radius: 20px !important;
@@ -96,6 +121,7 @@
   height: 200px;
 }
 
+/* Définit la présentation du texte associé aux images. */
 .parcours .card .info .inContent p {
   align-self: center;
   padding: 0;
@@ -106,15 +132,21 @@
   line-height: 1.5em;
   pointer-events: none;
   text-align: justify;
+
+  /* Ajuste l'affichage du texte dans le conteneur flex. */
   font-weight: normal;
   display: flex;
   justify-content: flex-end;
 }
 
+/*** ALTERNANCE DES CARTES ***/
+
+/* Positionne les cartes impaires à gauche. */
 .card:nth-child(odd) {
   padding: 30px 0 30px 30px;
 }
 
+/* Positionne leur bordure décorative sur la gauche. */
 .card:nth-child(odd)::before {
   left: 0px;
   top: -2px;
@@ -123,9 +155,12 @@
   border-radius: 50px 0px 0px 50px;
 }
 
+/* Positionne les cartes paires à droite. */
 .card:nth-child(even) {
   padding: 30px 30px 30px 0;
 }
+
+/* Positionne leur bordure décorative sur la droite. */
 .card:nth-child(even)::before {
   right: 0;
   top: 0;
@@ -134,6 +169,9 @@
   border-radius: 0px 50px 50px 0px;
 }
 
+/*** AJUSTEMENTS DES CARTES EXTRÊMES ***/
+
+/* Adapte la bordure de la première carte. */
 .card:first-child::before {
   left: 0px;
   top: 46px;
@@ -141,6 +179,8 @@
   border-width: 0 0 2px 2px;
   border-radius: 0px 0px 0px 50px;
 }
+
+/* Ajuste la bordure inférieure de la dernière carte paire. */
 .card:last-child:nth-child(even)::before {
   border-bottom: 0;
   border-bottom-right-radius: 0;
@@ -148,6 +188,7 @@
   bottom: 40px;
 }
 
+/* Définit un élément décoratif supplémentaire après la dernière carte. */
 .card:last-of-type::after {
   content: "";
   position: absolute;
@@ -165,12 +206,14 @@
   display: none;
 }
 
+/* Ajuste la bordure de la dernière carte. */
 .card:last-of-type::before {
   border-bottom: unset;
   border-radius: 20px 0 0 0;
   height: 200%;
 }
 
+/* Modifie le positionnement de la bordure de la première carte. */
 .card:first-of-type::before {
   top: -250px;
 }

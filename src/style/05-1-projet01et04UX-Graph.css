@@ -1,34 +1,44 @@
-/*Module*/
-
+/* Module : galeries de réalisations */
 .UXCont .row,
 .graphCont .row,
 .chiffresCont .row {
+	/* Espacement entre les éléments */
 	gap: 5px;
 	gap: 15px;
+
+	/* Organisation et alignement */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	padding-top: 55px;
 
+	/* Dimensions et espacement intérieur */
+	padding-top: 55px;
 	max-width: 90vw;
 	padding: 20px;
 }
 
+/* Vignettes des projets */
 .Frame {
+	/* Dimensions */
 	height: 175px;
 	max-width: 300px;
+
+	/* Animation et comportement */
 	transition: 0.5s;
 	overflow: hidden;
 	cursor: pointer;
+
+	/* Marges */
 	margin: 15px auto;
 	margin: auto;
 
+	/* Dimensions finales appliquées */
 	height: 100px;
 	max-width: 300px;
 }
 
-/*.UXCont */
+/* Images des vignettes */
 .Frame img {
 	width: 100%;
 	height: 100%;
@@ -36,21 +46,27 @@
 	margin: 0;
 }
 
+/* Effet au survol des vignettes */
 .Frame:hover {
 	transform: scale(1.1);
 }
 
-/* Modale plein écran */
+/* Modale d'affichage en plein écran */
 .imageModal {
 	margin-top: 100px;
 	position: fixed;
 	inset: 0;
 
+	/* Centrage de l'image */
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	/* Espacement et arrière-plan */
 	padding: 40px;
 	background: rgba(0, 0, 0, 0.9);
+
+	/* Comportement et superposition */
 	cursor: zoom-out;
 	z-index: 999999;
 }
@@ -65,69 +81,87 @@
 	cursor: default;
 }
 
-/* Bouton fermer */
+/* Bouton de fermeture de la modale */
 .modalClose {
+	/* Positionnement */
 	position: absolute;
 	top: 60px;
 	right: 30px;
+
+	/* Apparence du bouton */
 	border: none;
 	background: transparent;
-
 	font-size: 50px;
 	width: 50px;
 	height: 50px;
 	line-height: 1;
+
+	/* Interaction et superposition */
 	cursor: pointer;
 	z-index: 10000;
+
+	/* Bordure et forme */
 	border: 2px solid red;
 	border-radius: 50%;
+
+	/* Couleur et ombre */
 	color: var(--whiteish);
 	box-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+
+	/* Animation */
 	transition: 0.4s;
 }
 
+/* Effet au survol du bouton de fermeture */
 .modalClose:hover {
 	transform: scale(1.1);
 }
 
-/* Flèches de navigation */
+/* Flèches de navigation dans la modale */
 .modalArrow {
+	/* Positionnement */
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 	z-index: 10000;
 
+	/* Centrage du contenu */
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
+	/* Dimensions et forme */
 	width: 50px;
 	height: 50px;
 	border: none;
 	border-radius: 50%;
 
+	/* Couleurs et typographie */
 	background: rgba(255, 255, 255, 0.15);
 	color: var(--whiteish);
-
 	font-size: 28px;
+
+	/* Interaction et bordure */
 	cursor: pointer;
 	border: 2px solid #1f8e10;
 
+	/* Animation */
 	transition:
 		background 0.3s ease,
 		transform 0.3s ease;
 }
 
+/* Effet au survol des flèches */
 .modalArrow:hover {
 	transform: translateY(-50%) scale(1.1);
 }
 
-/* Flèche précédente */
+/* Position de la flèche précédente */
 .modalPrev {
 	left: 25px;
 }
 
-/* Flèche suivante */
+/* Position de la flèche suivante */
 .modalNext {
 	right: 25px;
 }
