@@ -77,7 +77,7 @@ export default function Projet04GRAPH() {
           </div>
         ))}
       </div>
-      /*** MODALE D'AFFICHAGE DES IMAGES ***/
+      {/*** MODALE D'AFFICHAGE DES IMAGES ***/}
       {/* La modale apparaît uniquement lorsqu'une image est sélectionnée. */}
       {selectedIndex !== null && (
         <div className="imageModal" onClick={() => setSelectedIndex(null)}>
