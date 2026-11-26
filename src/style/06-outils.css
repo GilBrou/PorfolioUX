@@ -127,7 +127,7 @@
 .envir .ecoCard img {
   /* Couleur de fond */
   background: var(--whiteish);
-  background: white;
+  /*background: white;*/
 
   /* Dimensions */
   height: 80px;
